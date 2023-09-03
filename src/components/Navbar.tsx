@@ -26,6 +26,7 @@ const Navbar = () => {
                 >
                     <m.div
                         className="absolute top-0 bg-blue rounded-full h-6 w-6 m-0.5"
+                        layout
                         animate={{
                             left: isDarkMode ? 0 : 28,
                         }}
