@@ -54,6 +54,10 @@ module.exports = {
             '2xl': ['48px', '48px'],
             '3xl': ['72px', '72px'],
         },
+        container: {
+            center: true,
+            padding: '1.25rem',
+        },
     },
     plugins: [],
 }

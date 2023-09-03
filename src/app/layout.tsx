@@ -98,7 +98,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="scroll-smooth">
             <head>
-                {/* <meta name='mobile-web-app-capable' content='yes' /> */}
+                <meta name="mobile-web-app-capable" content="yes" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
