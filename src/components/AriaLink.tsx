@@ -25,6 +25,7 @@ const AriaLink = (props: AriaLinkProps & AriaLinkOptions) => {
             rel={rel}
             target={target}
             className={className}
+            draggable="false"
         >
             {children}
         </Link>

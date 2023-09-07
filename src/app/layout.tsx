@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import type { Organization, WithContext } from 'schema-dts'
 import classNames from 'classnames'
 import { Roboto_Slab, Baumans, Rubik } from 'next/font/google'
+import ThemeContextProvider from '@/contexts/ThemeContext'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
@@ -104,18 +105,20 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body
-                className={classNames(
-                    'font-sans flex flex-col min-h-screen',
-                    baumans.variable,
-                    robotoSLab.variable,
-                    rubik.variable
-                )}
-            >
-                <Navbar />
-                <main className="flex-1 flex flex-col">{children}</main>
-                <Footer />
-            </body>
+            <ThemeContextProvider>
+                <body
+                    className={classNames(
+                        'font-sans flex flex-col min-h-screen overflow-x-hidden',
+                        baumans.variable,
+                        robotoSLab.variable,
+                        rubik.variable
+                    )}
+                >
+                    <Navbar />
+                    <main className="flex-1 flex flex-col">{children}</main>
+                    <Footer />
+                </body>
+            </ThemeContextProvider>
         </html>
     )
 }

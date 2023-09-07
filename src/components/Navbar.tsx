@@ -2,33 +2,45 @@
 
 import Button from './Button'
 import AriaLink from './AriaLink'
-import { useState } from 'react'
+import { useContext } from 'react'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import MagneticButton from './MagneticButton'
+import Logo from '@/components/Logo'
+import { ThemeContext } from '@/contexts/ThemeContext'
+import Moon from './icons/Moon'
+import Sun from './icons/Sun'
 
 const Navbar = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    const themeContext = useContext(ThemeContext)
 
     return (
         <LazyMotion features={domAnimation}>
-            <nav className="container w-full flex justify-between items-center p-6">
+            <nav className="container w-full flex flex-col justify-between items-center p-6 sm:flex-row">
                 <AriaLink href="/" aria-label="Freck Studio Logo">
-                    <h2 className="font-cursive text-xl font-bold">Freck.</h2>
+                    <Logo />
                 </AriaLink>
                 <div className="flex flex-row items-center gap-4 text-sm font-medium pointer-cursor">
                     <MagneticButton href="/">WHO</MagneticButton>
                     <MagneticButton href="/">WHAT</MagneticButton>
                     <MagneticButton href="/">WORK</MagneticButton>
                 </div>
+
                 <Button
-                    className="relative bg-purple rounded-full h-7 w-14 hover:scale-110"
-                    onPress={() => setIsDarkMode((prevValue) => !prevValue)}
+                    className="relative bg-purple rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5"
+                    onPress={() => {
+                        themeContext?.setShowAvatar(false)
+                        themeContext?.setIsDarkMode((prevValue) =>
+                            prevValue === 'light' ? 'dark' : 'light'
+                        )
+                    }}
                 >
+                    <Sun />
+                    <Moon />
                     <m.div
-                        className="absolute top-0 bg-blue rounded-full h-6 w-6 m-0.5"
+                        className="absolute top-0 bg-blue rounded-full h-7 w-7 m-0.5"
                         layout
                         animate={{
-                            left: isDarkMode ? 0 : 28,
+                            left: themeContext?.isDarkMode === 'light' ? 32 : 0,
                         }}
                         transition={{
                             duration: 0.2,
