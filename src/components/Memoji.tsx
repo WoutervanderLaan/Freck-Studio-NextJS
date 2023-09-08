@@ -45,18 +45,12 @@ const Memoji = () => {
         >
             <MemojiPart
                 name="avatar"
-                variant={
-                    themeContext?.isDarkMode === 'light' ? memoji : memojiDark
-                }
+                variant={themeContext?.isDarkMode ? memojiDark : memoji}
                 setIsFinishedLoading={setIsFinishedLoading}
             />
             <MemojiPart
                 name="hand"
-                variant={
-                    themeContext?.isDarkMode === 'light'
-                        ? memojiHand
-                        : memojiHandDark
-                }
+                variant={themeContext?.isDarkMode ? memojiHandDark : memojiHand}
                 dataValue={13}
                 setIsFinishedLoading={setIsFinishedLoading}
             />
@@ -88,16 +82,31 @@ const MemojiPart = ({
     const isTablet = UseViewportDetection(768)
 
     useEffect(() => {
-        document.addEventListener('mousemove', (e) => moveAvatar(e, dataValue))
-        return () =>
-            document.removeEventListener('mousemove', (e) =>
-                moveAvatar(e, dataValue)
-            )
-    }, [ref])
+        if (isTablet) {
+            bounceAvatar()
+        }
+        if (!isTablet) {
+            document.addEventListener('mousemove', (e) => moveAvatar(e))
+            return () =>
+                document.removeEventListener('mousemove', (e) => moveAvatar(e))
+        }
+    }, [ref, isTablet])
 
-    const moveAvatar = (e: MouseEvent, dataValue: number) => {
+    const moveAvatar = (e: MouseEvent) => {
         setX((e.clientX * dataValue) / 250)
         setY((e.clientY * dataValue) / 250)
+    }
+
+    const bounceAvatar = () => {
+        setX(0)
+        setY(1 * dataValue)
+
+        // gsap.to(object, {
+        //     y: 1 * movingValue,
+        //     yoyoEase: true,
+        //     repeat: -1,
+        //     duration: 1,
+        // })
     }
 
     return (

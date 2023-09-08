@@ -5,12 +5,13 @@ import {
     ReactNode,
     SetStateAction,
     createContext,
+    useEffect,
     useState,
 } from 'react'
 
 type ThemeContext = {
-    isDarkMode: 'light' | 'dark'
-    setIsDarkMode: Dispatch<SetStateAction<'light' | 'dark'>>
+    isDarkMode: boolean
+    setIsDarkMode: Dispatch<SetStateAction<boolean>>
     showAvatar: boolean
     setShowAvatar: Dispatch<SetStateAction<boolean>>
 }
@@ -18,8 +19,17 @@ type ThemeContext = {
 export const ThemeContext = createContext<ThemeContext | null>(null)
 
 const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
-    const [isDarkMode, setIsDarkMode] = useState<'light' | 'dark'>('light')
+    const [isDarkMode, setIsDarkMode] = useState(false)
     const [showAvatar, setShowAvatar] = useState(false)
+
+    useEffect(() => {
+        if (isDarkMode) {
+            document.querySelector('html')?.classList.add('dark')
+        }
+        if (!isDarkMode) {
+            document.querySelector('html')?.classList.remove('dark')
+        }
+    }, [isDarkMode])
 
     return (
         <ThemeContext.Provider

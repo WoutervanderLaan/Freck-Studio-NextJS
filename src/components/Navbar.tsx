@@ -26,21 +26,19 @@ const Navbar = () => {
                 </div>
 
                 <Button
-                    className="relative bg-purple rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5"
+                    className="relative bg-purple rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5 border-2 border-purple dark:bg-dark-bg dark:border-green"
                     onPress={() => {
                         themeContext?.setShowAvatar(false)
-                        themeContext?.setIsDarkMode((prevValue) =>
-                            prevValue === 'light' ? 'dark' : 'light'
-                        )
+                        themeContext?.setIsDarkMode((prevValue) => !prevValue)
                     }}
                 >
                     <Sun />
                     <Moon />
                     <m.div
-                        className="absolute top-0 bg-blue rounded-full h-7 w-7 m-0.5"
+                        className="absolute top-0 bg-blue dark:bg-green rounded-full h-7 w-7"
                         layout
                         animate={{
-                            left: themeContext?.isDarkMode === 'light' ? 32 : 0,
+                            left: themeContext?.isDarkMode ? 0 : 32,
                         }}
                         transition={{
                             duration: 0.2,

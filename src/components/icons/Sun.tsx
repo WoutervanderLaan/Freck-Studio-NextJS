@@ -1,7 +1,7 @@
 const Sun = () => (
     <svg
-        width={24}
-        height={24}
+        width={20}
+        height={20}
         viewBox="0 0 100 100"
         style={{
             strokeWidth: 8,
@@ -10,6 +10,7 @@ const Sun = () => (
             strokeLinecap: 'round',
             strokeMiterlimit: 10,
         }}
+        className="dark:fill-green"
     >
         <circle fill="#48a7e9" stroke="none" cx="50" cy="50" r="24.09" />
         <line x1="50" y1="4.5" x2="50" y2="14.47" />

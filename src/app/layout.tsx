@@ -102,13 +102,15 @@ export default function RootLayout({
                 <meta name="mobile-web-app-capable" content="yes" />
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(jsonLd),
+                    }}
                 />
             </head>
             <ThemeContextProvider>
                 <body
                     className={classNames(
-                        'font-sans flex flex-col min-h-screen overflow-x-hidden',
+                        'font-sans flex flex-col min-h-screen dark:bg-dark-bg dark:text-white',
                         baumans.variable,
                         robotoSLab.variable,
                         rubik.variable
