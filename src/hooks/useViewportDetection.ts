@@ -17,9 +17,11 @@ const UseViewportDetection = (threshold: number = MOBILE_THRESHOLD) => {
 
         checkWidthViewport()
 
-        window.addEventListener('resize', checkWidthViewport, { passive: true })
+        window.addEventListener('resize', checkWidthViewport)
 
-        return () => window.removeEventListener('resize', checkWidthViewport)
+        return () => {
+            window.removeEventListener('resize', checkWidthViewport)
+        }
     }, [threshold])
 
     return isWithinViewportThreshold

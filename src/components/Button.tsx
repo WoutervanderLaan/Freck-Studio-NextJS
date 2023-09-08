@@ -14,6 +14,7 @@ const variantStyles: Record<ButtonStyleVariants, string> = {
 
 type BaseProps = {
     variant?: ButtonStyleVariants
+    ariaLabel?: string
     isDisabled?: boolean
     className?: string
 }
@@ -45,6 +46,7 @@ const Button = (props: ButtonProps | LinkProps) => {
         variant = 'default',
         isDisabled,
         className,
+        ariaLabel,
         ...rest
     } = props
 
@@ -53,6 +55,7 @@ const Button = (props: ButtonProps | LinkProps) => {
             {'onPress' in props && (
                 <AriaButton
                     {...rest}
+                    aria-label={ariaLabel}
                     className={classNames(className, variantStyles[variant])}
                     onPress={props.onPress}
                     isDisabled={isDisabled}
@@ -64,6 +67,7 @@ const Button = (props: ButtonProps | LinkProps) => {
             {'href' in props && (
                 <AriaLink
                     {...rest}
+                    aria-label={ariaLabel}
                     className={classNames(className, variantStyles[variant])}
                     href={props.href}
                     isDisabled={isDisabled}

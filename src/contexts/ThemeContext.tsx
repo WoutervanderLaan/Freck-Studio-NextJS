@@ -12,15 +12,12 @@ import {
 type ThemeContext = {
     isDarkMode: boolean
     setIsDarkMode: Dispatch<SetStateAction<boolean>>
-    showAvatar: boolean
-    setShowAvatar: Dispatch<SetStateAction<boolean>>
 }
 
 export const ThemeContext = createContext<ThemeContext | null>(null)
 
 const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
     const [isDarkMode, setIsDarkMode] = useState(false)
-    const [showAvatar, setShowAvatar] = useState(false)
 
     useEffect(() => {
         if (isDarkMode) {
@@ -36,8 +33,6 @@ const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
             value={{
                 isDarkMode,
                 setIsDarkMode,
-                showAvatar,
-                setShowAvatar,
             }}
         >
             {children}

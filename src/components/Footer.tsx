@@ -4,7 +4,7 @@ const Footer = () => {
 
     return (
         <footer className="w-full self-end flex justify-center p-6">
-            <p className="text-sm text-tertiary-bg">{`© Freck Studio ${year}`}</p>
+            <p className="text-sm">{`© Freck Studio ${year}`}</p>
         </footer>
     )
 }

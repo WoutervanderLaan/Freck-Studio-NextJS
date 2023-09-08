@@ -20,17 +20,23 @@ const Navbar = () => {
                     <Logo />
                 </AriaLink>
                 <div className="flex flex-row items-center gap-4 text-sm font-medium pointer-cursor">
-                    <MagneticButton href="/">WHO</MagneticButton>
-                    <MagneticButton href="/">WHAT</MagneticButton>
-                    <MagneticButton href="/">WORK</MagneticButton>
+                    <MagneticButton href="/" ariaLabel="Section Who">
+                        WHO
+                    </MagneticButton>
+                    <MagneticButton href="/" ariaLabel="Section What">
+                        WHAT
+                    </MagneticButton>
+                    <MagneticButton href="/" ariaLabel="Section Work">
+                        WORK
+                    </MagneticButton>
                 </div>
 
                 <Button
                     className="relative bg-purple rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5 border-2 border-purple dark:bg-dark-bg dark:border-green"
                     onPress={() => {
-                        themeContext?.setShowAvatar(false)
                         themeContext?.setIsDarkMode((prevValue) => !prevValue)
                     }}
+                    ariaLabel="Theme slider"
                 >
                     <Sun />
                     <Moon />

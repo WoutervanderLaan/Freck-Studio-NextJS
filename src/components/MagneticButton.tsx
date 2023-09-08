@@ -14,6 +14,7 @@ const variantStyles: Record<magnetStyleVariants, string> = {
 type MagneticButtonProps = {
     children: ReactNode
     variant?: magnetStyleVariants
+    ariaLabel?: string
     href?: string
     onPress?: () => void
     magnetStrength?: number
@@ -40,6 +41,7 @@ const MagneticButton = (props: MagneticButtonProps) => {
         href = '',
         onPress = () => {},
         magnetStrength = MAGNET_STRENGHT,
+        ariaLabel,
     } = props
 
     useEffect(() => {
@@ -106,6 +108,7 @@ const MagneticButton = (props: MagneticButtonProps) => {
             >
                 {'href' in props && (
                     <Button
+                        ariaLabel={ariaLabel}
                         className={classNames(variantStyles[variant])}
                         href={href}
                     >
@@ -114,6 +117,7 @@ const MagneticButton = (props: MagneticButtonProps) => {
                 )}
                 {'onPress' in props && (
                     <Button
+                        ariaLabel={ariaLabel}
                         className={classNames(variantStyles[variant])}
                         onPress={onPress}
                     >
