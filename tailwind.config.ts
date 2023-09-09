@@ -23,6 +23,9 @@ module.exports = {
                 'tertiary-bg': '#E0E0E0',
                 'dark-bg': '#0E100D',
             },
+            borderRadius: {
+                custom: '40px',
+            },
         },
 
         backgroundImage: {
@@ -49,12 +52,14 @@ module.exports = {
         fontSize: {
             xs: ['10px', '10px'],
             sm: ['12px', '17px'],
-            base: ['16px', '16px'],
-            lg: ['24px', '24px'],
+            base: ['16px', '20px'],
+            lg: ['24px', '32px'],
             xl: ['40px', '40px'],
             '2xl': ['48px', '48px'],
             '3xl': ['72px', '72px'],
+            '4xl': ['92px', '92px'],
         },
+
         container: {
             center: true,
             padding: '1.25rem',

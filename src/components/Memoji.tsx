@@ -72,11 +72,9 @@ const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
     const moveAvatar = (e: MouseEvent) => {
         if (window.innerWidth <= 1024) {
             x.set(0)
-            y.set(0)
         }
         if (window.innerWidth >= 1024) {
             x.set((e.clientX * dataValue) / 250)
-            y.set((e.clientY * dataValue) / 250)
         }
     }
 
@@ -88,7 +86,7 @@ const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
                 y: [0, 1 * dataValue, 0],
             }}
             transition={{
-                duration: 1,
+                duration: 1.5,
                 repeat: Infinity,
                 type: 'tween',
                 ease: 'easeInOut',

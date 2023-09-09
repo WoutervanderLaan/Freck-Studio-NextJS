@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     },
     manifest: '/manifest.json',
     keywords:
-        'digital, digitaal, design, digital design, graphic, grafisch, grafisch vormgever, vormgever, graphic design, studio, design studio, design agency, illustrator, amsterdam, freck, freck studio, branding, brand, creative, creatief, agency, creative agency, creative design agency, illustrations, development, visual, marketing, visuele marketing, visual design, ideation, UX, user experience, user interface, interface, experience, UI, UI/UX design, strategy, strategie, merk, logo, logo design, web, web design, print, print design, corporate, identity, identiteit, IT, ict, packaging, motion graphics, animatie, animaties, 3d, 3d design, responsive web design, responsive, visual communication, communication, visual, portfolio, services, professional design, affordable design, professional, professioneel, betaalbaar, affordable, web assets, assets',
+        'digital, digitaal, design, digital design, graphic, grafisch, grafisch vormgever, vormgever, graphic design, studio, design studio, design agency, illustrator, amsterdam, freck, freck studio, branding, brand, creative, creatief, agency, creative agency, creative design agency, illustrations, development, visual, marketing, visuele marketing, visual design, ideation, UX, user experience, user interface, interface, experience, UI, UI/UX design, strategy, strategie, merk, logo, logo design, web, web design, print, print design, corporate, identity, identiteit, IT, ict, packaging, motion graphics, animatie, animaties, animations, animations, 3d, 3d design, responsive web design, responsive, visual communication, communication, visual, portfolio, services, professional design, affordable design, professional, professioneel, betaalbaar, affordable, web assets, assets',
     openGraph: {
         title: 'Freck Studio - Digital Design Studio in Amsterdam',
         type: 'website',
@@ -105,6 +105,12 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify(jsonLd),
                     }}
+                />
+
+                <link
+                    rel="canonical"
+                    href="https://www.freck-studio.com"
+                    key="canonical"
                 />
             </head>
             <ThemeContextProvider>
