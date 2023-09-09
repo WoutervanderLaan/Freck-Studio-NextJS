@@ -53,6 +53,7 @@ module.exports = {
             xs: ['10px', '10px'],
             sm: ['12px', '17px'],
             base: ['16px', '20px'],
+            'base-variant': ['20px', '30px'],
             lg: ['24px', '32px'],
             xl: ['40px', '40px'],
             '2xl': ['48px', '48px'],
@@ -62,7 +63,7 @@ module.exports = {
 
         container: {
             center: true,
-            padding: '1.25rem',
+            padding: '2rem',
         },
     },
     plugins: [],

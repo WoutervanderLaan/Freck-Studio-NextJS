@@ -2,18 +2,9 @@ import { ReactNode, useEffect, useRef, useState } from 'react'
 import { m, useWillChange } from 'framer-motion'
 import UseViewportDetection from '@/hooks/useViewportDetection'
 import Button from './Button'
-import classNames from 'classnames'
-
-type magnetStyleVariants = 'ghost' | 'other'
-
-const variantStyles: Record<magnetStyleVariants, string> = {
-    ghost: 'p-4 rounded-full',
-    other: '',
-}
 
 type MagneticButtonProps = {
     children: ReactNode
-    variant?: magnetStyleVariants
     ariaLabel?: string
     href?: string
     onPress?: () => void
@@ -37,7 +28,6 @@ const MagneticButton = (props: MagneticButtonProps) => {
 
     const {
         children,
-        variant = 'ghost',
         href = '',
         onPress = () => {},
         magnetStrength = MAGNET_STRENGHT,
@@ -88,7 +78,7 @@ const MagneticButton = (props: MagneticButtonProps) => {
     return (
         <div
             ref={magneticAreaRef}
-            className="w-24 h-24 flex justify-center items-center rounded-full"
+            className="w-fit h-24 min-w-[96px] flex justify-center items-center rounded-full"
         >
             <m.div
                 className="rounded-full"
@@ -107,18 +97,14 @@ const MagneticButton = (props: MagneticButtonProps) => {
                 draggable="false"
             >
                 {'href' in props && (
-                    <Button
-                        ariaLabel={ariaLabel}
-                        className={classNames(variantStyles[variant])}
-                        href={href}
-                    >
+                    <Button variant="ghost" ariaLabel={ariaLabel} href={href}>
                         {children}
                     </Button>
                 )}
                 {'onPress' in props && (
                     <Button
+                        variant="ghost"
                         ariaLabel={ariaLabel}
-                        className={classNames(variantStyles[variant])}
                         onPress={onPress}
                     >
                         {children}

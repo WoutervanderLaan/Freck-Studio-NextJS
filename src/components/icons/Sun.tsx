@@ -6,13 +6,14 @@ const Sun = () => (
         style={{
             strokeWidth: 8,
             fill: 'none',
-            stroke: '#48a7e9',
+            stroke: '#FFE5EB',
+
             strokeLinecap: 'round',
             strokeMiterlimit: 10,
         }}
         className="dark:fill-green"
     >
-        <circle fill="#48a7e9" stroke="none" cx="50" cy="50" r="24.09" />
+        <circle fill="#FFE5EB" stroke="none" cx="50" cy="50" r="24.09" />
         <line x1="50" y1="4.5" x2="50" y2="14.47" />
         <line x1="50" y1="85.53" x2="50" y2="95.5" />
         <line x1="95.5" y1="50" x2="85.53" y2="50" />

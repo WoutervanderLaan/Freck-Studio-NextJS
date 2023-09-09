@@ -136,7 +136,7 @@ const TextBalloon = ({
                         ref={balloonRef}
                         className="absolute bg-white rounded-custom flex items-center aspect-video justify-center p-4 w-[40%] translate-x-[-50%] lg:w-[26%] lg:p-6 dark:bg-dark-bg lg:translate-x-[-52%]"
                     >
-                        <div className="z-10 text-center flex flex-col gap-4">
+                        <div className="z-10 text-center flex flex-col gap-2 md:gap-4">
                             <p className="font-bold text-sm lg:text-lg">
                                 {title}
                             </p>

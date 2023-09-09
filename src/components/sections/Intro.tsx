@@ -1,23 +1,33 @@
 'use client'
 
 import Memoji from '@/components/Memoji'
+import Button from '../Button'
 
 const Intro = () => {
     return (
-        <section className="container flex flex-col-reverse lg:flex-row justify-between overflow-hidden">
-            <div className="flex-1 flex flex-col max-h-[400px] lg:max-w-[450px] lg:mt-20 gap-10">
-                <h1 className="font-serif text-2xl md:text-3xl font-bold text-center lg:text-start">
+        <section className="container flex flex-col-reverse justify-between items-center lg:items-start lg:flex-row">
+            <div className="flex-1 flex flex-col lg:max-w-[550px] gap-10">
+                <h1 className="font-serif text-2xl lg:text-3xl xl:text-4xl font-bold text-center lg:text-start">
                     We create meaningful experiences
                 </h1>
 
-                <h2 className="text-center lg:text-start">
+                <h2 className="text-center max-w-[80%] self-center lg:self-start lg:text-start xl:text-base-variant">
                     We partner with global brands and emerging businesses to
                     create exciting and meaningful experiences, whether digital
                     or non-digital.
                 </h2>
+                <Button
+                    onPress={() => console.log('hi')}
+                    variant="default"
+                    className="self-center lg:self-start"
+                >
+                    <span className="xl:text-base-variant">Contact Me</span>
+                </Button>
             </div>
-            <div className="relative aspect-square h-[100vw] self-center sm:h-[600px] lg:self-start">
-                <Memoji />
+            <div className="w-full flex justify-center">
+                <div className="relative aspect-square h-[100vw] self-center sm:h-[600px] lg:self-start">
+                    <Memoji />
+                </div>
             </div>
         </section>
     )
