@@ -31,7 +31,7 @@ const AriaLink = (props: AriaLinkProps & AriaLinkOptions) => {
             style={{
                 WebkitAppearance: 'none',
                 appearance: 'none',
-                outline: isFocusVisible ? '3px solid dodgerblue' : 'none',
+                outline: isFocusVisible ? '3px solid #EC8DAA' : 'none',
                 transitionDuration: '200ms',
                 outlineOffset: 2,
             }}

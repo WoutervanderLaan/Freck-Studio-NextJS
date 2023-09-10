@@ -8,7 +8,7 @@ const Sun = () => (
             strokeLinecap: 'round',
             strokeMiterlimit: 10,
         }}
-        className="stroke-pink fill-pink dark:fill-green dark:stroke-green"
+        className="stroke-purple fill-purple dark:fill-green dark:stroke-green"
     >
         <circle stroke="none" cx="50" cy="50" r="24.09" />
         <line x1="50" y1="4.5" x2="50" y2="14.47" />

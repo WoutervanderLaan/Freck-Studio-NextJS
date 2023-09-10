@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div className="lg:fixed right-10 z-30">
                     <Button
                         variant="switch"
-                        className="relative bg-pink-dark border-pink-dark border-2 dark:bg-dark-bg dark:border-green"
+                        className="relative bg-blue border-blue border-2 dark:bg-dark-bg dark:border-green"
                         onPress={() => {
                             themeContext?.setIsDarkMode(
                                 (prevValue) => !prevValue
@@ -45,7 +45,7 @@ const Navbar = () => {
                         <Sun />
                         <Moon />
                         <m.div
-                            className="absolute top-0 bg-pink dark:bg-green rounded-full h-6 w-6 m-0.5"
+                            className="absolute top-0 bg-purple dark:bg-green rounded-full h-6 w-6 m-0.5"
                             layout
                             animate={{
                                 left: themeContext?.isDarkMode ? 0 : 32,

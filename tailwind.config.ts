@@ -18,9 +18,7 @@ module.exports = {
                 pink: '#FFE5EB',
                 'pink-dark': '#EC8DAA',
                 green: '#247201',
-                'primary-bg': '#ffffff',
-                'secondary-bg': '#000000',
-                'tertiary-bg': '#E0E0E0',
+                gray: '#E0E0E0',
                 'dark-bg': '#0E100D',
             },
             borderRadius: {
@@ -33,7 +31,7 @@ module.exports = {
             'dark-secondary-bg': 'radial-gradient(#9137ff, #4900a3)',
             'dark-tertiary-bg': 'radial-gradient(#ffe5eb, #ffb8c8)',
             'dark-quarternary-bg': 'radial-gradient(#2b7347, #2b553b)',
-            'button-gradient-1': 'linear-gradient(90deg, #ec8eaa, #4900a3)',
+            'button-gradient-1': 'linear-gradient(45deg, #ec8eaa, #4900a3)',
             'button-gradient-2':
                 'linear-gradient(90deg, #ffca49,#ff9561,#ef78cf,#9137ff)',
             'button-gradient-3': 'linear-gradient(90deg, #6effd7, #78ff84)',
@@ -44,6 +42,7 @@ module.exports = {
             cursive: ['var(--font-baumans)'],
         },
         fontWeight: {
+            thin: '300',
             normal: '400',
             medium: '500',
             bold: '700',

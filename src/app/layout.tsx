@@ -30,7 +30,7 @@ const jsonLd: WithContext<Organization> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Freck Studio',
-    image: 'android-chrome-512x512.png', /// TO DO: change to webp file
+    image: 'share.webp',
     description:
         'A Digital Design Studio that Elevates Your Message with Purposeful and Ethical Design',
     url: 'https://www.freck-studio.com',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
             'A Digital Design Studio that Elevates Your Message with Purposeful and Ethical Design',
         images: [
             {
-                url: '/img/share.webp', /// TO DO: make this image
+                url: '/img/share.webp',
                 width: 1200,
                 height: 630,
             },

@@ -5,6 +5,9 @@
 // import Hostens from '../icons/brands/Hostens'
 // import IV from '../icons/brands/IV'
 // import Ignitis from '../icons/brands/Ignitis'
+// import Swedbank from '../icons/brands/Swedbank'
+// import VU from '../icons/brands/VU'
+// import Time4vps from '../icons/brands/Time4vps'
 
 const Brands = () => {
     return (
@@ -12,7 +15,7 @@ const Brands = () => {
             <h3 className="text-sm md:text-base lg:text-base-variant">
                 Brands I have worked with along the way:
             </h3>
-            {/* <div className="flex flex-row items-center gap-4 ">
+            {/* <div className="flex flex-col items-center gap-4 flex-wrap">
                 <SevenPack />
                 <BA />
                 <Bite />
@@ -20,6 +23,9 @@ const Brands = () => {
                 <Hostens />
                 <IV />
                 <Ignitis />
+                <Swedbank />
+                <VU />
+                <Time4vps />
             </div> */}
         </section>
     )

@@ -8,12 +8,12 @@ const HomePage = () => {
         <>
             <Intro />
             <Brands />
-            <section className="container" id="about">
+            <section id="about" className="container">
                 <WhoCard />
             </section>
             <section
-                className="container flex flex-col gap-10 lg:flex-row"
                 id="why"
+                className="container flex flex-col gap-10 lg:flex-row"
             >
                 <Card backgroundColor="bg-pink" className="w-full h-[800px]">
                     <div className="bg-pink-dark w-[60%] aspect-square rounded-full" />

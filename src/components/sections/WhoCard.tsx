@@ -11,7 +11,7 @@ const WhoCard = () => (
         className="relative text-center"
     >
         <h2 className="text-blue font-serif font-medium text-2xl lg:text-4xl lg:mt-10">
-            <span className="italic font-normal">Everyone</span> is an artist
+            <span className="italic font-thin">Everyone</span> is an artist
         </h2>
         <p className="text-blue text-center text-base mt-8 md:max-w-[70%] lg:max-w-[50%] lg:text-base-variant lg:mt-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
