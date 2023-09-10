@@ -1,6 +1,6 @@
 'use client'
 
-import { AriaButtonProps, useButton } from 'react-aria'
+import { AriaButtonProps, useButton, useFocusRing } from 'react-aria'
 import { ReactNode, useRef } from 'react'
 import classNames from 'classnames'
 import AriaLink from './AriaLink'
@@ -9,7 +9,7 @@ type ButtonStyleVariants = 'default' | 'ghost' | 'switch'
 
 const variantStyles: Record<ButtonStyleVariants, string> = {
     default:
-        'w-fit px-6 py-3 rounded-xl bg-pink-dark text-pink hover:bg-pink hover:text-pink-dark duration-100',
+        'w-fit px-6 py-3 rounded-xl bg-pink-dark text-white duration-100 hover:bg-pink hover:text-pink-dark dark:bg-green dark:hover:bg-white dark:hover:text-green',
     ghost: 'p-2 rounded-full md:p-4 md:text-[14px]',
     switch: 'rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5 border-2',
 }
@@ -87,10 +87,23 @@ const AriaButton = (
 ) => {
     const buttonRef = useRef<HTMLButtonElement>(null)
     const { buttonProps } = useButton(props, buttonRef)
+    const { isFocusVisible, focusProps } = useFocusRing()
     const { children, className } = props
 
     return (
-        <button ref={buttonRef} {...buttonProps} className={className}>
+        <button
+            ref={buttonRef}
+            {...buttonProps}
+            {...focusProps}
+            className={className}
+            style={{
+                WebkitAppearance: 'none',
+                appearance: 'none',
+                outline: isFocusVisible ? '3px solid dodgerblue' : 'none',
+                transitionDuration: '200ms',
+                outlineOffset: 2,
+            }}
+        >
             {children}
         </button>
     )

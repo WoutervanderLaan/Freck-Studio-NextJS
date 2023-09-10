@@ -8,10 +8,10 @@
 
 const Brands = () => {
     return (
-        <div className="container w-full flex flex-col justify-center items-center py-10 lg:py-0">
-            <p className="text-sm md:text-base lg:text-base-variant">
+        <section className="container flex flex-col justify-center items-center py-10 lg:py-0">
+            <h3 className="text-sm md:text-base lg:text-base-variant">
                 Brands I have worked with along the way:
-            </p>
+            </h3>
             {/* <div className="flex flex-row items-center gap-4 ">
                 <SevenPack />
                 <BA />
@@ -21,7 +21,7 @@ const Brands = () => {
                 <IV />
                 <Ignitis />
             </div> */}
-        </div>
+        </section>
     )
 }
 

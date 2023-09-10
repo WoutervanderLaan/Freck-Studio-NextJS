@@ -5,15 +5,12 @@ const Sun = () => (
         viewBox="0 0 100 100"
         style={{
             strokeWidth: 8,
-            fill: 'none',
-            stroke: '#FFE5EB',
-
             strokeLinecap: 'round',
             strokeMiterlimit: 10,
         }}
-        className="dark:fill-green"
+        className="stroke-pink fill-pink dark:fill-green dark:stroke-green"
     >
-        <circle fill="#FFE5EB" stroke="none" cx="50" cy="50" r="24.09" />
+        <circle stroke="none" cx="50" cy="50" r="24.09" />
         <line x1="50" y1="4.5" x2="50" y2="14.47" />
         <line x1="50" y1="85.53" x2="50" y2="95.5" />
         <line x1="95.5" y1="50" x2="85.53" y2="50" />

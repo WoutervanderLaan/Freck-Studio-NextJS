@@ -17,15 +17,15 @@ const Intro = () => {
                     or non-digital.
                 </h2>
                 <Button
-                    onPress={() => console.log('hi')}
-                    variant="default"
+                    onPress={() => alert('Contact')}
                     className="self-center lg:self-start"
+                    ariaLabel="Contact"
                 >
                     <span className="xl:text-base-variant">Contact Me</span>
                 </Button>
             </div>
             <div className="w-full flex justify-center">
-                <div className="relative aspect-square h-[100vw] self-center sm:h-[600px] lg:self-start">
+                <div className="relative aspect-square h-[100vw] scale-110 self-center sm:scale-100 sm:h-[600px] lg:self-start">
                     <Memoji />
                 </div>
             </div>
