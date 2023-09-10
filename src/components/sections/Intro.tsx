@@ -25,7 +25,7 @@ const Intro = () => {
                 </Button>
             </div>
             <div className="w-full flex justify-center">
-                <div className="relative aspect-square h-[100vw] scale-110 self-center sm:scale-100 sm:h-[600px] lg:self-start">
+                <div className="relative aspect-square h-[100vw] scale-110 self-center overflow-hidden sm:scale-100 sm:h-[600px] lg:self-start">
                     <Memoji />
                 </div>
             </div>

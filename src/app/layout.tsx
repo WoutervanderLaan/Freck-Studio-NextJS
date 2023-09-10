@@ -31,8 +31,7 @@ const jsonLd: WithContext<Organization> = {
     '@type': 'Organization',
     name: 'Freck Studio',
     image: 'share.webp',
-    description:
-        'A Digital Design Studio that Elevates Your Message with Purposeful and Ethical Design',
+    description: 'Elevate Your Message with Purposeful and Ethical Design',
     url: 'https://www.freck-studio.com',
     logo: 'https://www.freck-studio.com/logo.svg', /// TO DO: set up this route
     email: 'saruunep@gmail.com',
@@ -50,8 +49,7 @@ const jsonLd: WithContext<Organization> = {
 
 export const metadata: Metadata = {
     title: 'Freck Studio',
-    description:
-        'A Digital Design Studio that Elevates Your Message with Purposeful and Ethical Design',
+    description: 'Elevate Your Message with Purposeful and Ethical Design',
     icons: {
         icon: ['/favicon.svg', '/favicon.ico'],
         apple: '/apple-touch-icon.png',
@@ -63,13 +61,12 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Freck Studio - Digital Design Studio in Amsterdam',
         type: 'website',
-        description:
-            'A Digital Design Studio that Elevates Your Message with Purposeful and Ethical Design',
+        description: 'Elevate Your Message with Purposeful and Ethical Design',
         images: [
             {
-                url: '/img/share.webp',
-                width: 1200,
-                height: 630,
+                url: '/share.webp',
+                width: 300,
+                height: 300,
             },
         ],
         siteName: 'Freck Studio',
@@ -84,8 +81,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary',
         title: 'Freck Studio',
-        description:
-            'A Digital Design Studio that Elevates Your Message with Purposeful and Ethical Design',
+        description: 'Elevate Your Message with Purposeful and Ethical Design',
     },
     formatDetection: { telephone: false },
     themeColor: '#ffffff',
