@@ -19,7 +19,7 @@ const Intro = () => {
                 <Button
                     onPress={() => alert('Contact')}
                     className="self-center lg:self-start"
-                    ariaLabel="Contact"
+                    ariaLabel="Contact Me"
                 >
                     <span className="xl:text-base-variant">Contact Me</span>
                 </Button>

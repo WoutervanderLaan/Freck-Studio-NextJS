@@ -65,8 +65,8 @@ export const metadata: Metadata = {
         images: [
             {
                 url: '/share.webp',
-                width: 300,
-                height: 300,
+                width: 1600,
+                height: 900,
             },
         ],
         siteName: 'Freck Studio',

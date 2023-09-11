@@ -4,11 +4,11 @@ import Image, { StaticImageData } from 'next/image'
 import { useRef, useEffect, useContext } from 'react'
 import { ThemeContext } from '@/contexts/ThemeContext'
 import { motion, useMotionValue, AnimatePresence } from 'framer-motion'
-import memoji from '../../public/img/Memoji.png'
-import memojiDark from '../../public/img/MemojiDark.png'
-import memojiHand from '../../public/img/MemojiHand.png'
-import memojiHandDark from '../../public/img/MemojiHandDark.png'
-import memojiShadow from '../../public/img/MemojiShadow.png'
+import memoji from '../../public/img/Memoji_small.png'
+import memojiDark from '../../public/img/MemojiDark_small.png'
+import memojiHand from '../../public/img/MemojiHand_small.png'
+import memojiHandDark from '../../public/img/MemojiHandDark_small.png'
+import memojiShadow from '../../public/img/MemojiShadow_small.png'
 
 const Memoji = () => {
     const themeContext = useContext(ThemeContext)
