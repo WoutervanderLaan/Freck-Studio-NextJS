@@ -5,11 +5,12 @@ const Swedbank = () => (
         viewBox="0 0 216 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="max-h-10 w-fit"
     >
-        <g clip-path="url(#clip0_1_7)">
+        <g clipPath="url(#clip0_1_7)">
             <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M213.2 24C213.2 35.71 203.71 45.2 192 45.2C180.29 45.2 170.8 35.71 170.8 24C170.8 12.29 180.29 2.79999 192 2.79999C203.71 2.79999 213.2 12.29 213.2 24Z"
                 fill="url(#paint0_radial_1_7)"
             />
@@ -26,8 +27,8 @@ const Swedbank = () => (
                 fill="#FAAF5A"
             />
             <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M210.39 26.9C210.24 27.6 208.4 27.47 207.85 27.46C207.45 27.48 207.11 27.76 207 28.14C206.46 28.22 205.92 28.26 205.37 28.28C203.71 28.25 203.27 27.63 203.27 27.63C202.52 27.62 202.46 28.3 201.74 28.52C201.34 28.64 200.83 27.83 200.83 27.83C199.69 27.94 198.54 27.86 197.43 27.58C196.96 27.25 196.01 25.57 195.65 25.56C195.47 25.55 195.28 25.55 195.1 25.56C194.6 25.62 194.34 26.1 194.4 26.89C194.46 27.68 194.66 29.22 194.77 29.75C194.98 30.75 196.9 31.17 197.72 31.59L197.79 32C196.84 31.88 194.59 31.61 195.04 32.15C195.2 32.34 195.52 32.65 195.75 32.95V33.29C194.57 32.73 193.29 32.41 191.99 32.34C190.68 32.34 189.39 32.66 188.23 33.28L188.19 32.9C188.54 32.58 188.75 32.37 188.97 32.13C189.29 31.8 188.27 31.79 186.73 31.88L186.83 31.46C187.74 31.19 189.17 31.03 189.34 30.1C189.49 29.29 189.69 27.11 189.69 27.11C189.82 25.87 188.88 25.11 188.35 25.28C187.86 25.43 187.41 25.68 187.02 26.01C186.84 26.3 187.16 26.74 187.12 27.35C187.1 27.7 185.99 27.71 184.7 27.63C184.16 27.6 183.23 28.63 183 28.67C182.65 28.72 182.29 28.74 181.93 28.74C181.64 28.75 181.33 28.16 180.82 28.13C180.53 28.11 180.13 28.69 179.93 28.68C179.31 28.61 178.7 28.43 178.14 28.15C177.96 28.07 178.3 26.95 178.26 26.89C177.89 26.81 177.51 26.83 177.16 26.96C176.99 27.07 176.52 27.5 176.42 27.52C175.61 27.75 174.76 27.78 173.94 27.59C173.93 27.07 174.01 26.56 174.18 26.07C174.63 25.61 175.54 24.84 175.4 24.59C175.31 24.42 174.46 23.86 174.62 23.59C174.73 23.41 174.85 23.23 174.98 23.07C175.19 22.81 175.68 23.16 175.95 23.01C176.22 22.86 176.38 22.4 176.49 22.36C176.76 22.31 177.04 22.29 177.32 22.31C177.5 22.32 177.76 23.05 177.89 23.05C178.21 23.05 178.56 23.09 178.68 22.88C178.86 22.49 178.96 22.07 178.98 21.64C178.98 21.22 177.77 20.87 177.75 20.64C177.73 20.41 178.13 19.15 178.34 19.08C178.66 18.97 179.23 18.75 179.2 18.55C179.1 17.93 178.77 16.7 178.94 16.55C179.28 16.27 179.63 16.01 180.01 15.78C180.22 15.64 180.53 15.81 180.83 15.94C181.18 16.16 181.65 16.08 181.91 15.76C182.04 15.54 182 14.27 182.17 14.15C182.44 13.97 182.87 13.76 183.02 13.67C183.21 13.56 183.89 13.99 184.01 13.85C184.4 13.4 184.63 13.08 184.57 12.85C184.38 12.33 184.27 11.79 184.24 11.23C184.37 10.89 184.54 10.57 184.74 10.27C184.99 9.95 185.89 10.13 186.25 9.82C186.75 9.39 186.51 8.98 187.16 8.91C187.97 8.7 188.74 8.34 189.42 7.85C190.23 7.74 191.06 7.78 191.85 7.99C192.16 7.97 192.72 7.47 192.99 7.44C193.52 7.44 194.05 7.54 194.56 7.71C194.79 7.81 194.82 8.82 195.34 9C195.75 9.15 196.17 9.26 196.59 9.33C197.66 9.47 197.97 8.6 198.34 8.69C198.86 8.85 199.32 9.18 199.63 9.63C199.92 10 199.42 11.33 200.11 11.62C200.98 11.98 201.9 12.96 201.83 13.23C201.73 13.62 201.28 14.39 201.49 14.67C201.6 14.82 202.3 14.63 202.58 14.57C202.96 14.54 203.35 14.65 203.66 14.87C203.86 15.18 204.12 15.44 204.42 15.66C204.88 15.89 205.58 16.2 205.65 16.4C205.88 17.07 205.33 17.99 205.43 18.3C205.43 18.32 206.3 18.62 206.4 18.86C206.42 19.46 206.4 20.05 206.37 20.65C206.81 20.5 207.28 20.49 207.73 20.61C208.09 20.74 208.24 21.19 208.4 21.73C208.44 21.87 208.9 21.94 208.95 22.06C209.22 22.71 209.2 23.14 208.93 23.25C208.33 23.5 206.93 23.98 207.13 24.54C207.19 24.87 207.48 25.11 207.82 25.11C208.41 25.12 209 25.22 209.57 25.41C210.09 25.73 210.4 26.29 210.38 26.9H210.39Z"
                 fill="url(#paint3_radial_1_7)"
             />
@@ -2137,13 +2138,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(197.02 13.13) scale(32.92 32.92)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <linearGradient
                 id="paint1_linear_1_7"
@@ -2153,14 +2154,14 @@ const Swedbank = () => (
                 y2="43.07"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset="0.02" stop-color="#FFE6A5" />
-                <stop offset="0.11" stop-color="#FCC677" />
-                <stop offset="0.29" stop-color="#F5871E" />
-                <stop offset="0.56" stop-color="#E1690F" />
-                <stop offset="0.63" stop-color="#CC5C0E" />
-                <stop offset="0.8" stop-color="#9C3D0C" />
-                <stop offset="0.93" stop-color="#7E2A0B" />
-                <stop offset="1" stop-color="#73230A" />
+                <stop offset="0.02" stopColor="#FFE6A5" />
+                <stop offset="0.11" stopColor="#FCC677" />
+                <stop offset="0.29" stopColor="#F5871E" />
+                <stop offset="0.56" stopColor="#E1690F" />
+                <stop offset="0.63" stopColor="#CC5C0E" />
+                <stop offset="0.8" stopColor="#9C3D0C" />
+                <stop offset="0.93" stopColor="#7E2A0B" />
+                <stop offset="1" stopColor="#73230A" />
             </linearGradient>
             <linearGradient
                 id="paint2_linear_1_7"
@@ -2170,15 +2171,15 @@ const Swedbank = () => (
                 y2="6.37"
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stop-color="#FFE6A0" />
-                <stop offset="0.11" stop-color="#FCC877" />
-                <stop offset="0.33" stop-color="#F5871E" />
-                <stop offset="0.64" stop-color="#E1690F" />
-                <stop offset="0.65" stop-color="#DB650F" />
-                <stop offset="0.76" stop-color="#AE490D" />
-                <stop offset="0.86" stop-color="#8E340B" />
-                <stop offset="0.94" stop-color="#7A280A" />
-                <stop offset="0.99" stop-color="#73230A" />
+                <stop stopColor="#FFE6A0" />
+                <stop offset="0.11" stopColor="#FCC877" />
+                <stop offset="0.33" stopColor="#F5871E" />
+                <stop offset="0.64" stopColor="#E1690F" />
+                <stop offset="0.65" stopColor="#DB650F" />
+                <stop offset="0.76" stopColor="#AE490D" />
+                <stop offset="0.86" stopColor="#8E340B" />
+                <stop offset="0.94" stopColor="#7A280A" />
+                <stop offset="0.99" stopColor="#73230A" />
             </linearGradient>
             <radialGradient
                 id="paint3_radial_1_7"
@@ -2188,12 +2189,12 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(196.77 8.77) scale(36.96 36.96)"
             >
-                <stop stop-color="#FFC85A" />
-                <stop offset="0.27" stop-color="#F59619" />
-                <stop offset="0.44" stop-color="#E56B16" />
-                <stop offset="0.56" stop-color="#DC5014" />
-                <stop offset="0.79" stop-color="#BA3F18" />
-                <stop offset="0.82" stop-color="#B43C19" />
+                <stop stopColor="#FFC85A" />
+                <stop offset="0.27" stopColor="#F59619" />
+                <stop offset="0.44" stopColor="#E56B16" />
+                <stop offset="0.56" stopColor="#DC5014" />
+                <stop offset="0.79" stopColor="#BA3F18" />
+                <stop offset="0.82" stopColor="#B43C19" />
             </radialGradient>
             <radialGradient
                 id="paint4_radial_1_7"
@@ -2203,13 +2204,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.52 9.31) scale(35.7 35.7)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint5_radial_1_7"
@@ -2219,13 +2220,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.46 9.28) scale(35.81 35.81)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint6_radial_1_7"
@@ -2235,13 +2236,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.44 9.23999) scale(35.76 35.76)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint7_radial_1_7"
@@ -2251,13 +2252,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.56 9.25999) scale(35.7 35.7)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint8_radial_1_7"
@@ -2267,13 +2268,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(193.16 7.63996) scale(39.56 39.56)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint9_radial_1_7"
@@ -2283,13 +2284,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(195.24 8.85) scale(36.5197 36.52)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint10_radial_1_7"
@@ -2299,13 +2300,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(193.87 8.04998) scale(37.9601 37.96)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint11_radial_1_7"
@@ -2315,13 +2316,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.23 9.35998) scale(35.9001 35.9)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint12_radial_1_7"
@@ -2331,13 +2332,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(193.82 8.76) scale(37.3498 37.35)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint13_radial_1_7"
@@ -2347,13 +2348,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(195.04 9.04999) scale(36.4902 36.49)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint14_radial_1_7"
@@ -2363,13 +2364,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(193.92 9.30999) scale(37.5299 37.53)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint15_radial_1_7"
@@ -2379,13 +2380,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.3 9.09998) scale(36.3001 36.3)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint16_radial_1_7"
@@ -2395,13 +2396,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.39 9.14998) scale(36.79 36.79)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint17_radial_1_7"
@@ -2411,13 +2412,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.32 9.39) scale(36.3801 36.38)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint18_radial_1_7"
@@ -2427,13 +2428,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.5 9.43997) scale(37.2399 37.24)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint19_radial_1_7"
@@ -2443,13 +2444,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.32 9.48998) scale(36.2803 36.28)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint20_radial_1_7"
@@ -2459,13 +2460,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.47 9.39) scale(36.4101 36.41)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint21_radial_1_7"
@@ -2475,13 +2476,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.51 9.58999) scale(37.0996 37.1)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint22_radial_1_7"
@@ -2491,13 +2492,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.6 9.56999) scale(36.2001 36.2)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint23_radial_1_7"
@@ -2507,13 +2508,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.7 9.2) scale(36.7703 36.77)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint24_radial_1_7"
@@ -2523,13 +2524,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.31 9.26999) scale(36.14 36.14)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint25_radial_1_7"
@@ -2539,13 +2540,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.69 9.4) scale(36.5601 36.56)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint26_radial_1_7"
@@ -2555,13 +2556,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.92 8.91997) scale(36.92 36.92)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint27_radial_1_7"
@@ -2571,13 +2572,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.72 9.50999) scale(36.0499 36.05)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint28_radial_1_7"
@@ -2587,13 +2588,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(195.19 9.04999) scale(36.93 36.93)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint29_radial_1_7"
@@ -2603,13 +2604,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.76 9.09998) scale(36.2299 36.23)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint30_radial_1_7"
@@ -2619,13 +2620,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(195.34 9.17999) scale(37.5402 37.54)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint31_radial_1_7"
@@ -2635,13 +2636,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.71 9.17998) scale(36.58 36.58)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint32_radial_1_7"
@@ -2651,13 +2652,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(195.09 8.41999) scale(36.97 36.97)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint33_radial_1_7"
@@ -2667,13 +2668,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(195.03 8.87998) scale(36.4601 36.46)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint34_radial_1_7"
@@ -2683,13 +2684,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.99 8.88997) scale(36.6699 36.67)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint35_radial_1_7"
@@ -2699,13 +2700,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.96 8.60002) scale(36.8602 36.8599)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint36_radial_1_7"
@@ -2715,13 +2716,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.29 8.2) scale(37.8199 37.82)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint37_radial_1_7"
@@ -2731,13 +2732,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(195.04 8.33999) scale(37.2297 37.23)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint38_radial_1_7"
@@ -2747,13 +2748,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.17 8.17001) scale(37.63 37.63)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint39_radial_1_7"
@@ -2763,13 +2764,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.24 8.65) scale(36.9399 36.94)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint40_radial_1_7"
@@ -2779,13 +2780,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(194.1 8.60001) scale(36.73 36.73)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <radialGradient
                 id="paint41_radial_1_7"
@@ -2795,13 +2796,13 @@ const Swedbank = () => (
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(193.2 7.35003) scale(39 38.9999)"
             >
-                <stop stop-color="#FFE178" />
-                <stop offset="0.18" stop-color="#FFD05F" />
-                <stop offset="0.4" stop-color="#FFBE46" />
-                <stop offset="0.6" stop-color="#FF9B0F" />
-                <stop offset="0.8" stop-color="#F7780F" />
-                <stop offset="0.9" stop-color="#F3640F" />
-                <stop offset="1" stop-color="#E65F19" />
+                <stop stopColor="#FFE178" />
+                <stop offset="0.18" stopColor="#FFD05F" />
+                <stop offset="0.4" stopColor="#FFBE46" />
+                <stop offset="0.6" stopColor="#FF9B0F" />
+                <stop offset="0.8" stopColor="#F7780F" />
+                <stop offset="0.9" stopColor="#F3640F" />
+                <stop offset="1" stopColor="#E65F19" />
             </radialGradient>
             <clipPath id="clip0_1_7">
                 <rect width="216" height="48" fill="white" />

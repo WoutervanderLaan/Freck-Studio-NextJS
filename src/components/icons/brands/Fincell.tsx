@@ -5,8 +5,9 @@ const Fincell = () => (
         viewBox="0 0 347 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="max-h-10 w-fit"
     >
-        <g clip-path="url(#clip0_2_720)">
+        <g clipPath="url(#clip0_2_720)">
             <path
                 d="M121.177 74.3581H131.652V56.8167H151.216V47.5233H131.652V35.8214H156.805V26.1873H121.177V74.3581Z"
                 fill="black"

@@ -15,7 +15,7 @@ const Navbar = () => {
 
     return (
         <LazyMotion features={domAnimation}>
-            <nav className="px-10 w-full flex flex-col justify-between items-center pt-6 pb-16 sm:flex-row">
+            <nav className="px-10 w-full flex flex-col justify-between items-center pt-6 pb-10 sm:flex-row">
                 <AriaLink href="/" aria-label="Freck Studio Logo">
                     <Logo />
                 </AriaLink>

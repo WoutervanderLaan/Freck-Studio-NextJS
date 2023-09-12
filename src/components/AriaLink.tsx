@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { ReactNode, useRef } from 'react'
 import { AriaLinkOptions, useLink, useFocusRing } from 'react-aria'
+import classNames from 'classnames'
 
 type AriaLinkProps = {
     children: ReactNode
@@ -26,15 +27,11 @@ const AriaLink = (props: AriaLinkProps & AriaLinkOptions) => {
             href={href}
             rel={rel}
             target={target}
-            className={className}
+            className={classNames(className, 'outline-none transition', {
+                'ring-4 ring-pink-dark ring-offset-2 ring-offset-white':
+                    isFocusVisible,
+            })}
             draggable="false"
-            style={{
-                WebkitAppearance: 'none',
-                appearance: 'none',
-                outline: isFocusVisible ? '3px solid #EC8DAA' : 'none',
-                transitionDuration: '200ms',
-                outlineOffset: 2,
-            }}
         >
             {children}
         </Link>

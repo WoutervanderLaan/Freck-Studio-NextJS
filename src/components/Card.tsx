@@ -11,7 +11,7 @@ const Card = ({ children, backgroundColor, className }: CardProps) => {
     return (
         <div
             className={classNames(
-                'flex rounded-custom min-h-[300px] flex-col items-center px-[8%] py-10',
+                'flex rounded-custom min-h-[300px] flex-col items-center p-10',
                 backgroundColor,
                 className
             )}
