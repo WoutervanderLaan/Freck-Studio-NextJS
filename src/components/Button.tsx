@@ -9,7 +9,7 @@ type ButtonStyleVariants = 'default' | 'ghost' | 'switch'
 
 const variantStyles: Record<ButtonStyleVariants, string> = {
     default:
-        'w-fit px-6 py-3 rounded-xl bg-blue text-white duration-100 hover:bg-purple hover:text-blue dark:bg-green dark:hover:bg-white dark:hover:text-green',
+        'w-fit px-6 py-3 rounded-xl bg-purple text-blue duration-100 hover:bg-blue hover:text-purple dark:bg-green dark:text-white dark:hover:bg-white dark:hover:text-green disabled:opacity-50',
     ghost: 'p-2 rounded-full md:p-4 md:text-[14px]',
     switch: 'rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5 border-2',
 }

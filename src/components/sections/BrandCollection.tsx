@@ -11,16 +11,52 @@ import Time4vps from '../icons/brands/Time4vps'
 import AriaLink from '../AriaLink'
 
 const brandSVGCollection = [
-    { component: <Bite />, href: 'https://www.bite.lt/' },
-    { component: <Fincell />, href: 'https://www.fincell.eu/' },
-    { component: <BA />, href: 'https://www.ba.lt/en/' },
-    { component: <Hostens />, href: 'https://www.hostens.com/' },
-    { component: <IV />, href: 'https://www.iv.lt/en/' },
-    { component: <SevenPack />, href: 'https://7pack.lt/en/' },
-    { component: <Ignitis />, href: 'https://ignitis.lt/en/electricity-home' },
-    { component: <Swedbank />, href: 'https://www.swedbank.com/' },
-    { component: <VU />, href: 'https://www.vu.lt/en/' },
-    { component: <Time4vps />, href: 'https://www.time4vps.com/' },
+    { component: <Bite />, href: 'https://www.bite.lt/', name: 'Bite website' },
+    {
+        component: <Fincell />,
+        href: 'https://www.fincell.eu/',
+        name: 'Fincell website',
+    },
+    {
+        component: <BA />,
+        href: 'https://www.ba.lt/en/',
+        name: 'Baltic Amadeus website',
+    },
+    {
+        component: <Hostens />,
+        href: 'https://www.hostens.com/',
+        name: 'Hostens website',
+    },
+    {
+        component: <IV />,
+        href: 'https://www.iv.lt/en/',
+        name: 'Interneto Vizija website',
+    },
+    {
+        component: <SevenPack />,
+        href: 'https://7pack.lt/en/',
+        name: 'SevenPack website',
+    },
+    {
+        component: <Ignitis />,
+        href: 'https://ignitis.lt/en/electricity-home',
+        name: 'Ignitis website',
+    },
+    {
+        component: <Swedbank />,
+        href: 'https://www.swedbank.com/',
+        name: 'Swedbank website',
+    },
+    {
+        component: <VU />,
+        href: 'https://www.vu.lt/en/',
+        name: 'Vilnius Univeristy website',
+    },
+    {
+        component: <Time4vps />,
+        href: 'https://www.time4vps.com/',
+        name: 'Time4Vps Website',
+    },
 ]
 
 const BrandCollection = () => {
@@ -36,6 +72,7 @@ const BrandCollection = () => {
                         href={brand.href}
                         target="_blank"
                         rel="external"
+                        aria-label={brand.name}
                     >
                         <div className="max-h-[80px] max-w-[80px] flex justify-center grayscale transition hover:grayscale-0 hover:scale-110 md:max-w-[100px] md:max-h-10 dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale">
                             {brand.component}
