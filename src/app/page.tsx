@@ -1,7 +1,7 @@
 import Intro from '@/components/sections/Intro'
 import WhoCard from '@/components/sections/WhoCard'
 import Card from '@/components/Card'
-// import Brands from '@/components/sections/Brands'
+import BrandCollection from '@/components/sections/BrandCollection'
 import Testimonials from '@/components/sections/Testimonials'
 
 const HomePage = () => {
@@ -9,7 +9,7 @@ const HomePage = () => {
         <>
             <Intro />
 
-            {/* <Brands /> */}
+            <BrandCollection />
 
             <section id="about" className="container">
                 <WhoCard />

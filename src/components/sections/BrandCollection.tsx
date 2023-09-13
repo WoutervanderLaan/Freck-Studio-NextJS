@@ -23,15 +23,20 @@ const brandSVGCollection = [
     { component: <Time4vps />, href: 'https://www.time4vps.com/' },
 ]
 
-const Brands = () => {
+const BrandCollection = () => {
     return (
         <section className="container flex flex-col justify-center items-center py-10 gap-4 mb-[-40px] lg:mb-0 lg:py-0">
             <h3 className="text-sm md:text-base lg:text-base-variant">
                 Brands I have worked with along the way:
             </h3>
             <div className="min-h-[100px] flex flex-row items-center justify-evenly gap-7 flex-wrap lg:w-[80%] xl:w-full">
-                {brandSVGCollection.map((brand) => (
-                    <AriaLink href={brand.href} target="_blank" rel="external">
+                {brandSVGCollection.map((brand, index) => (
+                    <AriaLink
+                        key={index}
+                        href={brand.href}
+                        target="_blank"
+                        rel="external"
+                    >
                         <div className="max-h-[80px] max-w-[80px] flex justify-center grayscale transition hover:grayscale-0 hover:scale-110 md:max-w-[100px] md:max-h-10 dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale">
                             {brand.component}
                         </div>
@@ -42,4 +47,4 @@ const Brands = () => {
     )
 }
 
-export default Brands
+export default BrandCollection
