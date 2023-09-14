@@ -17,7 +17,7 @@ const Testimonials = () => {
     const [startValue, setStartValue] = useState(0)
     const [testimonialWidth, setTestimonialWidth] = useState(0)
     const [testimonialsPerPage, setTestimonialsPerPage] = useState(3)
-    const [endingIndex, setEndingIndex] = useState(testimonials.length - 1)
+    const [endingIndex, setEndingIndex] = useState(0)
 
     const calculateDimensions = (value: number) => {
         setTestimonialsPerPage(value < 768 ? 1 : value < 1024 ? 2 : 3)
