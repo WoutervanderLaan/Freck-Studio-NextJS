@@ -1,104 +1,64 @@
 'use client'
 
-import Testimonial from '../Testimonial'
-import UseViewportDetection from '@/hooks/useViewportDetection'
-import portrait from '../../../public/img/42295258_1908080579281083_4492696045435748352_o.jpg'
-import Button from '../Button'
 import { motion } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
+import Testimonial from '../Testimonial'
+import TestimonialItems from '../TestimonialItems'
+import Button from '../Button'
+import Moon from '../icons/Moon'
+import Sun from '../icons/Sun'
 
-const testimonials = [
-    {
-        backgroundColor: 'bg-black dark:bg-dark-quarternary-bg',
-        textColor: 'text-orange-500 dark:text-white',
-        name: 'Wouter van der Laan',
-        position: 'CEO Ciri empire',
-        company: 'Canvasheroes',
-        image: portrait,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
-    },
-    {
-        backgroundColor: 'bg-purple dark:bg-dark-secondary-bg',
-        textColor: 'text-emerald-400',
-        name: 'Wouter van der Laan',
-        position: 'CEO Ciri empire',
-        company: 'Canvasheroes',
-        image: portrait,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
-    },
-    {
-        name: 'Wouter van der Laan',
-        position: 'CEO Ciri empire',
-        company: 'Canvasheroes',
-        image: portrait,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
-    },
-    {
-        backgroundColor: 'bg-black dark:bg-dark-quarternary-bg',
-        textColor: 'text-orange-500 dark:text-white',
-        name: 'Wouter van der Laan',
-        position: 'CEO Ciri empire',
-        company: 'Canvasheroes',
-        image: portrait,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
-    },
-    {
-        backgroundColor: 'bg-purple dark:bg-dark-secondary-bg',
-        textColor: 'text-emerald-400',
-        name: 'Wouter van der Laan',
-        position: 'CEO Ciri empire',
-        company: 'Canvasheroes',
-        image: portrait,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
-    },
-]
+const GAP = 40
 
 const Testimonials = () => {
-    const isTablet = UseViewportDetection(768)
-    const isDesktop = UseViewportDetection(1240)
+    const testimonials = TestimonialItems()
     const containerRef = useRef<HTMLDivElement>(null)
+
     const [startValue, setStartValue] = useState(0)
-
     const [testimonialWidth, setTestimonialWidth] = useState(0)
+    const [testimonialsPerPage, setTestimonialsPerPage] = useState(3)
+    const [endingIndex, setEndingIndex] = useState(testimonials.length - 1)
 
-    const TESTIMONIALS_PER_PAGE = isTablet ? 1 : isDesktop ? 2 : 3
-    const ENDING_INDEX = isTablet
-        ? testimonials.length - 1
-        : isDesktop
-        ? testimonials.length - 2
-        : testimonials.length - 3
-    const GAP = 40
+    const calculateDimensions = (value: number) => {
+        setTestimonialsPerPage(value < 768 ? 1 : value < 1024 ? 2 : 3)
+        setEndingIndex(
+            value < 768
+                ? testimonials.length - 1
+                : value < 1024
+                ? testimonials.length - 2
+                : testimonials.length - 3
+        )
+    }
 
     useEffect(() => {
-        if (containerRef.current) {
+        if (containerRef.current)
             setTestimonialWidth(
                 containerRef.current?.getBoundingClientRect().width /
-                    TESTIMONIALS_PER_PAGE -
-                    (isTablet ? GAP / 2 : GAP)
+                    testimonialsPerPage -
+                    GAP
             )
-        }
+    }, [testimonialsPerPage])
+
+    useEffect(() => {
+        if (containerRef.current) calculateDimensions(window.innerWidth)
     }, [containerRef.current])
 
+    useEffect(() => {
+        window.addEventListener('resize', () =>
+            calculateDimensions(window.innerWidth)
+        )
+
+        return () =>
+            window.removeEventListener('resize', () =>
+                calculateDimensions(window.innerWidth)
+            )
+    }, [])
+
     return (
-        <section className="w-full relative flex flex-col items-center px-4 overflow-x-hidden">
-            {/* <div className="flex flex-row gap-2 mt-4 mb-8">
-                {testimonials.map((_, index) => (
-                    <motion.div
-                        key={index}
-                        className="w-2 h-2 rounded-full bg-purple"
-                        animate={{
-                            opacity: index === startValue ? 1 : 0.5,
-                            scale: index === startValue ? 1.3 : 1,
-                        }}
-                        transition={{
-                            duration: 0.2,
-                        }}
-                    />
-                ))}
-            </div> */}
+        <section className="w-full">
             <div
                 ref={containerRef}
-                className="container relative px-5 flex flex-row h-[560px] relative overflow-x-hidden"
+                className="container relative flex flex-col items-center justify-end h-[500px] overflow-x-hidden"
             >
                 {containerRef.current &&
                     testimonials.map((testimonial, index) => {
@@ -109,10 +69,11 @@ const Testimonials = () => {
                                     type: 'tween',
                                     duration: 0.2,
                                 }}
-                                className="absolute"
+                                className="absolute h-[500px]"
                                 style={{
                                     height: '100%',
                                     width: testimonialWidth,
+                                    left: 0 + GAP / 2,
                                 }}
                                 animate={{
                                     x:
@@ -124,32 +85,41 @@ const Testimonials = () => {
                             </motion.div>
                         )
                     })}
-            </div>
-            <div className="flex flex-row gap-4">
                 <Button
-                    className=""
+                    variant="ghost"
+                    className="absolute left-10 top-[50%] bg-white/50 -translate-y-6 hover:bg-white/75"
                     onPress={() =>
                         setStartValue((prevValue) => {
-                            return prevValue === 0
-                                ? ENDING_INDEX
-                                : prevValue - 1
+                            return prevValue === 0 ? endingIndex : prevValue - 1
                         })
                     }
-                >
-                    -
-                </Button>
+                    icon={<Moon />}
+                />
                 <Button
-                    className=""
+                    variant="ghost"
+                    className="absolute right-10 top-[50%] bg-white/50 -translate-y-6 hover:bg-white/75"
                     onPress={() =>
                         setStartValue((prevValue) => {
-                            return prevValue === ENDING_INDEX
-                                ? 0
-                                : prevValue + 1
+                            return prevValue === endingIndex ? 0 : prevValue + 1
                         })
                     }
-                >
-                    +
-                </Button>
+                    icon={<Sun />}
+                />
+                <div className="flex flex-row gap-2 mb-8">
+                    {testimonials.map((_, index) => (
+                        <motion.div
+                            key={index}
+                            className="w-2 h-2 rounded-full backdrop-invert"
+                            animate={{
+                                opacity: index === startValue ? 1 : 0.5,
+                                scale: index === startValue ? 1.3 : 1,
+                            }}
+                            transition={{
+                                duration: 0.2,
+                            }}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     )

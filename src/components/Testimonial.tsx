@@ -24,13 +24,13 @@ const Testimonial = ({
     company,
     className,
 }: Testimonial) => (
-    <Card backgroundColor={backgroundColor} className="gap-6 pb-14">
+    <Card backgroundColor={backgroundColor} className="gap-6 pb-14 h-full">
         <Image
             width={120}
             height={120}
             src={image}
             alt={`portrait of ${name} from company ${company}`}
-            className="rounded-full"
+            className="rounded-full aspect-square object-none ring-4 ring-white"
         />
         <div
             className={classNames(

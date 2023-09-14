@@ -1,7 +1,7 @@
 import BA from '../icons/brands/BA'
 import Bite from '../icons/brands/Bite'
 import Fincell from '../icons/brands/Fincell'
-import SevenPack from '../icons/brands/SevenPack'
+// import SevenPack from '../icons/brands/SevenPack'
 import Hostens from '../icons/brands/Hostens'
 import IV from '../icons/brands/IV'
 import Ignitis from '../icons/brands/Ignitis'
@@ -32,11 +32,11 @@ const brandSVGCollection = [
         href: 'https://www.iv.lt/en/',
         name: 'Interneto Vizija website',
     },
-    {
-        component: <SevenPack />,
-        href: 'https://7pack.lt/en/',
-        name: 'SevenPack website',
-    },
+    // {
+    //     component: <SevenPack />,
+    //     href: 'https://7pack.lt/en/',
+    //     name: 'SevenPack website',
+    // },
     {
         component: <Ignitis />,
         href: 'https://ignitis.lt/en/electricity-home',
@@ -74,7 +74,7 @@ const BrandCollection = () => {
                         rel="external"
                         aria-label={brand.name}
                     >
-                        <div className="max-h-[80px] max-w-[80px] flex justify-center grayscale transition hover:grayscale-0 hover:scale-110 md:max-w-[100px] md:max-h-10 dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale">
+                        <div className="max-h-[80px] max-w-[80px] flex justify-center grayscale transition hover:grayscale-0 hover:scale-[103%] md:max-w-[100px] md:max-h-10 dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale">
                             {brand.component}
                         </div>
                     </AriaLink>
