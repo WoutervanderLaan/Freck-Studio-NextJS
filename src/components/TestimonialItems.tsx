@@ -15,7 +15,7 @@ const TestimonialItems = () => [
     },
     {
         backgroundColor: 'bg-purple dark:bg-dark-secondary-bg',
-        textColor: 'text-emerald-400',
+        textColor: 'text-bright-green',
         name: 'Wouter van der Laan',
         position: 'CEO Ciri empire',
         company: 'Canvasheroes',
@@ -30,8 +30,8 @@ const TestimonialItems = () => [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
     },
     {
-        backgroundColor: 'bg-black dark:bg-dark-quarternary-bg',
-        textColor: 'text-orange-500 dark:text-white',
+        backgroundColor: 'bg-pink dark:bg-dark-tertiary-bg',
+        textColor: 'text-green',
         name: 'Wouter van der Laan',
         position: 'Artist Freelancer',
         company: 'Self-employed',

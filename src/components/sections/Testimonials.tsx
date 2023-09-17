@@ -45,6 +45,9 @@ const Testimonials = () => {
     }, [])
 
     const x = useMotionValue(0)
+    const left =
+        -testimonialWidth * (testimonials.length - testimonialsPerPage) -
+        GAP * (testimonials.length - testimonialsPerPage)
 
     return (
         <section className="w-full flex flex-col gap-4">
@@ -56,10 +59,7 @@ const Testimonials = () => {
                     }}
                     drag="x"
                     dragConstraints={{
-                        left:
-                            -testimonialWidth *
-                                (testimonials.length - testimonialsPerPage) -
-                            GAP * (testimonials.length - testimonialsPerPage),
+                        left,
                         right: 0,
                     }}
                 >
@@ -83,11 +83,13 @@ const Testimonials = () => {
                 {testimonials.map((_, index) => (
                     <motion.div
                         key={index}
-                        className="w-2 h-2 rounded-full backdrop-invert"
-                        animate={{
-                            opacity: 1,
-                            scale: 1,
-                        }}
+                        className="w-2 h-2 rounded-full backdrop-invert hover:scale-110 opacity-50 hover:opacity-100"
+                        animate={
+                            {
+                                // opacity: 1,
+                                // scale: 1,
+                            }
+                        }
                         transition={{
                             duration: 0.2,
                         }}

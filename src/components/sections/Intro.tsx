@@ -17,7 +17,7 @@ const Intro = () => {
                     or non-digital.
                 </h2>
                 <Button
-                    onPress={() => alert('Contact')}
+                    href="#contact"
                     className="self-center lg:self-start"
                     ariaLabel="Contact Me"
                 >

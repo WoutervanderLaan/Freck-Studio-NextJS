@@ -26,7 +26,10 @@ const Navbar = () => {
                     <MagneticButton href="#why" ariaLabel="Section Why Freck">
                         WHY FRECK?
                     </MagneticButton>
-                    <MagneticButton href="/" ariaLabel="Section Projects">
+                    <MagneticButton
+                        href="#projects"
+                        ariaLabel="Section Projects"
+                    >
                         PROJECTS
                     </MagneticButton>
                 </div>

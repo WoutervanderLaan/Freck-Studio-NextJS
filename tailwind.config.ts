@@ -14,10 +14,11 @@ module.exports = {
             colors: {
                 ...colors,
                 blue: '#47A8E8',
-                purple: '#4900A2',
+                purple: '#4900A5',
                 pink: '#FFE5EB',
                 'pink-dark': '#EC8DAA',
                 green: '#247201',
+                'bright-green': '#35FB6C',
                 gray: '#E0E0E0',
                 'dark-bg': '#0E100D',
             },

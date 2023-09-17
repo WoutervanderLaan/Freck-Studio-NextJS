@@ -34,6 +34,12 @@ const HomePage = () => {
             </section>
 
             <Testimonials />
+
+            <section id="projects" className="container">
+                <Card backgroundColor="bg-gray" className="w-full h-[800px]">
+                    {' '}
+                </Card>
+            </section>
         </>
     )
 }

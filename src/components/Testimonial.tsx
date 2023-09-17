@@ -15,7 +15,7 @@ type Testimonial = {
 }
 
 const Testimonial = ({
-    backgroundColor = 'bg-blue',
+    backgroundColor = 'bg-[#054BFA]',
     textColor = 'text-white',
     image,
     text,
