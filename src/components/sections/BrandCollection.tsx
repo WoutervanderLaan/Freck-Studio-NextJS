@@ -1,22 +1,22 @@
 import BA from '../icons/brands/BA'
 import Bite from '../icons/brands/Bite'
-import Fincell from '../icons/brands/Fincell'
+// import Fincell from '../icons/brands/Fincell'
 // import SevenPack from '../icons/brands/SevenPack'
 import Hostens from '../icons/brands/Hostens'
 import IV from '../icons/brands/IV'
 import Ignitis from '../icons/brands/Ignitis'
 import Swedbank from '../icons/brands/Swedbank'
 import VU from '../icons/brands/VU'
-import Time4vps from '../icons/brands/Time4vps'
+// import Time4vps from '../icons/brands/Time4vps'
 import AriaLink from '../AriaLink'
 
 const brandSVGCollection = [
     { component: <Bite />, href: 'https://www.bite.lt/', name: 'Bite website' },
-    {
-        component: <Fincell />,
-        href: 'https://www.fincell.eu/',
-        name: 'Fincell website',
-    },
+    // {
+    //     component: <Fincell />,
+    //     href: 'https://www.fincell.eu/',
+    //     name: 'Fincell website',
+    // },
     {
         component: <BA />,
         href: 'https://www.ba.lt/en/',
@@ -52,20 +52,20 @@ const brandSVGCollection = [
         href: 'https://www.vu.lt/en/',
         name: 'Vilnius Univeristy website',
     },
-    {
-        component: <Time4vps />,
-        href: 'https://www.time4vps.com/',
-        name: 'Time4Vps Website',
-    },
+    // {
+    //     component: <Time4vps />,
+    //     href: 'https://www.time4vps.com/',
+    //     name: 'Time4Vps Website',
+    // },
 ]
 
 const BrandCollection = () => {
     return (
-        <section className="container flex flex-col justify-center items-center py-10 gap-4 mb-[-40px] lg:mb-0 lg:py-0">
+        <section className="container flex flex-col justify-center items-center py-10 mb-[-40px] lg:mb-6 lg:py-0">
             <h3 className="text-sm md:text-base lg:text-base-variant">
                 Brands I have worked with along the way:
             </h3>
-            <div className="min-h-[100px] flex flex-row items-center justify-evenly gap-7 flex-wrap lg:w-[80%] xl:w-full">
+            <div className="min-h-[100px] flex flex-row items-center px-16 justify-evenly flex-wrap lg:w-[80%] xl:w-full">
                 {brandSVGCollection.map((brand, index) => (
                     <AriaLink
                         key={index}

@@ -14,6 +14,7 @@ module.exports = {
             colors: {
                 ...colors,
                 blue: '#47A8E8',
+                'blue-intense': '#054BFA',
                 purple: '#4900A5',
                 pink: '#FFE5EB',
                 'pink-dark': '#EC8DAA',
@@ -63,7 +64,7 @@ module.exports = {
 
         container: {
             center: true,
-            padding: '1.25rem',
+            padding: '2.25rem',
         },
     },
     plugins: [],

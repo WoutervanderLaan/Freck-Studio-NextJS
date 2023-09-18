@@ -1,6 +1,6 @@
 'use client'
 
-import { animate, motion, useMotionValue } from 'framer-motion'
+import { motion, useMotionValue } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import Testimonial from '../Testimonial'
 import TestimonialItems from '../TestimonialItems'
@@ -79,7 +79,7 @@ const Testimonials = () => {
                         })}
                 </motion.div>
             </div>
-            <div className="flex flex-row gap-2 mb-8 self-center">
+            {/* <div className="flex flex-row gap-2 mb-8 self-center">
                 {testimonials.map((_, index) => (
                     <motion.div
                         key={index}
@@ -98,7 +98,7 @@ const Testimonials = () => {
                         }
                     />
                 ))}
-            </div>
+            </div> */}
         </section>
     )
 }

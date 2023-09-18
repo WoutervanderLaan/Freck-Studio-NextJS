@@ -20,11 +20,11 @@ const Navbar = () => {
                     <Logo />
                 </AriaLink>
                 <div className="flex flex-row items-center gap-4 md:gap-8 text-sm font-medium pointer-cursor">
-                    <MagneticButton href="#about" ariaLabel="Section About">
-                        ABOUT
-                    </MagneticButton>
                     <MagneticButton href="#why" ariaLabel="Section Why Freck">
                         WHY FRECK?
+                    </MagneticButton>
+                    <MagneticButton href="#about" ariaLabel="Section About">
+                        ABOUT
                     </MagneticButton>
                     <MagneticButton
                         href="#projects"
