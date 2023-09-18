@@ -10,7 +10,7 @@ const ContactForm = ({
 }) => (
     <FocusScope contain>
         <div className="w-screen h-screen fixed top-0 flex flex-col justify-center items-center bg-black/50 backdrop-blur-sm z-30">
-            <div className="relative bg-purple text-blue flex flex-col items-center justify-center min-w-fit w-[40%] h-[160px] md:min-h-[200px] px-10 pb-8 md:pb-10 rounded-[20px]">
+            <div className="relative bg-purple text-blue flex flex-col items-center justify-center min-w-fit w-[40%] max-w-[600px] h-[160px] md:min-h-[200px] px-10 pb-8 md:pb-10 rounded-[20px]">
                 <p>Contact me</p>
                 <AriaLink
                     href="mailto:saruunep@gmail.com"
