@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useMotionValue } from 'framer-motion'
+import { m, LazyMotion, domMax, useMotionValue, animate } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import Testimonial from '../Testimonial'
 import TestimonialItems from '../TestimonialItems'
@@ -11,95 +11,93 @@ const Testimonials = () => {
     const testimonials = TestimonialItems()
     const containerRef = useRef<HTMLDivElement>(null)
 
+    const [containerWidth, setContainerWidth] = useState(0)
     const [testimonialWidth, setTestimonialWidth] = useState(0)
-    const [testimonialsPerPage, setTestimonialsPerPage] = useState(3)
-    const [endIndex, setEndIndex] = useState(0)
+    const [testimonialsPerPage, setTestimonialsPerPage] = useState(0)
+    const [snap, setSnap] = useState(false)
 
-    const calculateDimensions = (value: number) => {
-        setTestimonialsPerPage(value < 768 ? 1 : value < 1024 ? 2 : 3)
-        setEndIndex(2)
+    const calculateDimensions = (windowWidth: number) => {
+        if (containerRef.current) {
+            setTestimonialsPerPage(
+                windowWidth < 768 ? 1 : windowWidth < 1280 ? 2 : 3
+            )
+
+            setContainerWidth(
+                containerRef.current?.getBoundingClientRect().width -
+                    (windowWidth < 768 ? 0 : 40)
+            )
+        }
     }
 
     useEffect(() => {
-        if (containerRef.current)
-            setTestimonialWidth(
-                containerRef.current?.getBoundingClientRect().width /
-                    testimonialsPerPage -
-                    GAP
-            )
-    }, [testimonialsPerPage])
+        setTestimonialWidth(containerWidth / testimonialsPerPage - GAP)
+    }, [containerWidth, testimonialsPerPage])
 
     useEffect(() => {
-        if (containerRef.current) calculateDimensions(window.innerWidth)
+        calculateDimensions(window.innerWidth)
     }, [containerRef.current])
 
     useEffect(() => {
-        window.addEventListener('resize', () =>
+        window.addEventListener('resize', () => {
+            setSnap(true)
+            animate(x, 0)
             calculateDimensions(window.innerWidth)
-        )
+        })
 
         return () =>
-            window.removeEventListener('resize', () =>
+            window.removeEventListener('resize', () => {
+                setSnap(true)
+                animate(x, 0)
                 calculateDimensions(window.innerWidth)
-            )
+            })
     }, [])
 
     const x = useMotionValue(0)
+
     const left =
         -testimonialWidth * (testimonials.length - testimonialsPerPage) -
-        GAP * (testimonials.length - testimonialsPerPage)
+        GAP * (testimonials.length - testimonialsPerPage) -
+        1
 
     return (
-        <section className="w-full flex flex-col gap-4">
-            <div ref={containerRef} className="container h-fit overflow-hidden">
-                <motion.div
-                    className="w-max h-[500px] relative flex flex-row gap-10"
-                    style={{
-                        x,
-                    }}
-                    drag="x"
-                    dragConstraints={{
-                        left,
-                        right: 0,
-                    }}
+        <LazyMotion features={domMax}>
+            <section className="w-full flex flex-col gap-4">
+                <div
+                    ref={containerRef}
+                    className="container h-fit overflow-hidden"
                 >
-                    {containerRef.current &&
-                        testimonials.map((testimonial, index) => {
-                            return (
-                                <div
-                                    key={index}
-                                    className="h-full flex-1"
-                                    style={{
-                                        width: testimonialWidth,
-                                    }}
-                                >
-                                    <Testimonial key={index} {...testimonial} />
-                                </div>
-                            )
-                        })}
-                </motion.div>
-            </div>
-            {/* <div className="flex flex-row gap-2 mb-8 self-center">
-                {testimonials.map((_, index) => (
-                    <motion.div
-                        key={index}
-                        className="w-2 h-2 rounded-full backdrop-invert hover:scale-110 opacity-50 hover:opacity-100"
-                        animate={
-                            {
-                                // opacity: 1,
-                                // scale: 1,
-                            }
-                        }
-                        transition={{
-                            duration: 0.2,
+                    <m.div
+                        className="w-max h-fit relative flex flex-row gap-10"
+                        drag={snap ? false : 'x'}
+                        dragConstraints={{
+                            left,
+                            right: 0,
                         }}
-                        onClick={() =>
-                            animate(x, index * -testimonialWidth - index * GAP)
-                        }
-                    />
-                ))}
-            </div> */}
-        </section>
+                        style={{
+                            x,
+                        }}
+                    >
+                        {containerRef.current &&
+                            testimonials.map((testimonial, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        className="h-fit flex-1"
+                                        style={{
+                                            width: testimonialWidth || 100,
+                                        }}
+                                    >
+                                        <Testimonial
+                                            key={index}
+                                            {...testimonial}
+                                        />
+                                    </div>
+                                )
+                            })}
+                    </m.div>
+                </div>
+            </section>
+        </LazyMotion>
     )
 }
 

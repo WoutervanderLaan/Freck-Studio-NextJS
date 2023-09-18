@@ -1,6 +1,6 @@
 'use client'
 
-import { LazyMotion, domAnimation } from 'framer-motion'
+import { AnimatePresence, LazyMotion, domAnimation, m } from 'framer-motion'
 import { useState } from 'react'
 import AriaLink from './AriaLink'
 import Image from 'next/image'
@@ -71,23 +71,26 @@ const Footer = () => {
                     </AriaLink>
                     <div className="flex flex-row items-center gap-4 md:gap-8 text-sm font-medium pointer-cursor">
                         <Button
+                            variant="ghost"
                             href="#why"
                             ariaLabel="Section Why Freck"
-                            variant="ghost"
+                            className="hover:text-blue transition active:scale-90"
                         >
                             WHY FRECK?
                         </Button>
                         <Button
+                            variant="ghost"
                             href="#about"
                             ariaLabel="Section About"
-                            variant="ghost"
+                            className="hover:text-blue transition active:scale-90"
                         >
                             ABOUT
                         </Button>
                         <Button
+                            variant="ghost"
                             href="#projects"
                             ariaLabel="Section Projects"
-                            variant="ghost"
+                            className="hover:text-blue transition active:scale-90"
                         >
                             PROJECTS
                         </Button>
@@ -98,9 +101,21 @@ const Footer = () => {
                         </Button>
                     </div>
                 </div>
-                {isContactFormOpen && (
-                    <ContactForm setIsContactFormOpen={setIsContactFormOpen} />
-                )}
+                <AnimatePresence>
+                    {isContactFormOpen && (
+                        <m.div
+                            className="w-screen h-screen fixed top-0 flex flex-col justify-center items-center bg-black/50 z-30"
+                            key="contactForm"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                        >
+                            <ContactForm
+                                setIsContactFormOpen={setIsContactFormOpen}
+                            />
+                        </m.div>
+                    )}
+                </AnimatePresence>
             </footer>
         </LazyMotion>
     )

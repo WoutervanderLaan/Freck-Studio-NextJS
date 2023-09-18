@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { useEffect, useRef, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { m, LazyMotion, domAnimation, AnimatePresence } from 'framer-motion'
 
 type TextBalloonsProps = {
     debug?: boolean
@@ -8,7 +8,7 @@ type TextBalloonsProps = {
 
 const TextBalloons = ({ debug = false }: TextBalloonsProps) => {
     return (
-        <>
+        <LazyMotion features={domAnimation}>
             <TextBalloon
                 left={24}
                 bottom={24}
@@ -60,7 +60,7 @@ const TextBalloons = ({ debug = false }: TextBalloonsProps) => {
                 body="Siri doesn't always listen, but I couldn't do my work
                 without my favourite music."
             />
-        </>
+        </LazyMotion>
     )
 }
 
@@ -122,7 +122,7 @@ const TextBalloon = ({
             />
             <AnimatePresence>
                 {showBalloon && (
-                    <motion.div
+                    <m.div
                         key={'balloon'}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -148,7 +148,7 @@ const TextBalloon = ({
                                 left: '50%',
                             }}
                         />
-                    </motion.div>
+                    </m.div>
                 )}
             </AnimatePresence>
         </>

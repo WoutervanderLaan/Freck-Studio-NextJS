@@ -24,7 +24,7 @@ const Testimonial = ({
     company,
     className,
 }: Testimonial) => (
-    <Card backgroundColor={backgroundColor} className="gap-6 py-auto h-full">
+    <Card backgroundColor={backgroundColor} className="gap-6 pb-20 h-fit">
         <Image
             width={120}
             height={120}

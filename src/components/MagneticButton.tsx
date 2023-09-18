@@ -71,19 +71,19 @@ const MagneticButton = (props: MagneticButtonProps) => {
                     1) *
                 magnetStrength
 
-            // setCoordinates({ x, y })
+            setCoordinates({ x, y })
         }
     }
 
     return (
         <div
             ref={magneticAreaRef}
-            className="w-fit h-24 min-w-[96px] flex justify-center items-center rounded-full hover:text-blue"
+            className="w-fit h-24 min-w-[96px] flex justify-center items-center rounded-full"
         >
             <m.div
                 className="rounded-full"
                 whileTap={{ scale: 0.9 }}
-                // whileHover={{ scale: 1.2, color: '#47A8E8' }}
+                whileHover={{ scale: 1.2 }}
                 style={{ willChange }}
                 animate={{
                     x: coordinates.x,

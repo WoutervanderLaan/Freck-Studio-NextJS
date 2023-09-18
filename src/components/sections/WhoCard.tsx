@@ -23,6 +23,7 @@ const WhoCard = () => (
             <TextBalloons />
             <Image
                 loading="lazy"
+                quality={100}
                 draggable={false}
                 src={deskImage}
                 alt="Image of work table containing several personal and work related items"

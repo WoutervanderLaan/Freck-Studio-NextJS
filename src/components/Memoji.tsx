@@ -3,7 +3,13 @@
 import Image, { StaticImageData } from 'next/image'
 import { useRef, useEffect, useContext } from 'react'
 import { ThemeContext } from '@/contexts/ThemeContext'
-import { motion, useMotionValue, AnimatePresence } from 'framer-motion'
+import {
+    LazyMotion,
+    domAnimation,
+    m,
+    useMotionValue,
+    AnimatePresence,
+} from 'framer-motion'
 import memoji from '../../public/img/Memoji_small.png'
 import memojiDark from '../../public/img/MemojiDark_small.png'
 import memojiHand from '../../public/img/MemojiHand_small.png'
@@ -14,38 +20,40 @@ const Memoji = () => {
     const themeContext = useContext(ThemeContext)
 
     return (
-        <AnimatePresence mode="wait">
-            {!themeContext?.isDarkMode && (
-                <motion.div
-                    key="memojiLight"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                        duration: 0.2,
-                    }}
-                >
-                    <MemojiPart variant={memoji} />
-                    <MemojiPart variant={memojiHand} dataValue={13} />
-                    <MemojiPart variant={memojiShadow} />
-                </motion.div>
-            )}
-            {themeContext?.isDarkMode && (
-                <motion.div
-                    key="memojiDark"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{
-                        duration: 0.2,
-                    }}
-                >
-                    <MemojiPart variant={memojiDark} />
-                    <MemojiPart variant={memojiHandDark} dataValue={13} />
-                    <MemojiPart variant={memojiShadow} />
-                </motion.div>
-            )}
-        </AnimatePresence>
+        <LazyMotion features={domAnimation}>
+            <AnimatePresence mode="wait">
+                {!themeContext?.isDarkMode && (
+                    <m.div
+                        key="memojiLight"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 0.2,
+                        }}
+                    >
+                        <MemojiPart variant={memoji} />
+                        <MemojiPart variant={memojiHand} dataValue={13} />
+                        <MemojiPart variant={memojiShadow} />
+                    </m.div>
+                )}
+                {themeContext?.isDarkMode && (
+                    <m.div
+                        key="memojiDark"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 0.2,
+                        }}
+                    >
+                        <MemojiPart variant={memojiDark} />
+                        <MemojiPart variant={memojiHandDark} dataValue={13} />
+                        <MemojiPart variant={memojiShadow} />
+                    </m.div>
+                )}
+            </AnimatePresence>
+        </LazyMotion>
     )
 }
 
@@ -79,7 +87,7 @@ const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
     }
 
     return (
-        <motion.div
+        <m.div
             layout
             style={{ x, y }}
             animate={{
@@ -101,7 +109,7 @@ const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
                 priority
                 draggable="false"
             />
-        </motion.div>
+        </m.div>
     )
 }
 

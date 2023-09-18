@@ -4,7 +4,6 @@ import Button from './Button'
 import AriaLink from './AriaLink'
 import { useContext } from 'react'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
-import MagneticButton from './MagneticButton'
 import Logo from '@/components/Logo'
 import { ThemeContext } from '@/contexts/ThemeContext'
 import Moon from './icons/Moon'
@@ -20,18 +19,30 @@ const Navbar = () => {
                     <Logo />
                 </AriaLink>
                 <div className="flex flex-row items-center gap-4 md:gap-8 text-sm font-medium pointer-cursor">
-                    <MagneticButton href="#why" ariaLabel="Section Why Freck">
+                    <Button
+                        variant="ghost"
+                        href="#why"
+                        ariaLabel="Section Why Freck"
+                        className="hover:text-blue transition active:scale-90"
+                    >
                         WHY FRECK?
-                    </MagneticButton>
-                    <MagneticButton href="#about" ariaLabel="Section About">
+                    </Button>
+                    <Button
+                        variant="ghost"
+                        href="#about"
+                        ariaLabel="Section About"
+                        className="hover:text-blue transition active:scale-90"
+                    >
                         ABOUT
-                    </MagneticButton>
-                    <MagneticButton
+                    </Button>
+                    <Button
+                        variant="ghost"
                         href="#projects"
                         ariaLabel="Section Projects"
+                        className="hover:text-blue transition active:scale-90"
                     >
                         PROJECTS
-                    </MagneticButton>
+                    </Button>
                 </div>
                 <div className="hidden lg:block lg:w-[110px]" />
                 <div className="lg:fixed right-10 z-30">
