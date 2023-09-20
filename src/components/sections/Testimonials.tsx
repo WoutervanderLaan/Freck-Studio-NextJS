@@ -1,6 +1,6 @@
 'use client'
 
-import { m, LazyMotion, domMax, useMotionValue, animate } from 'framer-motion'
+import { motion, useMotionValue, animate } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import Testimonial from '../Testimonial'
 import TestimonialItems from '../TestimonialItems'
@@ -56,48 +56,39 @@ const Testimonials = () => {
 
     const left =
         -testimonialWidth * (testimonials.length - testimonialsPerPage) -
-        GAP * (testimonials.length - testimonialsPerPage) -
-        1
+        GAP * (testimonials.length - testimonialsPerPage)
 
     return (
-        <LazyMotion features={domMax}>
-            <section className="w-full flex flex-col gap-4">
-                <div
-                    ref={containerRef}
-                    className="container h-fit overflow-hidden"
+        <section className="w-full flex flex-col gap-4">
+            <div ref={containerRef} className="container h-fit overflow-hidden">
+                <motion.div
+                    className="w-max h-fit relative flex flex-row gap-10"
+                    drag={snap ? false : 'x'}
+                    dragConstraints={{
+                        left,
+                        right: 0,
+                    }}
+                    style={{
+                        x,
+                    }}
                 >
-                    <m.div
-                        className="w-max h-fit relative flex flex-row gap-10"
-                        drag={snap ? false : 'x'}
-                        dragConstraints={{
-                            left,
-                            right: 0,
-                        }}
-                        style={{
-                            x,
-                        }}
-                    >
-                        {containerRef.current &&
-                            testimonials.map((testimonial, index) => {
-                                return (
-                                    <div
-                                        key={index}
-                                        className="h-fit flex-1"
-                                        style={{
-                                            width: testimonialWidth || 100,
-                                        }}
-                                    >
-                                        <Testimonial
-                                            key={index}
-                                            {...testimonial}
-                                        />
-                                    </div>
-                                )
-                            })}
-                    </m.div>
-                </div>
-            </section>
-        </LazyMotion>
+                    {containerRef.current &&
+                        testimonials.map((testimonial, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className="h-fit flex-1"
+                                    style={{
+                                        width: testimonialWidth || 100,
+                                    }}
+                                >
+                                    <Testimonial key={index} {...testimonial} />
+                                </div>
+                            )
+                        })}
+                </motion.div>
+            </div>
+        </section>
     )
 }
 

@@ -58,7 +58,7 @@ const Button = (props: ButtonProps | LinkProps) => {
                 <AriaButton
                     {...rest}
                     aria-label={ariaLabel}
-                    className={classNames(className, variantStyles[variant])}
+                    className={classNames(variantStyles[variant], className)}
                     onPress={props.onPress}
                     isDisabled={isDisabled}
                 >
@@ -70,7 +70,7 @@ const Button = (props: ButtonProps | LinkProps) => {
                 <AriaLink
                     {...rest}
                     aria-label={ariaLabel}
-                    className={classNames(className, variantStyles[variant])}
+                    className={classNames(variantStyles[variant], className)}
                     href={props.href}
                     isDisabled={isDisabled}
                 >

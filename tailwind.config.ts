@@ -26,6 +26,9 @@ module.exports = {
             borderRadius: {
                 custom: '40px',
             },
+            cursor: {
+                hand: 'url(/img/cursor-hand_small.png), pointer',
+            },
         },
 
         backgroundImage: {

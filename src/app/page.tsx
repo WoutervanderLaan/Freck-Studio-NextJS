@@ -2,11 +2,12 @@ import Intro from '@/components/sections/Intro'
 import WhoCard from '@/components/sections/WhoCard'
 import Card from '@/components/Card'
 import BrandCollection from '@/components/sections/BrandCollection'
-import Testimonials from '@/components/sections/Testimonials'
+// import Testimonials from '@/components/sections/Testimonials'
+import ClientMotionConfig from '@/components/ClientMotionConfig'
 
 const HomePage = () => {
     return (
-        <>
+        <ClientMotionConfig>
             <Intro />
 
             <BrandCollection />
@@ -33,7 +34,7 @@ const HomePage = () => {
                 <WhoCard />
             </section>
 
-            <Testimonials />
+            {/* <Testimonials /> */}
 
             <section id="projects" className="container">
                 <Card
@@ -43,7 +44,7 @@ const HomePage = () => {
                     {' '}
                 </Card>
             </section>
-        </>
+        </ClientMotionConfig>
     )
 }
 

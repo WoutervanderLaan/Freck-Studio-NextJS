@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, useRef, useState } from 'react'
-import { m, useWillChange } from 'framer-motion'
+import { motion, useWillChange } from 'framer-motion'
 import UseViewportDetection from '@/hooks/useViewportDetection'
 import Button from './Button'
 
@@ -80,7 +80,7 @@ const MagneticButton = (props: MagneticButtonProps) => {
             ref={magneticAreaRef}
             className="w-fit h-24 min-w-[96px] flex justify-center items-center rounded-full"
         >
-            <m.div
+            <motion.div
                 className="rounded-full"
                 whileTap={{ scale: 0.9 }}
                 whileHover={{ scale: 1.2 }}
@@ -110,7 +110,7 @@ const MagneticButton = (props: MagneticButtonProps) => {
                         {children}
                     </Button>
                 )}
-            </m.div>
+            </motion.div>
         </div>
     )
 }

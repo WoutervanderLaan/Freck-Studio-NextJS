@@ -1,4 +1,4 @@
-import { m } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const crossVariants = {
     closed: {
@@ -16,32 +16,19 @@ const Cross = () => (
         xmlns="http://www.w3.org/2000/svg"
         className="stroke-blue"
     >
-        <m.path
+        <path
             d="M220.254 119.946L125.746 214.424"
             stroke-width="25.5"
             stroke-miterlimit="10"
             stroke-linecap="square"
-            variants={crossVariants}
-            initial={'closed'}
-            animate={'open'}
-            transition={{
-                duration: 0.2,
-            }}
         />
-        <m.path
+        <path
             d="M125.746 119.946L220.254 214.424"
             stroke-width="25.5"
             stroke-miterlimit="10"
             stroke-linecap="square"
-            variants={crossVariants}
-            initial={'closed'}
-            animate={'open'}
-            transition={{
-                duration: 0.2,
-                delay: 0.1,
-            }}
         />
-        <m.path
+        <motion.path
             d="M333.5 167.5C333.5 252.727 262.025 322.5 173 322.5C83.9745 322.5 12.5 252.727 12.5 167.5C12.5 82.2735 83.9745 12.5 173 12.5C262.025 12.5 333.5 82.2735 333.5 167.5Z"
             stroke-width="25"
             fill="none"
@@ -50,7 +37,7 @@ const Cross = () => (
             animate={'open'}
             transition={{
                 duration: 0.2,
-                delay: 0.5,
+                delay: 0.2,
             }}
         />
     </svg>
