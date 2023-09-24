@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useMotionValue, animate } from 'framer-motion'
+import { motion, useMotionValue, animate, wrap } from 'framer-motion'
 import { useState, useRef, useEffect } from 'react'
 import Testimonial from '../Testimonial'
 import TestimonialItems from '../TestimonialItems'

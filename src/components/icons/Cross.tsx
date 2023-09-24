@@ -1,13 +1,3 @@
-import { motion } from 'framer-motion'
-
-const crossVariants = {
-    closed: {
-        pathLength: 0,
-    },
-    open: {
-        pathLength: 1,
-    },
-}
 const Cross = () => (
     <svg
         width="40"
@@ -18,27 +8,15 @@ const Cross = () => (
     >
         <path
             d="M220.254 119.946L125.746 214.424"
-            stroke-width="25.5"
-            stroke-miterlimit="10"
-            stroke-linecap="square"
+            strokeWidth="25.5"
+            strokeMiterlimit="10"
+            strokeLinecap="square"
         />
         <path
             d="M125.746 119.946L220.254 214.424"
-            stroke-width="25.5"
-            stroke-miterlimit="10"
-            stroke-linecap="square"
-        />
-        <motion.path
-            d="M333.5 167.5C333.5 252.727 262.025 322.5 173 322.5C83.9745 322.5 12.5 252.727 12.5 167.5C12.5 82.2735 83.9745 12.5 173 12.5C262.025 12.5 333.5 82.2735 333.5 167.5Z"
-            stroke-width="25"
-            fill="none"
-            variants={crossVariants}
-            initial={'closed'}
-            animate={'open'}
-            transition={{
-                duration: 0.2,
-                delay: 0.2,
-            }}
+            strokeWidth="25.5"
+            strokeMiterlimit="10"
+            strokeLinecap="square"
         />
     </svg>
 )

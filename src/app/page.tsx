@@ -2,6 +2,7 @@ import Intro from '@/components/sections/Intro'
 import WhoCard from '@/components/sections/WhoCard'
 import Card from '@/components/Card'
 import BrandCollection from '@/components/sections/BrandCollection'
+import Projects from '@/components/sections/Projects'
 // import Testimonials from '@/components/sections/Testimonials'
 import ClientMotionConfig from '@/components/ClientMotionConfig'
 
@@ -34,16 +35,9 @@ const HomePage = () => {
                 <WhoCard />
             </section>
 
-            {/* <Testimonials /> */}
+            <Projects />
 
-            <section id="projects" className="container">
-                <Card
-                    backgroundColor="bg-gray"
-                    className="w-full h-screen lg:h-[800px]"
-                >
-                    {' '}
-                </Card>
-            </section>
+            {/* <Testimonials /> */}
         </ClientMotionConfig>
     )
 }

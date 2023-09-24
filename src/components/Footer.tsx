@@ -78,7 +78,7 @@ const Footer = () => {
                         ariaLabel="Section Why Freck"
                         className="hover:text-blue transition active:scale-90"
                     >
-                        WHY FRECK?
+                        Why Freck
                     </Button>
                     <Button
                         variant="ghost"
@@ -86,7 +86,7 @@ const Footer = () => {
                         ariaLabel="Section About"
                         className="hover:text-blue transition active:scale-90"
                     >
-                        ABOUT
+                        About
                     </Button>
                     <Button
                         variant="ghost"
@@ -94,7 +94,7 @@ const Footer = () => {
                         ariaLabel="Section Projects"
                         className="hover:text-blue transition active:scale-90"
                     >
-                        PROJECTS
+                        Projects
                     </Button>
                 </div>
                 <div className="flex flex-row justify-end">
@@ -106,7 +106,7 @@ const Footer = () => {
             <AnimatePresence>
                 {isEmailOverlayOpen && (
                     <motion.div
-                        className="w-screen h-screen fixed top-0 flex flex-col justify-center items-center bg-black/50 z-30"
+                        className="w-screen h-screen fixed top-0 flex flex-col justify-center items-center bg-black/50 z-20"
                         key="contactForm"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

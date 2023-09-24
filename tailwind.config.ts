@@ -22,6 +22,7 @@ module.exports = {
                 'bright-green': '#35FB6C',
                 gray: '#E0E0E0',
                 'dark-bg': '#0E100D',
+                orange: '#FF6B00',
             },
             borderRadius: {
                 custom: '40px',

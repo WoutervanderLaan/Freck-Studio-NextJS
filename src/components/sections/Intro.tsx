@@ -5,7 +5,7 @@ import Button from '../Button'
 
 const Intro = () => {
     return (
-        <section className="container flex flex-col-reverse justify-between items-center lg:items-start lg:flex-row lg:max-h-[600px] lg:overflow-hidden lg:mt-6">
+        <section className="container flex flex-col-reverse justify-between items-center mt-[140px] md:mt-0 lg:items-start lg:flex-row lg:max-h-[600px] lg:overflow-hidden lg:mt-6">
             <div className="flex-1 flex flex-col mt-[-60px] gap-8 lg:mt-0 lg:max-w-[550px]">
                 <h1 className="font-serif text-2xl lg:text-3xl xl:text-4xl font-bold text-center lg:text-start">
                     We create meaningful experiences
