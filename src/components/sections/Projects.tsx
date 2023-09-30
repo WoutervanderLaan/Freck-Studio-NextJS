@@ -11,13 +11,15 @@ export type HoverValues = {
     SW: boolean
 }
 
+export const defaultState = {
+    BA: true,
+    IV: true,
+    HO: true,
+    SW: true,
+}
+
 const Projects = () => {
-    const [isHovered, setIsHovered] = useState<HoverValues>({
-        BA: false,
-        IV: false,
-        HO: false,
-        SW: false,
-    })
+    const [isHovered, setIsHovered] = useState<HoverValues>(defaultState)
 
     return (
         <section id="projects" className="container">
