@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
-import monkeyImg from '../../../public/img/monkey.png'
+import { motion } from 'framer-motion'
+import monkeyImg from '../../../public/img/monkey7.png'
 import Card from '../Card'
 import Tag from '../Tag'
 
@@ -18,7 +21,10 @@ const designServices = [
 ]
 
 const WhyFreck = () => (
-    <section
+    <motion.section
+        initial={{ y: 200, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
         id="why"
         className="container flex flex-col gap-10 scroll-my-20 lg:flex-row"
     >
@@ -26,10 +32,10 @@ const WhyFreck = () => (
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"
             className="w-full h-fit lg:h-[800px] text-green flex flex-col lg:py-16"
         >
-            <div className="bg-pink-dark w-[60%] aspect-square rounded-full">
+            <div className="bg-pink-dark w-[50%] aspect-square rounded-full overflow-hidden">
                 <Image
                     src={monkeyImg}
-                    className="scale-[1.3]"
+                    className="scale-[1.3] translate-y-5"
                     alt="image of monkey holding a heart"
                 />
             </div>
@@ -58,7 +64,7 @@ const WhyFreck = () => (
                 ))}
             </div>
         </Card>
-    </section>
+    </motion.section>
 )
 
 export default WhyFreck

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Card from '../Card'
 import ProjectItem from '../ProjectItem'
 
@@ -22,7 +23,13 @@ const Projects = () => {
     const [isHovered, setIsHovered] = useState<HoverValues>(defaultState)
 
     return (
-        <section id="projects" className="container scroll-my-20">
+        <motion.section
+            id="projects"
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="container scroll-my-20"
+        >
             <Card
                 backgroundColor="bg-dark-bg dark:bg-dark-primary-bg text-orange"
                 className="w-full h-fit flex flex-col gap-10 md:gap-14 py-20"
@@ -56,7 +63,7 @@ const Projects = () => {
                     isHovered={isHovered.SW}
                 />
             </Card>
-        </section>
+        </motion.section>
     )
 }
 

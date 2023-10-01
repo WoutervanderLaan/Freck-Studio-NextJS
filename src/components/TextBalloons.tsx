@@ -10,8 +10,8 @@ const TextBalloons = ({ debug = false }: TextBalloonsProps) => {
     return (
         <>
             <TextBalloon
-                left={24}
-                bottom={24}
+                left={25}
+                bottom={26}
                 width={10}
                 height={27}
                 debug={debug}
@@ -21,7 +21,7 @@ const TextBalloons = ({ debug = false }: TextBalloonsProps) => {
 
             <TextBalloon
                 left={20}
-                bottom={19}
+                bottom={21}
                 width={7}
                 height={5}
                 debug={debug}
@@ -30,8 +30,8 @@ const TextBalloons = ({ debug = false }: TextBalloonsProps) => {
                 pale skin."
             />
             <TextBalloon
-                left={10}
-                bottom={19}
+                left={6}
+                bottom={21}
                 width={10}
                 height={22}
                 debug={debug}
@@ -40,10 +40,10 @@ const TextBalloons = ({ debug = false }: TextBalloonsProps) => {
             />
 
             <TextBalloon
-                left={65}
-                bottom={16}
-                width={14}
-                height={20}
+                left={68}
+                bottom={19}
+                width={10}
+                height={15}
                 debug={debug}
                 title="Le Creuset Mug"
                 body="Coffee is an important part of my workflow. And Le Creuset
@@ -52,13 +52,23 @@ const TextBalloons = ({ debug = false }: TextBalloonsProps) => {
 
             <TextBalloon
                 left={79}
-                bottom={20}
+                bottom={23}
                 width={8}
-                height={15}
+                height={14}
                 debug={debug}
                 title="Apple Homepod"
                 body="Siri doesn't always listen, but I couldn't do my work
                 without my favourite music."
+            />
+
+            <TextBalloon
+                left={78}
+                bottom={15}
+                width={14}
+                height={8}
+                debug={debug}
+                title="Tony's Chocolonely's"
+                body="The best and most responsible cholocate ever."
             />
         </>
     )

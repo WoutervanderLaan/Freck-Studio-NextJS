@@ -1,7 +1,8 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { ThemeContext } from '@/contexts/ThemeContext'
 import AriaLink from './AriaLink'
 import Image from 'next/image'
 import Button from './Button'
@@ -13,6 +14,7 @@ import EmailOverlay from './EmailOverlay'
 
 const Footer = () => {
     const [isEmailOverlayOpen, setIsEmailOverlayOpen] = useState(false)
+    const themeContext = useContext(ThemeContext)
 
     return (
         <footer
@@ -25,7 +27,7 @@ const Footer = () => {
             <div className="flex flex-row gap-10 md:gap-20 mb-12 pointer-events-auto place-items-center">
                 <Button
                     variant="ghost"
-                    className="p-0 w-fit h-fit rounded-none"
+                    className="p-0 w-fit h-fit rounded-none active:scale-90"
                     onPress={() => setIsEmailOverlayOpen(true)}
                     aria-label="Press to see email address"
                 >
@@ -41,7 +43,7 @@ const Footer = () => {
                     href="tel:+31657582654"
                     aria-label="Press to call"
                     target="_parent"
-                    className="md:p-4"
+                    className="md:p-4 active:scale-90"
                 >
                     <Image
                         src={phone}
@@ -56,7 +58,7 @@ const Footer = () => {
                     aria-label="Press to view LinkedIn"
                     target="_blank"
                     rel="external"
-                    className="md:p-4"
+                    className="md:p-4 active:scale-90"
                 >
                     <Image
                         src={linkedin}
@@ -69,7 +71,7 @@ const Footer = () => {
             </div>
             <div className="w-full flex flex-col gap-4 justify-between items-center md:flex-row md:gap-0">
                 <AriaLink href="/" aria-label="Freck Studio Logo">
-                    <Logo />
+                    <Logo fill={themeContext?.isDarkMode ? 'white' : 'black'} />
                 </AriaLink>
                 <div className="flex flex-row items-center gap-4 lg:gap-8 text-sm font-medium pointer-cursor md:translate-x-2">
                     <Button

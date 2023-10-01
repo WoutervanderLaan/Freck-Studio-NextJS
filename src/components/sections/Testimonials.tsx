@@ -3,10 +3,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import Testimonial from '../Testimonial'
 import TestimonialItems from '../TestimonialItems'
-
-const GAP = 39
 
 const Testimonials = () => {
     const testimonials = TestimonialItems()
@@ -34,7 +33,12 @@ const Testimonials = () => {
     }, [])
 
     return (
-        <section className="w-full flex flex-col gap-4">
+        <motion.section
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="w-full flex flex-col gap-4"
+        >
             <div className="container h-fit overflow-hidden">
                 <Swiper spaceBetween={50} slidesPerView={testimonialsPerPage}>
                     {testimonials.map((testimonial, index) => {
@@ -46,7 +50,7 @@ const Testimonials = () => {
                     })}
                 </Swiper>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

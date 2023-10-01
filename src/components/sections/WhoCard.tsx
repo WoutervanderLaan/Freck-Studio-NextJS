@@ -1,12 +1,19 @@
 'use client'
 
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import Card from '../Card'
-import deskImage from '../../../public/img/Desk.png'
+import deskImage from '../../../public/img/Desk2.png'
 import TextBalloons from '../TextBalloons'
 
 const WhoCard = () => (
-    <section id="about" className="container scroll-my-20">
+    <motion.section
+        id="about"
+        initial={{ y: 200, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        className="container scroll-my-20"
+    >
         <Card
             backgroundColor="bg-dark-secondary-bg"
             className="relative text-center"
@@ -32,7 +39,7 @@ const WhoCard = () => (
                 />
             </div>
         </Card>
-    </section>
+    </motion.section>
 )
 
 export default WhoCard
