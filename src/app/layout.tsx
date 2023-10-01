@@ -112,7 +112,7 @@ export default function RootLayout({
             <ThemeContextProvider>
                 <body
                     className={classNames(
-                        'font-sans flex flex-col min-h-screen dark:bg-dark-bg dark:text-white',
+                        'font-sans flex flex-col min-h-screen overflow-x-hidden dark:bg-dark-bg dark:text-white',
                         baumans.variable,
                         robotoSLab.variable,
                         rubik.variable
