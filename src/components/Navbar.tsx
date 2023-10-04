@@ -66,7 +66,7 @@ const Navbar = () => {
                     </AriaLink>
                     {isTablet === false && (
                         <>
-                            <div className="flex flex-row items-center gap-4 md:gap-8 text-sm font-medium pointer-cursor">
+                            <div className="flex flex-row items-center gap-4 md:gap-8 font-medium pointer-cursor">
                                 <Button
                                     variant="ghost"
                                     href="#why"
@@ -127,6 +127,7 @@ const Navbar = () => {
                             <Button
                                 variant="ghost"
                                 className="aspect-square px-1 py-0"
+                                ariaLabel="Click to open menu"
                                 onPress={() =>
                                     setIsMenuDropdownOpen(
                                         (prevValue) => !prevValue

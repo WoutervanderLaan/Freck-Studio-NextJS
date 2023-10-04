@@ -29,7 +29,7 @@ const Card = ({ children, backgroundColor, className }: CardProps) => {
     return (
         <motion.div
             className={classNames(
-                'flex rounded-custom min-h-[300px] flex-col items-center p-10',
+                'flex rounded-custom min-h-[300px] flex-col items-center px-10 py-[50px]',
                 backgroundColor,
                 className
             )}

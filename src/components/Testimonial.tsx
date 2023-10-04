@@ -15,8 +15,8 @@ type Testimonial = {
 }
 
 const Testimonial = ({
-    backgroundColor = 'bg-gray',
-    textColor,
+    backgroundColor = 'bg-pink dark:bg-dark-quarternary-bg',
+    textColor = 'text-green',
     image,
     text,
     name,
@@ -24,7 +24,7 @@ const Testimonial = ({
     company,
     className,
 }: Testimonial) => (
-    <Card backgroundColor={backgroundColor} className="gap-6 pb-20 h-fit">
+    <Card backgroundColor={backgroundColor} className="gap-6 h-fit">
         <Image
             width={120}
             height={120}
@@ -39,11 +39,11 @@ const Testimonial = ({
                 textColor
             )}
         >
-            <p className="w-full italic mb-6">"{text}"</p>
+            <p className="w-full italic mb-5 text-base-variant">"{text}"</p>
             <div>
-                <p className="font-bold text-base-variant">{name}</p>
-                <p className="text-sm">{position}</p>
-                <p className="text-sm">{company}</p>
+                <p className="font-medium text-base">{name}</p>
+                <p className="text-base">{position}</p>
+                <p className="text-base">{company}</p>
             </div>
         </div>
     </Card>

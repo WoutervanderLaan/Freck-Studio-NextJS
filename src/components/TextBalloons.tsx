@@ -120,7 +120,7 @@ const TextBalloon = ({
         <>
             <div
                 ref={divRef}
-                className={classNames('absolute z-20', {
+                className={classNames('absolute z-50', {
                     'border-2 border-dashed border-pink': debug,
                 })}
                 style={{
@@ -144,7 +144,7 @@ const TextBalloon = ({
                             bottom: bottom + height + 5 + '%',
                         }}
                         ref={balloonRef}
-                        className="absolute bg-white rounded-custom flex items-center aspect-video justify-center p-4 w-[40%] translate-x-[-50%] lg:w-[26%] lg:p-6 dark:bg-dark-bg lg:translate-x-[-52%]"
+                        className="absolute bg-white rounded-custom flex items-center justify-center p-4 w-[40%] translate-x-[-50%] lg:w-[26%] lg:p-6 dark:bg-dark-bg lg:translate-x-[-52%]"
                     >
                         <div className="z-10 text-center flex flex-col gap-2 md:gap-4">
                             <p className="font-bold text-sm lg:text-lg">

@@ -34,13 +34,13 @@ const Testimonials = () => {
 
     return (
         <motion.section
-            initial={{ y: 200, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             className="w-full flex flex-col gap-4"
         >
             <div className="container h-fit overflow-hidden">
-                <Swiper spaceBetween={50} slidesPerView={testimonialsPerPage}>
+                <Swiper spaceBetween={20} slidesPerView={testimonialsPerPage}>
                     {testimonials.map((testimonial, index) => {
                         return (
                             <SwiperSlide key={index}>

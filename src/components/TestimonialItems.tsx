@@ -5,8 +5,6 @@ import portrait4 from '../../public/img/20190302_125209.jpg'
 
 const TestimonialItems = () => [
     {
-        backgroundColor: 'bg-black dark:bg-dark-quarternary-bg',
-        textColor: 'text-white',
         name: 'Sarune Paulauskaite',
         position: 'Amazing Digital Designer',
         company: 'Freck Studio',
@@ -14,8 +12,8 @@ const TestimonialItems = () => [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
     },
     {
-        backgroundColor: 'bg-pink dark:bg-dark-secondary-bg',
-        textColor: 'text-green',
+        backgroundColor: 'bg-gray',
+        textColor: 'text-black',
         name: 'Wouter van der Laan',
         position: 'CEO Ciri empire',
         company: 'Canvasheroes',
@@ -23,6 +21,8 @@ const TestimonialItems = () => [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
     },
     {
+        backgroundColor: 'bg-green-light',
+        textColor: 'text-purple-alt',
         name: 'Wouter van der Laan',
         position: 'Unemployed',
         company: 'Stay at home dad',
@@ -30,8 +30,6 @@ const TestimonialItems = () => [
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
     },
     {
-        backgroundColor: 'bg-black',
-        textColor: 'text-white',
         name: 'Wouter van der Laan',
         position: 'Artist Freelancer',
         company: 'Self-employed',

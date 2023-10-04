@@ -17,14 +17,17 @@ const Footer = () => {
     const themeContext = useContext(ThemeContext)
 
     return (
-        <footer
+        <motion.footer
             id="contact"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             className="w-full flex flex-col items-center px-10 py-6 gap-10 mt-20 mb-2"
         >
             <h3 className="text-lg font-medium font-serif max-w-[400px] text-center items-center md:text-2xl md:max-w-[700px]">
                 You can contact me through email or social media
             </h3>
-            <div className="flex flex-row gap-10 md:gap-20 mb-12 pointer-events-auto place-items-center">
+            <div className="flex flex-row gap-4 mb-12 pointer-events-auto place-items-center">
                 <Button
                     variant="ghost"
                     className="p-0 w-fit h-fit rounded-none active:scale-90"
@@ -120,7 +123,7 @@ const Footer = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </footer>
+        </motion.footer>
     )
 }
 

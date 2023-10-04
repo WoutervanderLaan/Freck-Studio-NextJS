@@ -25,7 +25,7 @@ const Projects = () => {
     return (
         <motion.section
             id="projects"
-            initial={{ y: 200, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             className="container scroll-my-20"

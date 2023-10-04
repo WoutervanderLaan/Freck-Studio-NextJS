@@ -11,7 +11,7 @@ const Intro = () => {
                     We create meaningful experiences
                 </h1>
 
-                <h2 className="text-center max-w-[80%] self-center lg:self-start lg:text-start xl:text-base-variant">
+                <h2 className="text-center w-full self-center lg:self-start lg:text-start xl:text-base-variant">
                     We partner with global brands and emerging businesses to
                     create exciting and meaningful experiences, whether digital
                     or non-digital.

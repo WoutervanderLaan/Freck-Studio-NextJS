@@ -119,7 +119,7 @@ export default function RootLayout({
                     )}
                 >
                     <Navbar />
-                    <main className="flex-1 flex flex-col gap-10">
+                    <main className="flex-1 flex flex-col gap-5">
                         {children}
                     </main>
                     <Footer />
