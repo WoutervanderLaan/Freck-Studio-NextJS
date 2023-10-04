@@ -34,10 +34,11 @@ const WhyFreck = () => (
             <div className="relative bg-pink-dark w-[60%] aspect-square rounded-full overflow-hidden">
                 <Image
                     src={monkeyImg}
-                    className="scale-[1.3] translate-y-5"
+                    className="scale-[1.3] translate-y-5 aspect-square"
                     alt="image of monkey holding a heart"
                     placeholder="blur"
                     fill
+                    sizes="(max-width: 1024px) 40vw, 20vw"
                 />
             </div>
             <div className="text-center flex flex-col justify-between h-fit px-2 gap-5 max-w-[460px]">

@@ -27,7 +27,7 @@ module.exports = {
                 orange: '#FF6B00',
             },
             aspectRatio: {
-                desk: '9 / 5',
+                desk: '20 / 11',
             },
             borderRadius: {
                 custom: '40px',
