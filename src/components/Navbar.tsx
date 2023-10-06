@@ -73,15 +73,7 @@ const Navbar = () => {
                                     ariaLabel="Section Why Freck"
                                     className="hover:text-blue transition active:scale-90"
                                 >
-                                    Why Freck
-                                </Button>
-                                <Button
-                                    variant="ghost"
-                                    href="#about"
-                                    ariaLabel="Section About"
-                                    className="hover:text-blue transition active:scale-90"
-                                >
-                                    About
+                                    Why Freck?
                                 </Button>
                                 <Button
                                     variant="ghost"
@@ -90,6 +82,14 @@ const Navbar = () => {
                                     className="hover:text-blue transition active:scale-90"
                                 >
                                     Projects
+                                </Button>
+                                <Button
+                                    variant="ghost"
+                                    href="#about"
+                                    ariaLabel="Section About"
+                                    className="hover:text-blue transition active:scale-90"
+                                >
+                                    About
                                 </Button>
                             </div>
                             <div className="hidden lg:block lg:w-[110px]" />

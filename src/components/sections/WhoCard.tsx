@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Card from '../Card'
-import deskImage from '../../../public/img/Desk2.png'
+import deskImage from '../../../public/img/Desk-small.gif'
 import TextBalloons from '../TextBalloons'
 
 const WhoCard = () => (

@@ -1,8 +1,6 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import monkeyImg from '../../../public/img/monkey7.png'
 import Card from '../Card'
 import Tag from '../Tag'
 
@@ -10,7 +8,6 @@ const designServices = [
     '3D assets',
     'Branding',
     'illustrations',
-    // 'UX/UI',
     'Icons',
     'Motion',
     'Visual Design',
@@ -25,21 +22,28 @@ const WhyFreck = () => (
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         id="why"
-        className="container flex flex-col gap-5 scroll-my-20 lg:flex-row lg:h-[725px]"
+        className="container flex flex-col gap-5 scroll-my-20 lg:flex-row lg:min-h-[730px]"
     >
         <Card
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"
-            className="w-full h-full text-green flex flex-col py-[50px] gap-5"
+            className="w-full h-full lg:min-h-[730px] text-green flex flex-col py-[50px] gap-5"
         >
-            <div className="relative bg-pink-dark w-[60%] aspect-square rounded-full overflow-hidden">
-                <Image
-                    src={monkeyImg}
-                    className="scale-[1.3] translate-y-5 aspect-square"
-                    alt="image of monkey holding a heart"
-                    placeholder="blur"
-                    fill
-                    sizes="(max-width: 1024px) 40vw, 20vw"
-                />
+            <div className="relative w-[60%] aspect-square rounded-full overflow-hidden">
+                <video
+                    muted
+                    loop
+                    autoPlay
+                    preload="metadata"
+                    playsInline
+                    src="/img/Monkey_Freck_1.mp4"
+                    className="scale-[1.3] translate-y-10 translate-x-[-5px]"
+                >
+                    Your browser does not support the video tag.
+                    <track
+                        kind="captions"
+                        content="Monkey holding a glowing heart"
+                    />
+                </video>
             </div>
             <div className="text-center flex flex-col justify-between h-fit px-2 gap-5 max-w-[460px]">
                 <h3 className="text-lg font-medium font-serif lg:text-2xl">
@@ -57,7 +61,7 @@ const WhyFreck = () => (
 
         <Card
             backgroundColor="bg-black dark:bg-dark-primary-bg"
-            className="w-full h-full text-white flex flex-col gap-10 lg:gap-20 lg:px-[60px] lg:py-[50px]"
+            className="w-full h-full lg:min-h-[730px] text-white flex flex-col gap-10 lg:gap-20 lg:px-[60px] lg:py-[50px]"
         >
             <div className="text-center flex flex-col gap-5">
                 <h3 className="text-lg font-medium font-serif lg:text-2xl">
