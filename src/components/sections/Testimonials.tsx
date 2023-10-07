@@ -39,6 +39,16 @@ const Testimonials = () => {
             viewport={{ once: true }}
             className="w-full flex flex-col gap-4"
         >
+            <div className="text-center flex flex-col gap-6 max-w-[640px] self-center my-4 md:my-10">
+                <h3 className="font-serif text-lg-variant md:text-xl">
+                    You are too polite people!
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                    magna aliquam.
+                </p>
+            </div>
             <div className="container h-fit overflow-hidden">
                 <Swiper spaceBetween={20} slidesPerView={testimonialsPerPage}>
                     {testimonials.map((testimonial, index) => {

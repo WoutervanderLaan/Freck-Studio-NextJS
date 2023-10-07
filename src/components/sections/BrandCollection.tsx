@@ -44,8 +44,8 @@ const brandSVGCollection = [
 
 const BrandCollection = () => {
     return (
-        <section className="container flex flex-col justify-center items-center py-10 mb-[-40px] lg:mb-10 lg:py-0">
-            <h3 className="text-sm md:text-base lg:text-base-variant mb-4 lg:mb-0">
+        <section className="container flex flex-col justify-center items-center py-10 mb-[-40px] sm:mb-4 lg:mb-10 lg:py-0">
+            <h3 className="text-sm sm:text-base lg:text-base-variant mb-4 lg:mb-0">
                 Brands I have worked with along the way:
             </h3>
             <div className="min-h-[100px] w-full flex flex-row items-center justify-evenly gap-6 px-4 flex-wrap lg:gap-4 lg:px-16">
@@ -57,7 +57,7 @@ const BrandCollection = () => {
                         rel="external"
                         aria-label={brand.name}
                     >
-                        <div className="max-h-[80px] max-w-[80px] flex justify-center grayscale transition hover:grayscale-0 hover:scale-[103%] md:max-w-[100px] md:max-h-10 dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale">
+                        <div className="max-h-5 max-w-5 flex justify-center grayscale transition hover:grayscale-0 hover:scale-[103%] sm:max-h-10 md:max-w-[100px] md:max-h-10 dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale">
                             {brand.component}
                         </div>
                     </AriaLink>

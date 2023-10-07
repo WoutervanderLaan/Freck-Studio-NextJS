@@ -5,7 +5,7 @@ const IV = () => (
         viewBox="0 0 285 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="max-h-10 w-fit"
+        className="max-h-5 w-fit sm:max-h-10"
     >
         <g clipPath="url(#clip0_2_747)">
             <path d="M99.9744 0H0V100H99.9744V0Z" fill="#075BAA" />

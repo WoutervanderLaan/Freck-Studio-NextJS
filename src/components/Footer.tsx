@@ -27,46 +27,33 @@ const Footer = () => {
             <h3 className="text-lg font-medium font-serif max-w-[400px] text-center items-center md:text-2xl md:max-w-[700px]">
                 You can contact me through email or social media
             </h3>
-            <div className="flex flex-row gap-4 mb-12 pointer-events-auto place-items-center">
+            <div className="flex flex-row gap-4 mb-12 pointer-events-auto place-items-center md:gap-9">
                 <Button
                     variant="ghost"
-                    className="p-0 w-fit h-fit rounded-none active:scale-90"
+                    className="relative p-0 w-20 md:w-[120px] h-20 md:h-[120px] rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
                     onPress={() => setIsEmailOverlayOpen(true)}
                     aria-label="Press to see email address"
                 >
-                    <Image
-                        src={email}
-                        width={120}
-                        height={120}
-                        quality={100}
-                        alt="Email icon"
-                    />
+                    <Image src={email} fill quality={100} alt="Email icon" />
                 </Button>
                 <AriaLink
                     href="tel:+31657582654"
                     aria-label="Press to call"
                     target="_parent"
-                    className="md:p-4 active:scale-90"
+                    className="relative w-20 md:w-[120px] h-20 md:h-[120px] rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
                 >
-                    <Image
-                        src={phone}
-                        width={120}
-                        height={120}
-                        quality={100}
-                        alt="Phone icon"
-                    />
+                    <Image src={phone} fill quality={100} alt="Phone icon" />
                 </AriaLink>
                 <AriaLink
                     href="https://www.linkedin.com/in/sarunepaulauskaite/"
                     aria-label="Press to view LinkedIn"
                     target="_blank"
                     rel="external"
-                    className="md:p-4 active:scale-90"
+                    className="relative w-20 md:w-[120px] h-20 md:h-[120px] rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
                 >
                     <Image
                         src={linkedin}
-                        width={120}
-                        height={120}
+                        fill
                         quality={100}
                         alt="LinkedIn icon"
                     />
@@ -104,7 +91,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-row justify-end">
                     <Button onPress={() => setIsEmailOverlayOpen(true)}>
-                        Contact Me
+                        <span className="lg:text-base-variant">Contact Me</span>
                     </Button>
                 </div>
             </div>

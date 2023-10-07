@@ -4,6 +4,7 @@ import BrandCollection from '@/components/sections/BrandCollection'
 import Projects from '@/components/sections/Projects'
 import WhyFreck from '@/components/sections/WhyFreck'
 import Testimonials from '@/components/sections/Testimonials'
+import Services from '@/components/sections/Services'
 import ClientMotionConfig from '@/components/ClientMotionConfig'
 
 const HomePage = () => {
@@ -15,11 +16,13 @@ const HomePage = () => {
 
             <WhyFreck />
 
-            <WhoCard />
+            <Services />
 
             <Projects />
 
             <Testimonials />
+
+            <WhoCard />
         </ClientMotionConfig>
     )
 }

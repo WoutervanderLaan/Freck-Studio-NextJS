@@ -2,19 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Card from '../Card'
-import Tag from '../Tag'
-
-const designServices = [
-    '3D assets',
-    'Branding',
-    'illustrations',
-    'Icons',
-    'Motion',
-    'Visual Design',
-    'Web Development',
-    'Social Media',
-    'UI Kits',
-]
 
 const WhyFreck = () => (
     <motion.section
@@ -22,21 +9,21 @@ const WhyFreck = () => (
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         id="why"
-        className="container flex flex-col gap-5 scroll-my-20 lg:flex-row lg:min-h-[730px]"
+        className="container flex flex-col gap-5 scroll-my-20 lg:flex-row xl:h-[820px]"
     >
         <Card
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"
-            className="w-full h-full lg:min-h-[730px] text-green flex flex-col py-[50px] gap-5"
+            className="w-full h-full text-green flex flex-col flex-1 py-12 gap-5 lg:min-h-[730px]"
         >
-            <div className="relative w-[60%] aspect-square rounded-full overflow-hidden">
+            <div className="relative aspect-square rounded-full overflow-hidden min-[500px]:w-[80%] md:w-[60%]">
                 <video
                     muted
                     loop
                     autoPlay
                     preload="metadata"
                     playsInline
-                    src="/img/Monkey_Freck_1.mp4"
-                    className="scale-[1.3] translate-y-10 translate-x-[-5px]"
+                    src="/img/Monkey.mp4"
+                    className="scale-[1.3] translate-y-[10%] translate-x-[-5px]"
                 >
                     Your browser does not support the video tag.
                     <track
@@ -47,9 +34,9 @@ const WhyFreck = () => (
             </div>
             <div className="text-center flex flex-col justify-between h-fit px-2 gap-5 max-w-[460px]">
                 <h3 className="text-lg font-medium font-serif lg:text-2xl">
-                    My design purpose <br /> Love and Care
+                    (Too) emotional designer
                 </h3>
-                <p className="text-base-variant">
+                <p className="md:text-base-variant">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore
                     magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
@@ -61,21 +48,21 @@ const WhyFreck = () => (
 
         <Card
             backgroundColor="bg-black dark:bg-dark-primary-bg"
-            className="w-full h-full lg:min-h-[730px] text-white flex flex-col gap-10 lg:gap-20 lg:px-[60px] lg:py-[50px]"
+            className="w-full h-full text-white flex flex-col flex-1 gap-10 px-0 xl:px-10 lg:gap-20 lg:py-12 lg:min-h-[730px]"
         >
-            <div className="text-center flex flex-col gap-5">
-                <h3 className="text-lg font-medium font-serif lg:text-2xl">
-                    Hey I just met you and I can help you
+            <div className="text-center flex flex-col gap-5 px-10">
+                <h3 className="text-lg font-medium font-serif lg:text-lg-variant xl:text-2xl">
+                    Skills to skyrocket your marketing
                 </h3>
-                <p className="text-base-variant opacity-75">
+                <p className="md:text-base-variant opacity-75">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt.
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    quis nostrud exerci tation ullamcorper suscipit lobortis
+                    nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor
+                    sit amet, consectetuer adipiscing elit, sed diam nonummy
+                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
                 </p>
-            </div>
-            <div className="flex flex-row flex-wrap gap-2 justify-center">
-                {designServices.map((tag, index) => (
-                    <Tag key={index}>{tag}</Tag>
-                ))}
             </div>
         </Card>
     </motion.section>

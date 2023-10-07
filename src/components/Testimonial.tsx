@@ -15,7 +15,7 @@ type Testimonial = {
 }
 
 const Testimonial = ({
-    backgroundColor = 'bg-pink dark:bg-dark-quarternary-bg',
+    backgroundColor = 'bg-pink',
     textColor = 'text-green',
     image,
     text,
@@ -25,13 +25,16 @@ const Testimonial = ({
     className,
 }: Testimonial) => (
     <Card backgroundColor={backgroundColor} className="gap-6 h-fit">
-        <Image
-            width={120}
-            height={120}
-            src={image}
-            alt={`portrait of ${name} from company ${company}`}
-            className="rounded-full aspect-square object-none"
-        />
+        <div className="relative aspect-square w-[60%] sm:w-[40%] md:w-[60%]">
+            <Image
+                src={image}
+                fill
+                quality={100}
+                alt={`portrait of ${name} from company ${company}`}
+                className="object-cover rounded-full"
+                sizes="(min-width: 1280px) 100vw, (min-width: 768px) 20vw, 33vw"
+            />
+        </div>
         <div
             className={classNames(
                 'flex flex-col gap-4 text-center',
@@ -39,7 +42,7 @@ const Testimonial = ({
                 textColor
             )}
         >
-            <p className="w-full italic mb-5 text-base-variant">"{text}"</p>
+            <p className="w-full italic mb-5 md:text-base-variant">"{text}"</p>
             <div>
                 <p className="font-medium text-base">{name}</p>
                 <p className="text-base">{position}</p>

@@ -21,7 +21,7 @@ const Intro = () => {
                     className="self-center lg:self-start"
                     ariaLabel="Contact Me"
                 >
-                    <span className="xl:text-base-variant">Contact Me</span>
+                    <span className="lg:text-base-variant">Contact Me</span>
                 </Button>
             </div>
             <div className="w-full flex justify-center">
