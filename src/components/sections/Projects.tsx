@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Card from '../Card'
 import ProjectItem from '../ProjectItem'
+// import Label from '../Label'
 
 export type HoverValues = {
     BA: boolean
@@ -32,8 +33,11 @@ const Projects = () => {
         >
             <Card
                 backgroundColor="bg-dark-bg dark:bg-dark-primary-bg text-orange"
-                className="w-full h-fit flex flex-col gap-10 md:gap-14 py-20"
+                className="relative w-full h-fit flex flex-col gap-10 md:gap-14 py-20"
             >
+                {/* <Label style="orange" position="left" className="z-[-99]">
+                    Case Studies
+                </Label> */}
                 <ProjectItem
                     href="/"
                     id="BA"

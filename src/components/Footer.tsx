@@ -11,9 +11,11 @@ import email from '../../public/img/Email-small.png'
 import phone from '../../public/img/Phone_small.png'
 import linkedin from '../../public/img/Linkedin_small.png'
 import EmailOverlay from './EmailOverlay'
+import UseViewportDetection from '@/hooks/useViewportDetection'
 
 const Footer = () => {
     const [isEmailOverlayOpen, setIsEmailOverlayOpen] = useState(false)
+    const isTablet = UseViewportDetection(768)
     const themeContext = useContext(ThemeContext)
 
     return (
@@ -22,25 +24,25 @@ const Footer = () => {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="w-full flex flex-col items-center px-10 py-6 gap-10 mt-20 mb-2"
+            className="w-full flex flex-col items-center px-10 md:py-6 gap-10 mt-20 mb-2"
         >
             <h3 className="text-lg font-medium font-serif max-w-[400px] text-center items-center md:text-2xl md:max-w-[700px]">
                 You can contact me through email or social media
             </h3>
-            <div className="flex flex-row gap-4 mb-12 pointer-events-auto place-items-center md:gap-9">
+            <div className="flex flex-row gap-4 mb-12 pointer-events-auto place-items-center sm:gap-6 md:gap-9">
                 <Button
                     variant="ghost"
-                    className="relative p-0 w-20 md:w-[120px] h-20 md:h-[120px] rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
+                    className="relative p-0 w-20 md:w-[120px] h-20 md:h-[120px] rounded-2xl md:rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
                     onPress={() => setIsEmailOverlayOpen(true)}
                     aria-label="Press to see email address"
                 >
                     <Image src={email} fill quality={100} alt="Email icon" />
                 </Button>
                 <AriaLink
-                    href="tel:+31657582654"
+                    href="tel:+37063920855"
                     aria-label="Press to call"
                     target="_parent"
-                    className="relative w-20 md:w-[120px] h-20 md:h-[120px] rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
+                    className="relative w-20 md:w-[120px] h-20 md:h-[120px] rounded-2xl md:rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
                 >
                     <Image src={phone} fill quality={100} alt="Phone icon" />
                 </AriaLink>
@@ -49,7 +51,7 @@ const Footer = () => {
                     aria-label="Press to view LinkedIn"
                     target="_blank"
                     rel="external"
-                    className="relative w-20 md:w-[120px] h-20 md:h-[120px] rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
+                    className="relative w-20 md:w-[120px] h-20 md:h-[120px] rounded-2xl md:rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
                 >
                     <Image
                         src={linkedin}
@@ -59,42 +61,52 @@ const Footer = () => {
                     />
                 </AriaLink>
             </div>
-            <div className="w-full flex flex-col gap-4 justify-between items-center md:flex-row md:gap-0">
-                <AriaLink href="/" aria-label="Freck Studio Logo">
-                    <Logo fill={themeContext?.isDarkMode ? 'white' : 'black'} />
-                </AriaLink>
-                <div className="flex flex-row items-center gap-4 lg:gap-8 text-sm font-medium pointer-cursor md:translate-x-2">
-                    <Button
-                        variant="ghost"
-                        href="#why"
-                        ariaLabel="Section Why Freck"
-                        className="hover:text-blue transition active:scale-90"
+            {isTablet === false && (
+                <div className="w-full flex flex-col justify-between items-center md:flex-row">
+                    <AriaLink
+                        href="/"
+                        aria-label="Freck Studio Logo"
+                        className="flex-1"
                     >
-                        Why Freck
-                    </Button>
-                    <Button
-                        variant="ghost"
-                        href="#about"
-                        ariaLabel="Section About"
-                        className="hover:text-blue transition active:scale-90"
-                    >
-                        About
-                    </Button>
-                    <Button
-                        variant="ghost"
-                        href="#projects"
-                        ariaLabel="Section Projects"
-                        className="hover:text-blue transition active:scale-90"
-                    >
-                        Projects
-                    </Button>
+                        <Logo
+                            fill={themeContext?.isDarkMode ? 'white' : 'black'}
+                        />
+                    </AriaLink>
+                    <div className="flex flex-row items-center gap-4 lg:gap-8 text-sm font-medium pointer-cursor">
+                        <Button
+                            variant="ghost"
+                            href="#why"
+                            ariaLabel="Section Why Freck"
+                            className="hover:text-blue transition active:scale-90"
+                        >
+                            Why Freck
+                        </Button>
+                        <Button
+                            variant="ghost"
+                            href="#about"
+                            ariaLabel="Section About"
+                            className="hover:text-blue transition active:scale-90"
+                        >
+                            About
+                        </Button>
+                        <Button
+                            variant="ghost"
+                            href="#projects"
+                            ariaLabel="Section Projects"
+                            className="hover:text-blue transition active:scale-90"
+                        >
+                            Projects
+                        </Button>
+                    </div>
+                    <div className="flex flex-row justify-end flex-1">
+                        <Button onPress={() => setIsEmailOverlayOpen(true)}>
+                            <span className="lg:text-base-variant">
+                                Contact Me
+                            </span>
+                        </Button>
+                    </div>
                 </div>
-                <div className="flex flex-row justify-end">
-                    <Button onPress={() => setIsEmailOverlayOpen(true)}>
-                        <span className="lg:text-base-variant">Contact Me</span>
-                    </Button>
-                </div>
-            </div>
+            )}
             <AnimatePresence>
                 {isEmailOverlayOpen && (
                     <motion.div

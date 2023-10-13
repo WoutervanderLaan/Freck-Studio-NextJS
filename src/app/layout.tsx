@@ -6,6 +6,7 @@ import { Roboto_Slab, Baumans, Rubik } from 'next/font/google'
 import ThemeContextProvider from '@/contexts/ThemeContext'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+import Script from 'next/script'
 
 const baumans = Baumans({
     subsets: ['latin'],
@@ -95,7 +96,36 @@ export default function RootLayout({
     return (
         <html lang="en" className="scroll-smooth">
             <head>
-                <meta name="mobile-web-app-capable" content="yes" />
+                <Script
+                    strategy="afterInteractive"
+                    defer
+                    src="https://www.googletagmanager.com/gtag/js?id=G-3S4ZLQBS61"
+                />
+
+                <Script id="analytics" strategy="afterInteractive" defer>
+                    {`window.dataLayer = window.dataLayer || []; 
+                    function gtag(){dataLayer.push(arguments);} 
+                    gtag('js', new Date()); 
+                    
+                    gtag('config', 'G-3S4ZLQBS61');`}
+                </Script>
+
+                <link
+                    rel="dns-prefetch"
+                    href="https://www.google-analytics.com"
+                />
+
+                <link
+                    href="https://www.googletagmanager.com/gtag/js?id=G-3S4ZLQBS61"
+                    rel="preload"
+                    as="script"
+                />
+
+                <link
+                    rel="dns-prefetch"
+                    href="https://www.googletagmanager.com"
+                />
+
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -108,6 +138,7 @@ export default function RootLayout({
                     href="https://www.freck-studio.com"
                     key="canonical"
                 />
+                <meta name="mobile-web-app-capable" content="yes" />
             </head>
             <ThemeContextProvider>
                 <body

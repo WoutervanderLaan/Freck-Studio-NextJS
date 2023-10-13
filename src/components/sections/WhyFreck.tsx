@@ -1,7 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Card from '../Card'
+import phone from '@/../public/img/phone3D.png'
 
 const WhyFreck = () => (
     <motion.section
@@ -15,7 +17,7 @@ const WhyFreck = () => (
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"
             className="w-full h-full text-green flex flex-col flex-1 py-12 gap-5 lg:min-h-[730px]"
         >
-            <div className="relative aspect-square rounded-full overflow-hidden min-[500px]:w-[80%] md:w-[60%]">
+            <div className="relative aspect-square rounded-full overflow-hidden z-10 min-[500px]:w-[80%] md:w-[60%]">
                 <video
                     muted
                     loop
@@ -23,7 +25,7 @@ const WhyFreck = () => (
                     preload="metadata"
                     playsInline
                     src="/img/Monkey.mp4"
-                    className="scale-[1.3] translate-y-[10%] translate-x-[-5px]"
+                    className="scale-[1.3] translate-y-[10%] translate-x-[-5px] z-0 rounded-full"
                 >
                     Your browser does not support the video tag.
                     <track
@@ -48,7 +50,7 @@ const WhyFreck = () => (
 
         <Card
             backgroundColor="bg-black dark:bg-dark-primary-bg"
-            className="w-full h-full text-white flex flex-col flex-1 gap-10 px-0 xl:px-10 lg:gap-20 lg:py-12 lg:min-h-[730px]"
+            className="w-full h-full text-white flex flex-col justify-between flex-1 px-0 xl:px-10 lg:py-12 lg:min-h-[730px]"
         >
             <div className="text-center flex flex-col gap-5 px-10">
                 <h3 className="text-lg font-medium font-serif lg:text-lg-variant xl:text-2xl">
@@ -63,6 +65,14 @@ const WhyFreck = () => (
                     sit amet, consectetuer adipiscing elit, sed diam nonummy
                     nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
                 </p>
+            </div>
+            <div className="relative aspect-square w-[60%]">
+                <Image
+                    src={phone}
+                    alt="Image of phone with incoming call"
+                    fill
+                    className="aspect-square"
+                />
             </div>
         </Card>
     </motion.section>
