@@ -31,11 +31,10 @@ const WhoCard = () => {
                 <div className="relative bottom-[-50px] w-full aspect-desk mt-[-30px] md:mt-[-50px] lg:mt-[-90px] 2xl:bottom-[-90px]">
                     <video muted loop autoPlay preload="auto" playsInline>
                         <source
-                            src="/img/Desk-hevc.mp4"
-                            type="video/mp4; codecs='hevc'"
+                            src="/img/Desk_Safari.mov"
+                            type="video/quicktime"
                         />
-                        <source src="/img/Desk-webm.webm" type="video/webm" />
-                        <source src="/img/Desk.mp4" type="video/mp4" />
+                        <source src="/img/Desk_Chrome.webm" type="video/webm" />
                         Your browser does not support the video tag.
                         <track
                             kind="captions"
