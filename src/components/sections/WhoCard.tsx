@@ -7,6 +7,7 @@ import UseViewportDetection from '@/hooks/useViewportDetection'
 
 const WhoCard = () => {
     const isTablet = UseViewportDetection(768)
+
     return (
         <motion.section
             id="about"

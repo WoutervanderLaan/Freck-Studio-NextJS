@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Card from '../Card'
 import ProjectItem from '../ProjectItem'
+import BA_Macaron from '../../../public/img/BA_Macaron.png'
+import Hand from '../../../public/img/Email-small.png'
 // import Label from '../Label'
 
 export type HoverValues = {
@@ -43,28 +45,36 @@ const Projects = () => {
                     id="BA"
                     projectName="Baltic Amadeus"
                     setIsHovered={setIsHovered}
-                    isHovered={isHovered.BA}
+                    isHovered={isHovered}
+                    img={BA_Macaron}
+                    imgAlt="3D rendered bracket symbol"
                 />
                 <ProjectItem
                     href="/"
                     id="IV"
                     projectName="Interneto Vizija"
                     setIsHovered={setIsHovered}
-                    isHovered={isHovered.IV}
+                    isHovered={isHovered}
+                    img={Hand}
+                    imgAlt="3D rendered bracket symbol"
                 />
                 <ProjectItem
                     href="/"
                     id="HO"
                     projectName="Hostens"
                     setIsHovered={setIsHovered}
-                    isHovered={isHovered.HO}
+                    isHovered={isHovered}
+                    img={BA_Macaron}
+                    imgAlt="3D rendered bracket symbol"
                 />
                 <ProjectItem
                     href="/"
                     id="SW"
                     projectName="Swedbank"
                     setIsHovered={setIsHovered}
-                    isHovered={isHovered.SW}
+                    isHovered={isHovered}
+                    img={Hand}
+                    imgAlt="3D rendered bracket symbol"
                 />
             </Card>
         </motion.section>
