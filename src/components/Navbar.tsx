@@ -51,7 +51,7 @@ const Navbar = () => {
 
     return (
         <>
-            <FocusScope contain={isMenuDropdownOpen === true}>
+            <FocusScope contain={isMenuDropdownOpen === true} autoFocus={false}>
                 <nav className="z-20 fixed top-0 w-full flex md:static">
                     <motion.div
                         className="absolute w-full h-full top-0 left-0 md:hidden"

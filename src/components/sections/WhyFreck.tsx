@@ -35,7 +35,7 @@ const WhyFreck = () => (
                     />
                 </video>
             </div>
-            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-5 px-14">
+            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-5 px-8 md:px-14">
                 <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
                     (Too) emotional designer
                 </h3>
@@ -54,7 +54,7 @@ const WhyFreck = () => (
             className="w-full text-white flex flex-col justify-evenly flex-1 overflow-hidden"
             padding={false}
         >
-            <div className="text-center flex flex-col gap-5 md:gap-8 lg:gap-5 px-14">
+            <div className="text-center flex flex-col gap-5 md:gap-8 lg:gap-5 px-8 md:px-14">
                 <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
                     Skills to skyrocket your marketing
                 </h3>

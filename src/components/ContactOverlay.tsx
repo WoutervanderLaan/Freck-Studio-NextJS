@@ -32,7 +32,7 @@ const ContactOverlay = () => {
                     exit={{ opacity: 0 }}
                     className="fixed top-0 left-0 h-[100dvh] overflow-auto w-full bg-blue z-20 flex flex-col md:bg-black/50 md:items-center md:justify-center pointer-events-auto"
                 >
-                    <FocusScope contain autoFocus restoreFocus>
+                    <FocusScope contain autoFocus={false} restoreFocus>
                         <Card
                             backgroundColor="bg-tranparent md:bg-blue"
                             className="relative text-purple h-max w-full rounded-none md:flex md:flex-col md:items-center md:justify-center md:w-fit md:h-fit md:rounded-custom md:mt-20"
