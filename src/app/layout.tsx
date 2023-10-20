@@ -35,7 +35,7 @@ const jsonLd: WithContext<Organization> = {
     image: '/share.webp',
     description: 'Elevate Your Message with Purposeful and Ethical Design',
     url: 'https://www.freck-studio.com',
-    logo: 'https://www.freck-studio.com/logo.svg', /// TO DO: set up this route
+    logo: 'https://www.freck-studio.com/logo.svg',
     email: 'saruunep@gmail.com',
     telephone: '+370-639-20855',
     address: {
@@ -50,6 +50,7 @@ const jsonLd: WithContext<Organization> = {
 }
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://freck-studio-next-js.vercel.app'),
     title: 'Freck Studio',
     description: 'Elevate Your Message with Purposeful and Ethical Design',
     icons: {
@@ -81,7 +82,7 @@ export const metadata: Metadata = {
         capable: true,
     },
     twitter: {
-        card: 'summary',
+        card: 'summary_large_image',
         title: 'Freck Studio',
         description: 'Elevate Your Message with Purposeful and Ethical Design',
     },
