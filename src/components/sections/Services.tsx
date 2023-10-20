@@ -31,7 +31,7 @@ const Services = () => (
             className="flex flex-col gap-12 lg:px-20"
         >
             <div className="text-center flex flex-col gap-6 items-center">
-                <h3 className="font-medium font-serif text-lg-variant w-full lg:text-3xl">
+                <h3 className="font-medium font-serif w-full text-lg-variant md:text-xl lg:text-3xl">
                     Services for your business
                 </h3>
                 <p className="max-w-[640px] md:text-base-variant">

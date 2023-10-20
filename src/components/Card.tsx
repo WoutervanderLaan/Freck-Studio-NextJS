@@ -14,9 +14,17 @@ type CardProps = {
     children: ReactNode
     backgroundColor: string
     className?: string
+    padding?: boolean
+    skew?: boolean
 }
 
-const Card = ({ children, backgroundColor, className }: CardProps) => {
+const Card = ({
+    children,
+    backgroundColor,
+    className,
+    padding = true,
+    skew = true,
+}: CardProps) => {
     const { scrollY } = useScroll()
     const scrollVelocity = useVelocity(scrollY)
     const smoothVelocity = useSpring(scrollVelocity, {
@@ -29,12 +37,13 @@ const Card = ({ children, backgroundColor, className }: CardProps) => {
     return (
         <motion.div
             className={classNames(
-                'flex rounded-custom min-h-[300px] flex-col items-center px-10 py-[50px]',
+                'flex rounded-custom min-h-[300px] flex-col items-center py-[50px]',
                 backgroundColor,
-                className
+                className,
+                { 'px-10': padding }
             )}
             style={{
-                skewY,
+                skewY: skew ? skewY : 0,
             }}
         >
             {children}

@@ -1,10 +1,10 @@
-const Cross = () => (
+const Cross = ({ strokeColor = 'stroke-purple' }: { strokeColor?: string }) => (
     <svg
         width="40"
         height="40"
         viewBox="0 0 346 335"
         xmlns="http://www.w3.org/2000/svg"
-        className="stroke-blue"
+        className={strokeColor}
     >
         <path
             d="M220.254 119.946L125.746 214.424"

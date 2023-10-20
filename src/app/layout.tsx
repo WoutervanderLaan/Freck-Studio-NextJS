@@ -4,6 +4,7 @@ import type { Organization, WithContext } from 'schema-dts'
 import classNames from 'classnames'
 import { Roboto_Slab, Baumans, Rubik } from 'next/font/google'
 import ThemeContextProvider from '@/contexts/ThemeContext'
+import OverlayContextProvider from '@/contexts/OverlayContext'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import Script from 'next/script'
@@ -31,7 +32,7 @@ const jsonLd: WithContext<Organization> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Freck Studio',
-    image: 'share.webp',
+    image: '/share.webp',
     description: 'Elevate Your Message with Purposeful and Ethical Design',
     url: 'https://www.freck-studio.com',
     logo: 'https://www.freck-studio.com/logo.svg', /// TO DO: set up this route
@@ -141,20 +142,22 @@ export default function RootLayout({
                 <meta name="mobile-web-app-capable" content="yes" />
             </head>
             <ThemeContextProvider>
-                <body
-                    className={classNames(
-                        'font-sans flex flex-col min-h-screen overflow-x-hidden dark:bg-dark-bg dark:text-white',
-                        baumans.variable,
-                        robotoSLab.variable,
-                        rubik.variable
-                    )}
-                >
-                    <Navbar />
-                    <main className="flex-1 flex flex-col gap-5">
-                        {children}
-                    </main>
-                    <Footer />
-                </body>
+                <OverlayContextProvider>
+                    <body
+                        className={classNames(
+                            'font-sans flex flex-col min-h-screen overflow-x-hidden dark:bg-dark-bg dark:text-white',
+                            baumans.variable,
+                            robotoSLab.variable,
+                            rubik.variable
+                        )}
+                    >
+                        <Navbar />
+                        <main className="flex-1 flex flex-col gap-5">
+                            {children}
+                        </main>
+                        <Footer />
+                    </body>
+                </OverlayContextProvider>
             </ThemeContextProvider>
         </html>
     )
