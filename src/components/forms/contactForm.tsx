@@ -71,7 +71,7 @@ const ContactForm = () => {
                 id="contactForm"
                 name="contactForm"
                 onSubmit={handleSubmit(onSubmit)}
-                className="relative flex flex-row flex-wrap gap-x-12 gap-y-10 w-full h-fit justify-between"
+                className="relative flex flex-row flex-wrap md:gap-x-12 gap-y-10 w-full h-fit justify-between"
             >
                 <ContactFormInput
                     name="firstName"
@@ -177,7 +177,7 @@ const ContactFormInput = (
     } = useController(props)
 
     return (
-        <div className="relative h-fit max-w-[40%]">
+        <div className="relative h-fit w-full md:max-w-[40%]">
             <label
                 id={`${name}_label`}
                 htmlFor={name}

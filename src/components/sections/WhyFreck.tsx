@@ -15,9 +15,10 @@ const WhyFreck = () => (
     >
         <Card
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"
-            className="w-full text-green flex flex-col flex-1 py-12 gap-5"
+            className="w-full text-green flex flex-col flex-1 py-12 gap-5 justify-evenly"
+            padding={false}
         >
-            <div className="relative aspect-square rounded-full overflow-hidden z-10 min-[500px]:w-[80%] md:w-[60%]">
+            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%]">
                 <video
                     muted
                     loop
@@ -34,8 +35,8 @@ const WhyFreck = () => (
                     />
                 </video>
             </div>
-            <div className="text-center flex flex-col justify-between h-fit px-2 gap-5 max-w-[460px]">
-                <h3 className="text-lg font-medium font-serif lg:text-2xl">
+            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-5 px-14">
+                <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
                     (Too) emotional designer
                 </h3>
                 <p className="md:text-base-variant">
@@ -50,11 +51,11 @@ const WhyFreck = () => (
 
         <Card
             backgroundColor="bg-black dark:bg-dark-primary-bg"
-            className="w-full text-white flex flex-col justify-between flex-1 overflow-hidden"
+            className="w-full text-white flex flex-col justify-evenly flex-1 overflow-hidden"
             padding={false}
         >
-            <div className="text-center flex flex-col gap-5 px-10">
-                <h3 className="text-lg font-medium font-serif lg:text-lg-variant xl:text-2xl">
+            <div className="text-center flex flex-col gap-5 md:gap-8 lg:gap-5 px-14">
+                <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
                     Skills to skyrocket your marketing
                 </h3>
                 <p className="md:text-base-variant opacity-75">

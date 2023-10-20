@@ -12,27 +12,32 @@ import Sun from './icons/Sun'
 import Hamburger from './icons/Hamburger'
 import Button from './Button'
 import AriaLink from './AriaLink'
+import ContactOverlay from './ContactOverlay'
+import { OverlayContext } from '@/contexts/OverlayContext'
 
 const Navbar = () => {
     const themeContext = useContext(ThemeContext)
+    const overlayContext = useContext(OverlayContext)
     const isTablet = UseViewportDetection(768)
-    const [isMenuDropdownOpen, setIsMenuDropdownOpen] = useState(false)
+    const [isMenuDropdownOpen, setIsMenuDropdownOpen] = useState<
+        boolean | null
+    >(null)
     const router = useRouter()
 
     const date = new Date()
     const year = date.getFullYear()
 
     useEffect(() => {
-        if (isMenuDropdownOpen) {
+        if (isMenuDropdownOpen || overlayContext?.isContactOverlayOpen) {
             document.body.classList.add('overflow-hidden')
         }
-        if (!isMenuDropdownOpen) {
+        if (!isMenuDropdownOpen && !overlayContext?.isContactOverlayOpen) {
             document.body.classList.remove('overflow-hidden')
         }
-    }, [isMenuDropdownOpen])
+    }, [isMenuDropdownOpen, overlayContext?.isContactOverlayOpen])
 
     useEffect(() => {
-        setIsMenuDropdownOpen(false)
+        isTablet && setIsMenuDropdownOpen(false)
     }, [isTablet])
 
     const backgroundVariants = {
@@ -45,8 +50,8 @@ const Navbar = () => {
     }
 
     return (
-        <FocusScope contain={isMenuDropdownOpen}>
-            <header>
+        <>
+            <FocusScope contain={isMenuDropdownOpen === true}>
                 <nav className="z-20 fixed top-0 w-full flex md:static">
                     <motion.div
                         className="absolute w-full h-full top-0 left-0 md:hidden"
@@ -137,7 +142,7 @@ const Navbar = () => {
                                     }
                                     icon={
                                         <Hamburger
-                                            isOpen={isMenuDropdownOpen}
+                                            isOpen={isMenuDropdownOpen === true}
                                             dark={themeContext?.isDarkMode}
                                         />
                                     }
@@ -157,7 +162,7 @@ const Navbar = () => {
                             exit={{ opacity: 0 }}
                         >
                             <div className="h-full flex flex-col justify-end gap-32">
-                                <ul className="flex flex-col gap-4 pointer-events-auto">
+                                <ul className="flex flex-col pointer-events-auto">
                                     <li>
                                         <Button
                                             variant="ghost"
@@ -213,14 +218,31 @@ const Navbar = () => {
                                             </span>
                                         </Button>
                                     </li>
+                                    <li>
+                                        <Button
+                                            variant="ghost"
+                                            onPress={() => {
+                                                overlayContext?.setIsContactOverlayOpen(
+                                                    true
+                                                )
+                                                setIsMenuDropdownOpen(false)
+                                            }}
+                                        >
+                                            <span className="text-lg-variant text-white">
+                                                Contact
+                                            </span>
+                                        </Button>
+                                    </li>
                                 </ul>
                                 <p className="text-center text-white text-sm">{`© Freck Studio ${year}`}</p>
                             </div>
                         </motion.div>
                     )}
                 </AnimatePresence>
-            </header>
-        </FocusScope>
+            </FocusScope>
+
+            <ContactOverlay />
+        </>
     )
 }
 

@@ -12,7 +12,6 @@ import phone from '../../public/img/Phone_small.png'
 import linkedin from '../../public/img/Linkedin_small.png'
 import EmailOverlay from './EmailOverlay'
 import UseViewportDetection from '@/hooks/useViewportDetection'
-import ContactOverlay from './ContactOverlay'
 import { OverlayContext } from '@/contexts/OverlayContext'
 
 const Footer = () => {
@@ -128,7 +127,6 @@ const Footer = () => {
             )}
 
             <EmailOverlay />
-            <ContactOverlay />
         </motion.footer>
     )
 }

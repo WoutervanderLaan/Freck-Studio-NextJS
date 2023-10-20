@@ -20,7 +20,7 @@ const WhoCard = () => {
                 backgroundColor="bg-dark-secondary-bg"
                 className="relative text-center overflow-hidden"
             >
-                <h2 className="text-blue font-serif font-medium text-xl md:text-2xl lg:text-3xl">
+                <h2 className="text-blue font-serif font-medium text-lg-variant md:text-xl lg:text-3xl">
                     Everyone is an artist
                 </h2>
                 <p className="text-blue text-center text-base mt-5 z-10 md:max-w-[70%] lg:max-w-[50%] lg:text-base-variant">
