@@ -23,6 +23,7 @@ module.exports = {
                 green: '#247201',
                 'green-light': '#D8EFD2',
                 'bright-green': '#35FB6C',
+                'bright-red': '#ED1D24',
                 gray: '#E0E0E0',
                 'dark-bg': '#0E100D',
                 orange: '#FF6B00',

@@ -15,6 +15,7 @@ type CardProps = {
     backgroundColor: string
     className?: string
     padding?: boolean
+    skew?: boolean
 }
 
 const Card = ({
@@ -22,6 +23,7 @@ const Card = ({
     backgroundColor,
     className,
     padding = true,
+    skew = true,
 }: CardProps) => {
     const { scrollY } = useScroll()
     const scrollVelocity = useVelocity(scrollY)
@@ -41,7 +43,7 @@ const Card = ({
                 { 'px-10': padding }
             )}
             style={{
-                skewY,
+                skewY: skew ? skewY : 0,
             }}
         >
             {children}

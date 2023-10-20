@@ -72,6 +72,7 @@ const WhyFreck = () => (
                     src={hands}
                     alt="Image of hands exchanging a like card"
                     fill
+                    sizes="(max-width: 1024px) 80vw, 40vw"
                     className="aspect-[16/11]"
                 />
             </div>

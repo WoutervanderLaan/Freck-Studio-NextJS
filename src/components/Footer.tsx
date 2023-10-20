@@ -1,7 +1,7 @@
 'use client'
 
-import { AnimatePresence, motion } from 'framer-motion'
-import { useState, useContext } from 'react'
+import { motion } from 'framer-motion'
+import { useContext } from 'react'
 import { ThemeContext } from '@/contexts/ThemeContext'
 import AriaLink from './AriaLink'
 import Image from 'next/image'
@@ -12,11 +12,13 @@ import phone from '../../public/img/Phone_small.png'
 import linkedin from '../../public/img/Linkedin_small.png'
 import EmailOverlay from './EmailOverlay'
 import UseViewportDetection from '@/hooks/useViewportDetection'
+import ContactOverlay from './ContactOverlay'
+import { OverlayContext } from '@/contexts/OverlayContext'
 
 const Footer = () => {
-    const [isEmailOverlayOpen, setIsEmailOverlayOpen] = useState(false)
-    const isTablet = UseViewportDetection(768)
+    const overlayContext = useContext(OverlayContext)
     const themeContext = useContext(ThemeContext)
+    const isTablet = UseViewportDetection(768)
 
     return (
         <motion.footer
@@ -33,10 +35,16 @@ const Footer = () => {
                 <Button
                     variant="ghost"
                     className="relative p-0 w-20 md:w-[120px] h-20 md:h-[120px] rounded-2xl md:rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
-                    onPress={() => setIsEmailOverlayOpen(true)}
+                    onPress={() => overlayContext?.setIsEmailOverlayOpen(true)}
                     aria-label="Press to see email address"
                 >
-                    <Image src={email} fill quality={100} alt="Email icon" />
+                    <Image
+                        src={email}
+                        fill
+                        sizes="(10vw)"
+                        quality={100}
+                        alt="Email icon"
+                    />
                 </Button>
                 <AriaLink
                     href="tel:+37063920855"
@@ -44,7 +52,13 @@ const Footer = () => {
                     target="_parent"
                     className="relative w-20 md:w-[120px] h-20 md:h-[120px] rounded-2xl md:rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
                 >
-                    <Image src={phone} fill quality={100} alt="Phone icon" />
+                    <Image
+                        src={phone}
+                        fill
+                        sizes="(10vw)"
+                        quality={100}
+                        alt="Phone icon"
+                    />
                 </AriaLink>
                 <AriaLink
                     href="https://www.linkedin.com/in/sarunepaulauskaite/"
@@ -56,6 +70,7 @@ const Footer = () => {
                     <Image
                         src={linkedin}
                         fill
+                        sizes="(10vw)"
                         quality={100}
                         alt="LinkedIn icon"
                     />
@@ -72,7 +87,7 @@ const Footer = () => {
                             fill={themeContext?.isDarkMode ? 'white' : 'black'}
                         />
                     </AriaLink>
-                    <div className="flex flex-row items-center gap-4 lg:gap-8 text-sm font-medium pointer-cursor">
+                    <div className="flex flex-row items-center lg:gap-8 text-sm font-medium pointer-cursor">
                         <Button
                             variant="ghost"
                             href="#why"
@@ -98,30 +113,22 @@ const Footer = () => {
                             Projects
                         </Button>
                     </div>
-                    <div className="flex flex-row justify-end flex-1">
-                        <Button onPress={() => setIsEmailOverlayOpen(true)}>
+                    <div className="flex flex-row justify-end flex-1 pointer-events-auto">
+                        <Button
+                            onPress={() =>
+                                overlayContext?.setIsContactOverlayOpen(true)
+                            }
+                        >
                             <span className="lg:text-base-variant">
-                                Contact Me
+                                Contact Form
                             </span>
                         </Button>
                     </div>
                 </div>
             )}
-            <AnimatePresence>
-                {isEmailOverlayOpen && (
-                    <motion.div
-                        className="w-screen h-screen fixed top-0 flex flex-col justify-center items-center bg-black/50 z-20"
-                        key="contactForm"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                    >
-                        <EmailOverlay
-                            setIsEmailOverlayOpen={setIsEmailOverlayOpen}
-                        />
-                    </motion.div>
-                )}
-            </AnimatePresence>
+
+            <EmailOverlay />
+            <ContactOverlay />
         </motion.footer>
     )
 }

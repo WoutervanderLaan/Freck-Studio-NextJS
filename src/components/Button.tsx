@@ -37,10 +37,12 @@ type LinkProps = (WithChildrenProps | WithIconProps) & {
 }
 
 type ButtonProps = (WithChildrenProps | WithIconProps) & {
-    onPress: () => void
     target?: '_blank' | '_self'
     rel?: string
-}
+} & (
+        | { onPress: () => void; type?: never; form?: never }
+        | { type: 'button' | 'submit'; form: string; onPress?: never }
+    )
 
 const Button = (props: ButtonProps | LinkProps) => {
     const {
@@ -55,13 +57,13 @@ const Button = (props: ButtonProps | LinkProps) => {
 
     return (
         <>
-            {'onPress' in props && (
+            {('onPress' in props || 'type' in props) && (
                 <AriaButton
                     {...rest}
                     aria-label={ariaLabel}
                     className={classNames(variantStyles[variant], className)}
                     onPress={props.onPress}
-                    isDisabled={isDisabled}
+                    type={props.type}
                 >
                     {children && children}
                     {icon && icon}
@@ -84,18 +86,24 @@ const Button = (props: ButtonProps | LinkProps) => {
 }
 
 const AriaButton = (
-    props: { children: ReactNode; className?: string } & AriaButtonProps
+    props: {
+        children: ReactNode
+        className?: string
+        form?: string
+    } & AriaButtonProps
 ) => {
     const buttonRef = useRef<HTMLButtonElement>(null)
-    const { buttonProps } = useButton(props, buttonRef)
     const { isFocusVisible, focusProps } = useFocusRing()
-    const { children, className } = props
+    const { buttonProps } = useButton(props, buttonRef)
+    const { children, className, isDisabled, form } = props
 
     return (
         <button
             ref={buttonRef}
             {...buttonProps}
             {...focusProps}
+            form={props.form}
+            disabled={isDisabled}
             className={classNames(className, 'outline-none transition', {
                 'ring-4 ring-pink-dark ring-offset-2 ring-offset-white':
                     isFocusVisible,
