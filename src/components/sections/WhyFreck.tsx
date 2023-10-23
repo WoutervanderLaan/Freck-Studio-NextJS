@@ -11,7 +11,7 @@ const WhyFreck = () => (
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         id="why"
-        className="container flex flex-col gap-5 scroll-my-20 lg:flex-row xl:h-[820px] items-stretch"
+        className="container flex flex-col gap-5 scroll-my-20 lg:flex-row xl:h-[880px] items-stretch"
     >
         <Card
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"

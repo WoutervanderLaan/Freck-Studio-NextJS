@@ -28,7 +28,7 @@ const Services = () => (
     >
         <Card
             backgroundColor="bg-gray"
-            className="flex flex-col gap-12 lg:px-20"
+            className="flex flex-col gap-12 justify-between lg:px-20"
         >
             <div className="text-center flex flex-col gap-6 items-center">
                 <h3 className="font-medium font-serif w-full text-lg-variant md:text-xl lg:text-3xl">
@@ -52,7 +52,7 @@ const Services = () => (
                     </Tag>
                 ))}
             </div>
-            <Button variant="black" href="#contact" className="md:m-10">
+            <Button variant="black" href="#contact" className="md:mt-10">
                 <span className="lg:text-base-variant">Contact Me</span>
             </Button>
         </Card>

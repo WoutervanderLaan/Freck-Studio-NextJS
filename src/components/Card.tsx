@@ -43,7 +43,7 @@ const Card = ({
     return (
         <motion.div
             className={classNames(
-                'flex rounded-custom min-h-[300px] flex-col items-center py-[50px]',
+                'flex rounded-custom min-h-[300px] flex-col items-center py-[50px] lg:py-20',
                 backgroundColor,
                 className,
                 { 'px-10': padding }

@@ -20,14 +20,14 @@ const EmailOverlay = () => {
                     exit={{ opacity: 0 }}
                 >
                     <FocusScope contain autoFocus restoreFocus>
-                        <div className="relative bg-purple dark:bg-dark-secondary-bg text-blue flex flex-col items-center justify-center pointer-events-auto min-w-fit w-[60%] max-w-[800px] px-16 rounded-custom z-20 md:w-[40%] h-[160px] md:min-h-[200px]">
+                        <div className="relative bg-purple dark:bg-dark-secondary-bg text-blue flex flex-col items-center justify-center pointer-events-auto min-w-fit w-[60%] max-w-[800px] px-8 md:px-16 rounded-custom z-20 md:w-[40%] h-[160px] md:min-h-[200px]">
                             <AriaLink
                                 href="mailto:saruunep@gmail.com"
                                 aria-label="Press to send email"
                                 target="_parent"
                             >
                                 <h3 className="text-lg md:text-2xl font-serif transition hover:scale-[105%]">
-                                    Hello@freck.com
+                                    Saruunep@gmail.com
                                 </h3>
                             </AriaLink>
                             <Button

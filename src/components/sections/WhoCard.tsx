@@ -29,7 +29,7 @@ const WhoCard = () => {
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                <div className="relative bottom-[-50px] w-[100vw] sm:w-full aspect-desk mt-[-30px] md:mt-[-50px] lg:mt-[-90px] 2xl:bottom-[-90px]">
+                <div className="relative bottom-[-50px] w-[100vw] sm:w-full aspect-desk mt-[-30px] md:mt-[-90px] lg:bottom-[-90px]">
                     <video muted loop autoPlay preload="auto" playsInline>
                         <source
                             src="/img/Desk_Safari.mov"
