@@ -41,7 +41,7 @@ const Projects = () => {
                     Case Studies
                 </Label> */}
                 <ProjectItem
-                    href="/"
+                    href="/ba"
                     id="BA"
                     projectName="Baltic Amadeus"
                     setIsHovered={setIsHovered}
@@ -50,7 +50,7 @@ const Projects = () => {
                     imgAlt="3D rendered bracket symbol"
                 />
                 <ProjectItem
-                    href="/"
+                    href="/iv"
                     id="IV"
                     projectName="Interneto Vizija"
                     setIsHovered={setIsHovered}
@@ -59,7 +59,7 @@ const Projects = () => {
                     imgAlt="3D rendered bracket symbol"
                 />
                 <ProjectItem
-                    href="/"
+                    href="/hostens"
                     id="HO"
                     projectName="Hostens"
                     setIsHovered={setIsHovered}
@@ -68,7 +68,7 @@ const Projects = () => {
                     imgAlt="3D rendered bracket symbol"
                 />
                 <ProjectItem
-                    href="/"
+                    href="/swedbank"
                     id="SW"
                     projectName="Swedbank"
                     setIsHovered={setIsHovered}

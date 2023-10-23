@@ -52,7 +52,7 @@ const Services = () => (
                     </Tag>
                 ))}
             </div>
-            <Button href="#contact" className="md:m-10">
+            <Button variant="black" href="#contact" className="md:m-10">
                 <span className="lg:text-base-variant">Contact Me</span>
             </Button>
         </Card>

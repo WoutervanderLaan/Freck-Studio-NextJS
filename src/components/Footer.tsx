@@ -25,12 +25,19 @@ const Footer = () => {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="w-full flex flex-col items-center px-10 md:py-6 gap-10 mt-20 mb-2"
+            className="w-full flex flex-col items-center px-10 gap-14 mt-12 mb-6"
         >
-            <h3 className="text-lg font-medium font-serif max-w-[400px] text-center items-center md:text-2xl md:max-w-[700px]">
-                You can contact me through email or social media
-            </h3>
-            <div className="flex flex-row gap-4 mb-12 pointer-events-auto place-items-center sm:gap-6 md:gap-9">
+            <div className="flex flex-col gap-7 text-center items-center max-w-[400px] md:max-w-[640px]">
+                <h3 className="text-lg font-medium font-serif md:text-2xl">
+                    Freck Studio <br /> Amsterdam <br /> the Netherlands, Earth
+                </h3>
+                <p className="text-base-variant">
+                    For new biz, sugar or juicy content call +370 (639) 20 855,
+                    email hello@freck.com or drop by the office at Jacob Oliepad
+                    8 in Amsterdam, Netherlands.
+                </p>
+            </div>
+            <div className="flex flex-row gap-4 mb-6 pointer-events-auto place-items-center sm:gap-6 md:gap-9">
                 <Button
                     variant="ghost"
                     className="relative p-0 w-20 md:w-[120px] h-20 md:h-[120px] rounded-2xl md:rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
@@ -86,7 +93,7 @@ const Footer = () => {
                             fill={themeContext?.isDarkMode ? 'white' : 'black'}
                         />
                     </AriaLink>
-                    <div className="flex flex-row items-center lg:gap-8 text-sm font-medium pointer-cursor">
+                    <div className="flex flex-row items-center lg:gap-4 text-sm font-medium pointer-cursor">
                         <Button
                             variant="ghost"
                             href="#why"
@@ -94,6 +101,14 @@ const Footer = () => {
                             className="hover:text-blue transition active:scale-90"
                         >
                             Why Freck
+                        </Button>
+                        <Button
+                            variant="ghost"
+                            href="#services"
+                            ariaLabel="Section Services"
+                            className="hover:text-blue transition active:scale-90"
+                        >
+                            Services
                         </Button>
                         <Button
                             variant="ghost"

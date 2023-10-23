@@ -17,7 +17,7 @@ const Testimonials = () => {
             className="container flex flex-col gap-4"
         >
             <div className="text-center flex flex-col gap-6 max-w-[80%] md:max-w-[640px] self-center my-4 md:my-10">
-                <h3 className="font-serif font-medium text-lg-variant md:text-xl">
+                <h3 className="font-serif font-medium text-lg-variant md:text-2xl">
                     You are too polite people!
                 </h3>
                 <p className="text-base-variant">

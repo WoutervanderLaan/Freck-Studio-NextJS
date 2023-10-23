@@ -153,7 +153,7 @@ export default function RootLayout({
                         )}
                     >
                         <Navbar />
-                        <main className="flex-1 flex flex-col gap-5">
+                        <main className="flex-1 flex flex-col gap-5 antialiased">
                             {children}
                         </main>
                         <Footer />

@@ -73,7 +73,7 @@ const Navbar = () => {
                         </AriaLink>
                         {isTablet === false && (
                             <>
-                                <div className="flex flex-row items-center gap-4 md:gap-8 font-medium pointer-cursor">
+                                <div className="flex flex-row items-center gap-4 md:gap-2 font-medium pointer-cursor">
                                     <Button
                                         variant="ghost"
                                         href="#why"
@@ -81,6 +81,14 @@ const Navbar = () => {
                                         className="hover:text-blue transition active:scale-90"
                                     >
                                         Why Freck?
+                                    </Button>
+                                    <Button
+                                        variant="ghost"
+                                        href="#services"
+                                        ariaLabel="Section Services"
+                                        className="hover:text-blue transition active:scale-90"
+                                    >
+                                        Services
                                     </Button>
                                     <Button
                                         variant="ghost"
@@ -180,12 +188,12 @@ const Navbar = () => {
                                         <Button
                                             variant="ghost"
                                             onPress={() => {
-                                                router.push('/#about')
+                                                router.push('/#services')
                                                 setIsMenuDropdownOpen(false)
                                             }}
                                         >
                                             <span className="text-lg-variant text-white">
-                                                About
+                                                Services
                                             </span>
                                         </Button>
                                     </li>
@@ -199,6 +207,19 @@ const Navbar = () => {
                                         >
                                             <span className="text-lg-variant text-white">
                                                 Projects
+                                            </span>
+                                        </Button>
+                                    </li>
+                                    <li>
+                                        <Button
+                                            variant="ghost"
+                                            onPress={() => {
+                                                router.push('/#about')
+                                                setIsMenuDropdownOpen(false)
+                                            }}
+                                        >
+                                            <span className="text-lg-variant text-white">
+                                                About
                                             </span>
                                         </Button>
                                     </li>

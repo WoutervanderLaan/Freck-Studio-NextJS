@@ -35,29 +35,9 @@ const ContactOverlay = () => {
                     <FocusScope contain autoFocus={false} restoreFocus>
                         <Card
                             backgroundColor="bg-tranparent md:bg-blue"
-                            className="relative text-purple h-max w-full rounded-none md:flex md:flex-col md:items-center md:justify-center md:w-fit md:h-fit md:rounded-custom md:mt-20"
+                            className="relative text-purple h-max w-full rounded-none md:flex md:flex-col md:items-center md:justify-center md:w-fit md:h-fit md:rounded-custom"
                             skew={false}
                         >
-                            <motion.div
-                                className="hidden md:block absolute -z-10"
-                                initial={{
-                                    top: -80,
-                                }}
-                                animate={{
-                                    top: -215,
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    delay: 1,
-                                }}
-                            >
-                                <Image
-                                    src={clockCat}
-                                    width={400}
-                                    className="aspect-auto"
-                                    alt="3D cat holding a clock"
-                                />
-                            </motion.div>
                             <div className="absolute w-fit left-4 top-4 md:hidden">
                                 <Logo fill="#4900A5" />
                             </div>

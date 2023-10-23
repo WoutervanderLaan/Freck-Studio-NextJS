@@ -25,7 +25,7 @@ const ContactForm = () => {
         control,
         reset,
         setError,
-        formState: { isSubmitting },
+        formState: { isSubmitting, errors },
     } = useForm<FormValues>({
         defaultValues: {
             firstName: '',
@@ -72,6 +72,7 @@ const ContactForm = () => {
                 name="contactForm"
                 onSubmit={handleSubmit(onSubmit)}
                 className="relative flex flex-row flex-wrap md:gap-x-12 gap-y-10 w-full h-fit justify-between"
+                autoComplete="off"
             >
                 <ContactFormInput
                     name="firstName"
@@ -119,7 +120,6 @@ const ContactForm = () => {
                         },
                     }}
                     type="email"
-                    autoComplete="email"
                 />
                 <ContactFormTextArea
                     name="message"
@@ -139,11 +139,16 @@ const ContactForm = () => {
                         Thank you for your message!
                     </span>
                 )}
+                {errors && (
+                    <span className="absolute -bottom-3 left-0 text-bright-green text-sm">
+                        {errors.root?.message}
+                    </span>
+                )}
             </form>
             <Button
                 type="submit"
                 form="contactForm"
-                className="place-self-start"
+                className="place-self-start border-purple border-2"
                 isDisabled={isSubmitting}
             >
                 Send Message
@@ -197,7 +202,7 @@ const ContactFormInput = (
                 aria-labelledby={`${name}_label`}
                 disabled={isSubmitting}
                 className={classNames(
-                    'w-full border-b-[3px] py-1 border-purple bg-transparent text-purple outline-none placeholder:text-base-variant placeholder:text-purple/25',
+                    'w-full border-b-2 py-1 border-purple bg-transparent text-purple outline-none placeholder:text-base-variant placeholder:text-purple/25',
                     {
                         'ring-2 ring-pink-dark ring-offset-2 ring-offset-white':
                             isFocusVisible,
@@ -248,7 +253,7 @@ const ContactFormTextArea = (
                 aria-labelledby={`${name}_label`}
                 disabled={isSubmitting}
                 className={classNames(
-                    'w-full h-16 py-1 border-b-[3px] border-purple bg-transparent outline-none text-purple placeholder:text-base-variant placeholder:text-purple/25',
+                    'w-full h-16 py-1 border-b-2 border-purple bg-transparent outline-none text-purple placeholder:text-base-variant placeholder:text-purple/25',
                     {
                         'ring-2 ring-pink-dark ring-offset-2 ring-offset-white':
                             isFocusVisible,

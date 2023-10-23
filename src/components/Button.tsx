@@ -5,11 +5,12 @@ import { ReactNode, useRef } from 'react'
 import classNames from 'classnames'
 import AriaLink from './AriaLink'
 
-type ButtonStyleVariants = 'default' | 'ghost' | 'switch' | 'small'
+type ButtonStyleVariants = 'default' | 'ghost' | 'switch' | 'small' | 'black'
 
 const variantStyles: Record<ButtonStyleVariants, string> = {
     default:
         'w-fit px-9 py-5 rounded-custom bg-purple text-blue duration-200 hover:bg-blue hover:text-purple dark:bg-green dark:text-white dark:hover:bg-white dark:hover:text-green disabled:opacity-50',
+    black: 'w-fit px-9 py-5 rounded-custom bg-black text-white duration-200 hover:bg-white hover:text-black disabled:opacity-50',
     ghost: 'p-2 rounded-full md:p-4 md:text-base-variant font-normal',
     switch: 'rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5 border-2',
     small: 'w-fit h-fit bg-pink-dark rounded-custom px-4 py-1 dark:bg-purple',
@@ -49,7 +50,6 @@ const Button = (props: ButtonProps | LinkProps) => {
         icon,
         children,
         variant = 'default',
-        isDisabled,
         className,
         ariaLabel,
         ...rest
@@ -75,7 +75,6 @@ const Button = (props: ButtonProps | LinkProps) => {
                     aria-label={ariaLabel}
                     className={classNames(variantStyles[variant], className)}
                     href={props.href}
-                    isDisabled={isDisabled}
                 >
                     {children && children}
                     {icon && icon}
@@ -95,7 +94,7 @@ const AriaButton = (
     const buttonRef = useRef<HTMLButtonElement>(null)
     const { isFocusVisible, focusProps } = useFocusRing()
     const { buttonProps } = useButton(props, buttonRef)
-    const { children, className, isDisabled, form } = props
+    const { children, className, isDisabled } = props
 
     return (
         <button

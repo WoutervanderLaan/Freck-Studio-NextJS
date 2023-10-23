@@ -23,7 +23,7 @@ const WhoCard = () => {
                 <h2 className="text-blue font-serif font-medium text-lg-variant md:text-xl lg:text-3xl">
                     Everyone is an artist
                 </h2>
-                <p className="text-blue text-center text-base mt-5 z-10 md:max-w-[70%] lg:max-w-[50%] lg:text-base-variant">
+                <p className="text-blue text-center text-base mt-5 z-10 md:max-w-[70%] lg:max-w-[640px] lg:text-base-variant">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation

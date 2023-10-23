@@ -18,6 +18,8 @@ type CardProps = {
     skew?: boolean
 }
 
+const SKEW_AMOUNT = 2
+
 const Card = ({
     children,
     backgroundColor,
@@ -32,7 +34,11 @@ const Card = ({
         stiffness: 1000,
     })
 
-    const skewY = useTransform(smoothVelocity, [-3000, 3000], [-3, 3])
+    const skewY = useTransform(
+        smoothVelocity,
+        [-3000, 3000],
+        [-SKEW_AMOUNT, SKEW_AMOUNT]
+    )
 
     return (
         <motion.div
