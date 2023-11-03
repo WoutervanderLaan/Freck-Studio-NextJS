@@ -8,6 +8,7 @@ import AriaLink from '../AriaLink'
 
 const WhoCard = () => {
     const isTablet = UseViewportDetection(768)
+    console.log('test')
 
     return (
         <motion.section
