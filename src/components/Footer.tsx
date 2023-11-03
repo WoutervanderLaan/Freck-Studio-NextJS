@@ -96,7 +96,7 @@ const Footer = () => {
                     <div className="flex flex-row items-center lg:gap-4 text-sm font-medium pointer-cursor">
                         <Button
                             variant="ghost"
-                            href="#why"
+                            href="/#why"
                             ariaLabel="Section Why Freck"
                             className="hover:text-blue transition active:scale-90"
                         >
@@ -104,7 +104,7 @@ const Footer = () => {
                         </Button>
                         <Button
                             variant="ghost"
-                            href="#services"
+                            href="/#services"
                             ariaLabel="Section Services"
                             className="hover:text-blue transition active:scale-90"
                         >
@@ -112,7 +112,7 @@ const Footer = () => {
                         </Button>
                         <Button
                             variant="ghost"
-                            href="#about"
+                            href="/#about"
                             ariaLabel="Section About"
                             className="hover:text-blue transition active:scale-90"
                         >
@@ -120,7 +120,7 @@ const Footer = () => {
                         </Button>
                         <Button
                             variant="ghost"
-                            href="#projects"
+                            href="/#projects"
                             ariaLabel="Section Projects"
                             className="hover:text-blue transition active:scale-90"
                         >

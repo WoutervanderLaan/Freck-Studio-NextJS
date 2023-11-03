@@ -48,9 +48,10 @@ const ContactOverlay = () => {
                                         How can I Help?
                                     </h3>
                                     <p className="font-medium text-base">
-                                        Digital queries? We'd love to hear them!
-                                        Fill in your details and we'll get back
-                                        to you as soon as possible.
+                                        Digital queries? We&apos;d love to hear
+                                        them! Fill in your details and
+                                        we&apos;ll get back to you as soon as
+                                        possible.
                                     </p>
                                 </div>
                                 <ContactForm />

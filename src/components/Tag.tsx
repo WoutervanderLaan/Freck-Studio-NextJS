@@ -1,9 +1,29 @@
 import { ReactNode } from 'react'
+import { motion } from 'framer-motion'
 
-const Tag = ({ children, note }: { children: ReactNode; note?: string }) => (
-    <div className="bg-white text-black rounded-custom py-3 text-center px-6 text-base sm:text-lg">
-        {children} {note && <span className="text-black/50">{note}</span>}
-    </div>
+const tagVariants = {
+    default: { backgroundColor: '#ffffff', color: '#000000' },
+    hovered: { backgroundColor: '#000000', color: '#ffffff' },
+}
+
+const Tag = ({
+    children,
+    note,
+    hovered,
+}: {
+    children: ReactNode
+    note?: string
+    hovered?: boolean
+}) => (
+    <motion.div
+        className="rounded-custom py-3 text-center px-6 text-base sm:text-lg"
+        data-name="tag"
+        variants={tagVariants}
+        initial={{ backgroundColor: '#ffffff' }}
+        animate={hovered ? 'hovered' : 'default'}
+    >
+        {children} {note && <span className="opacity-50">{note}</span>}
+    </motion.div>
 )
 
 export default Tag

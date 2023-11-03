@@ -42,7 +42,9 @@ const Testimonial = ({
                 textColor
             )}
         >
-            <p className="w-full italic mb-5 md:text-base-variant">"{text}"</p>
+            <p className="w-full italic mb-5 md:text-base-variant">
+                &quot;{text}&quot;
+            </p>
             <div>
                 <p className="font-medium text-base">{name}</p>
                 <p className="text-base">{position}</p>

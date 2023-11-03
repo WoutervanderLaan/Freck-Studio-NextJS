@@ -76,7 +76,7 @@ const Navbar = () => {
                                 <div className="flex flex-row items-center gap-4 md:gap-2 font-medium pointer-cursor">
                                     <Button
                                         variant="ghost"
-                                        href="#why"
+                                        href="/#why"
                                         ariaLabel="Section Why Freck"
                                         className="hover:text-blue transition active:scale-90"
                                     >
@@ -84,7 +84,7 @@ const Navbar = () => {
                                     </Button>
                                     <Button
                                         variant="ghost"
-                                        href="#services"
+                                        href="/#services"
                                         ariaLabel="Section Services"
                                         className="hover:text-blue transition active:scale-90"
                                     >
@@ -92,7 +92,7 @@ const Navbar = () => {
                                     </Button>
                                     <Button
                                         variant="ghost"
-                                        href="#projects"
+                                        href="/#projects"
                                         ariaLabel="Section Projects"
                                         className="hover:text-blue transition active:scale-90"
                                     >
@@ -100,7 +100,7 @@ const Navbar = () => {
                                     </Button>
                                     <Button
                                         variant="ghost"
-                                        href="#about"
+                                        href="/#about"
                                         ariaLabel="Section About"
                                         className="hover:text-blue transition active:scale-90"
                                     >
