@@ -11,14 +11,13 @@ import cursor from '../../../public/img/3d-cursor.png'
 const designServices = [
     '3D assets',
     'Branding',
-    'Graphic Design',
-    'Icons',
+    'Digital Design',
     'Motion',
-    'Print',
-    'illustrations',
-    'UI Kits',
+    'Print Design',
+    'Illustrations',
+    'UX/UI',
     'Social Media',
-    'Web Development',
+    'Development',
 ]
 
 type Coordinate = { x: number; y: number }
@@ -57,7 +56,7 @@ const Services = () => {
     }
 
     useEffect(() => {
-        if (tagContainer.current) calcTagPositions()
+        if (tagContainer.current) setTimeout(() => calcTagPositions(), 400)
     }, [tagContainer.current])
 
     useEffect(() => {
@@ -95,9 +94,9 @@ const Services = () => {
                         Services for your business
                     </h3>
                     <p className="max-w-[640px] md:text-base-variant">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                        dolore magna aliquam erat volutpat.
+                        I create quality content that speaks from the heart of
+                        your brand and jaw dropping designs that will make your
+                        competitors ask my number.
                     </p>
                 </div>
                 <div
@@ -106,12 +105,16 @@ const Services = () => {
                 >
                     {XY && (
                         <motion.div
-                            className="left-0 top-0 absolute z-30"
+                            className="left-0 top-0 absolute z-10"
                             animate={XY}
                         >
-                            <div className="bg-blue w-10 h-10 rounded-full border-2 border-black shadow-lg flex justify-center">
-                                <span>{cursorIndex}</span>
-                            </div>
+                            <Image
+                                src={cursor}
+                                alt="3D image of cursor"
+                                width={60}
+                                height={60}
+                                className="translate-y-4"
+                            />
                         </motion.div>
                     )}
                     {designServices.map((tag, index) => (

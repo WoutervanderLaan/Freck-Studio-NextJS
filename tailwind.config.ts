@@ -71,7 +71,7 @@ module.exports = {
             xl: ['40px', '40px'],
             '2xl': ['48px', '60px'],
             '3xl': ['72px', '72px'],
-            '4xl': ['92px', '92px'],
+            '4xl': ['85px', '85px'],
         },
 
         container: {

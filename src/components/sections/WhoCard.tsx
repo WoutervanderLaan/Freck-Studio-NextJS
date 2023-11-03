@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Card from '../Card'
 import TextBalloons from '../TextBalloons'
 import UseViewportDetection from '@/hooks/useViewportDetection'
+import AriaLink from '../AriaLink'
 
 const WhoCard = () => {
     const isTablet = UseViewportDetection(768)
@@ -21,13 +22,29 @@ const WhoCard = () => {
                 className="relative text-center overflow-hidden"
             >
                 <h2 className="text-blue font-serif font-medium text-lg-variant md:text-xl lg:text-3xl">
-                    Everyone is an artist
+                    Behind the scenes
                 </h2>
-                <p className="text-blue text-center text-base mt-5 z-10 md:max-w-[70%] lg:max-w-[640px] lg:text-base-variant">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <p className="text-blue text-center mt-5 z-10 md:max-w-[70%] lg:max-w-[640px] md:text-base-variant">
+                    <AriaLink
+                        href="https://www.youtube.com/watch?v=TEhh8UuG6u8"
+                        target="_blank"
+                        rel="external"
+                    >
+                        <motion.q
+                        // animate={{ opacity: [0.7, 1, 1, 0.7] }}
+                        // transition={{
+                        //     duration: 2,
+                        //     repeat: Infinity,
+                        //     ease: 'easeInOut',
+                        // }}
+                        >
+                            Ade due Damballa. Give me the power, I beg of you!
+                        </motion.q>
+                    </AriaLink>
+                    <br />
+                    <br />A look behind the scenes at Freck. All these totems
+                    play an important role in conjuring the energies needed to
+                    design in contemporary times.
                 </p>
                 <div className="relative bottom-[-50px] w-[100vw] sm:w-full aspect-desk mt-[-30px] md:mt-[-90px] lg:bottom-[-90px]">
                     <video muted loop autoPlay preload="auto" playsInline>

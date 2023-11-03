@@ -15,10 +15,10 @@ const WhyFreck = () => (
     >
         <Card
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"
-            className="w-full text-green flex flex-col flex-1 py-12 gap-5 justify-evenly"
+            className="w-full text-green flex flex-col flex-1 gap-5 justify-evenly"
             padding={false}
         >
-            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%]">
+            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%] lg:-mt-10">
                 <video
                     muted
                     loop
@@ -35,16 +35,17 @@ const WhyFreck = () => (
                     />
                 </video>
             </div>
-            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-5 px-8 md:px-14">
+            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-5 px-8 md:px-14 lg:-mb-10">
                 <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
-                    (Too) emotional designer
+                    Emotional designer
                 </h3>
                 <p className="md:text-base-variant">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat.
+                    I try to conquer the digital world through real emotional
+                    engagement. I seek to challenge conservative frameworks
+                    while collaborating with my clients. My responsibility is to
+                    stay engaged, give a damn, and build meaningful
+                    relationships together. <br /> <br /> Empathy is the only
+                    way forward!
                 </p>
             </div>
         </Card>
@@ -56,16 +57,17 @@ const WhyFreck = () => (
         >
             <div className="text-center flex flex-col gap-5 md:gap-8 lg:gap-5 px-8 md:px-14">
                 <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
-                    Skills to skyrocket your marketing
+                    In search of stardom and extravaganza?
                 </h3>
                 <p className="md:text-base-variant opacity-75">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis
-                    nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor
-                    sit amet, consectetuer adipiscing elit, sed diam nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat.
+                    Are you tired of boringly designed Power Point
+                    presentations? Are you in need of infographics,
+                    illustrations or one pagers to explain your brand? Or are
+                    you thinking of rebranding your company?
+                    <br />
+                    <br />
+                    You wont need Photoshop or any other fancy softwares, just a
+                    Slack thread with me.
                 </p>
             </div>
             <div className="relative w-full aspect-[16/11]">

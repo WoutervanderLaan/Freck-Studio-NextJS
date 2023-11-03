@@ -34,7 +34,7 @@ const Footer = () => {
                 <p className="text-base-variant">
                     For new biz, sugar or juicy content call +370 (639) 20 855,
                     email saruunep@gmail.com or drop by the office at Jacob
-                    Oliepad 8 in Amsterdam, Netherlands.
+                    Oliepad 8 in Amsterdam, the Netherlands.
                 </p>
             </div>
             <div className="flex flex-row gap-4 mb-6 pointer-events-auto place-items-center sm:gap-6 md:gap-9">

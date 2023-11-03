@@ -3,7 +3,11 @@ import { motion } from 'framer-motion'
 
 const tagVariants = {
     default: { backgroundColor: '#ffffff', color: '#000000' },
-    hovered: { backgroundColor: '#000000', color: '#ffffff' },
+    hovered: {
+        backgroundColor: '#000000',
+        color: '#ffffff',
+        transition: { delay: 0.2 },
+    },
 }
 
 const Tag = ({
