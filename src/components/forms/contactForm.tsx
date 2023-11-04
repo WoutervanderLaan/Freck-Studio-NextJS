@@ -183,11 +183,7 @@ const ContactFormInput = (
 
     return (
         <div className="relative h-fit w-full md:max-w-[40%]">
-            <label
-                id={`${name}_label`}
-                htmlFor={name}
-                className="font-medium text-base"
-            >
+            <label id={`${name}_label`} htmlFor={name} className="text-base">
                 {label}
             </label>
 

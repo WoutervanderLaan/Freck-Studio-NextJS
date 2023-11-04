@@ -30,6 +30,7 @@ module.exports = {
             aspectRatio: {
                 desk: '20 / 11',
                 swedbank: '9 / 2',
+                hands: '31 / 20',
             },
             borderRadius: {
                 custom: '40px',
@@ -55,8 +56,8 @@ module.exports = {
             cursive: ['var(--font-baumans)'],
         },
         fontWeight: {
-            thin: '300',
-            normal: '400',
+            normal: '300',
+            base: '400',
             medium: '500',
             bold: '700',
             black: '800',
@@ -66,17 +67,18 @@ module.exports = {
             sm: ['12px', '17px'],
             base: ['16px', '20px'],
             'base-variant': ['20px', '24px'],
+            'base-v2': ['24px', '34px'],
             lg: ['24px', '28px'],
             'lg-variant': ['32px', '40px'],
             xl: ['40px', '40px'],
-            '2xl': ['48px', '60px'],
+            '2xl': ['52px', '60px'],
             '3xl': ['72px', '72px'],
-            '4xl': ['85px', '85px'],
+            '4xl': ['90px', '90px'],
         },
 
         container: {
             center: true,
-            padding: { DEFAULT: '1.25rem', md: '2.5rem' },
+            padding: { DEFAULT: '1.25rem', md: '2.5rem', lg: '1rem' },
         },
     },
     plugins: [],

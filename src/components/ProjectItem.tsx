@@ -42,13 +42,19 @@ const ProjectItem = ({
             }))
         }
         onHoverEnd={() => setIsHovered(() => defaultState)}
-        className="relative active:scale-90 transition"
+        className={classNames(
+            'relative flex active:scale-90 transition min-w-fit',
+            {
+                'opacity-50': !isHovered[id],
+            }
+        )}
     >
         <AriaLink
             href={href}
-            className={classNames({ 'opacity-50': !isHovered[id] })}
+            aria-label={`Press to go to case study of ${projectName}`}
+            target="_self"
         >
-            <h3 className="font-medium font-serif text-lg-variant w-full max-[360px]:text-lg min-[480px]:text-2xl lg:text-3xl">
+            <h3 className="font-medium font-serif text-lg-variant max-[360px]:text-lg min-[480px]:text-2xl lg:text-3xl">
                 {projectName}
             </h3>
         </AriaLink>

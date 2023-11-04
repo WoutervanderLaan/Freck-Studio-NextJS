@@ -11,23 +11,24 @@ const WhyFreck = () => (
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         id="why"
-        className="container flex flex-col gap-5 scroll-my-20 lg:flex-row xl:h-[880px] items-stretch"
+        className="container flex flex-col gap-5 scroll-my-20 lg:flex-row xl:h-[920px] items-stretch"
     >
         <Card
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"
-            className="w-full text-green flex flex-col flex-1 gap-5 justify-evenly"
+            className="w-full text-green flex flex-col flex-1 gap-8 justify-evenly"
             padding={false}
         >
-            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%] lg:-mt-10">
+            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%] lg:-mt-10 xl:w-[55%]">
                 <video
                     muted
                     loop
                     autoPlay
-                    preload="metadata"
+                    preload="auto"
                     playsInline
-                    src="/img/Monkey.mp4"
                     className="scale-[1.3] translate-y-[10%] translate-x-[-5px] z-0 rounded-full"
                 >
+                    <source src="/img/Monkey-smalll.webm" type="video/webm" />
+                    <source src="/img/Monkey.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                     <track
                         kind="captions"
@@ -35,17 +36,15 @@ const WhyFreck = () => (
                     />
                 </video>
             </div>
-            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-5 px-8 md:px-14 lg:-mb-10">
+            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-5 px-8 md:px-14 lg:-mb-10 xl:px-12 2xl:px-[90px]">
                 <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
-                    Emotional designer
+                    Heartfelt designer
                 </h3>
-                <p className="md:text-base-variant">
-                    I try to conquer the digital world through real emotional
-                    engagement. I seek to challenge conservative frameworks
-                    while collaborating with my clients. My responsibility is to
-                    stay engaged, give a damn, and build meaningful
-                    relationships together. <br /> <br /> Empathy is the only
-                    way forward!
+                <p className="md:text-base-v2">
+                    I aim to challenge traditional frameworks while
+                    collaborating closely with my clients. My duty is to stay
+                    engaged, give a damn, and build authentic relationships
+                    together. <br /> <br /> Empathy is the only way forward!
                 </p>
             </div>
         </Card>
@@ -55,28 +54,28 @@ const WhyFreck = () => (
             className="w-full text-white flex flex-col justify-evenly flex-1 overflow-hidden"
             padding={false}
         >
-            <div className="text-center flex flex-col gap-5 md:gap-8 lg:gap-5 px-8 md:px-14">
+            <div className="text-center flex flex-col gap-5 md:gap-8 lg:gap-5 px-8 md:px-14 xl:px-12 2xl:px-[90px]">
                 <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
                     In search of stardom and extravaganza?
                 </h3>
-                <p className="md:text-base-variant opacity-75">
-                    Are you tired of boringly designed Power Point
-                    presentations? Are you in need of infographics,
-                    illustrations or one pagers to explain your brand? Or are
-                    you thinking of rebranding your company?
+                <p className="md:text-base-v2 opacity-75">
+                    Are you looking for eye-catching infographics, captivating
+                    illustrations, or concise one-pagers to convey your
+                    brand&apos;s message? Perhaps you&apos;re contemplating a
+                    company rebrand?
                     <br />
                     <br />
-                    You wont need Photoshop or any other fancy softwares, just a
-                    Slack thread with me.
+                    You won&apos;t need Photoshop or any other complex software
+                    tools—just a Slack thread with me.
                 </p>
             </div>
-            <div className="relative w-full aspect-[16/11]">
+            <div className="relative w-full aspect-hands">
                 <Image
                     src={hands}
                     alt="Image of hands exchanging a like card"
                     fill
                     sizes="(max-width: 1024px) 80vw, 40vw"
-                    className="aspect-[16/11]"
+                    className="aspect-hands object-cover"
                 />
             </div>
         </Card>

@@ -6,7 +6,6 @@ import Card from '../Card'
 import ProjectItem from '../ProjectItem'
 import BA_Macaron from '../../../public/img/BA_Macaron.png'
 import Hand from '../../../public/img/Email-small.png'
-// import Label from '../Label'
 
 export type HoverValues = {
     BA: boolean
@@ -37,9 +36,6 @@ const Projects = () => {
                 backgroundColor="bg-dark-bg dark:bg-dark-primary-bg text-orange"
                 className="relative w-full h-fit flex flex-col gap-10 md:gap-14 py-20"
             >
-                {/* <Label style="orange" position="left" className="z-[-99]">
-                    Case Studies
-                </Label> */}
                 <ProjectItem
                     href="/ba"
                     id="BA"

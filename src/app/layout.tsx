@@ -1,5 +1,5 @@
 import './globals.css'
-import type { Metadata, Viewport } from 'next'
+import type { Metadata } from 'next'
 import type { Organization, WithContext } from 'schema-dts'
 import classNames from 'classnames'
 import { Roboto_Slab, Baumans, Rubik } from 'next/font/google'
@@ -47,10 +47,6 @@ const jsonLd: WithContext<Organization> = {
         addressCountry: 'the Netherlands',
     },
     sameAs: ['https://www.linkedin.com/in/sarunepaulauskaite/'],
-}
-
-export const viewport: Viewport = {
-    themeColor: '#ffffff',
 }
 
 export const metadata: Metadata = {
@@ -156,7 +152,7 @@ export default function RootLayout({
                         )}
                     >
                         <Navbar />
-                        <main className="flex-1 flex flex-col gap-5">
+                        <main className="flex-1 flex flex-col gap-5 font-normal">
                             {children}
                         </main>
                         <Footer />

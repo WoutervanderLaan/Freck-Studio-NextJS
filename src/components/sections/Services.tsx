@@ -17,7 +17,9 @@ const designServices = [
     'Illustrations',
     'UX/UI',
     'Social Media',
-    'Development',
+    'Iconography',
+    'Logo Design',
+    'Web Development',
 ]
 
 type Coordinate = { x: number; y: number }
@@ -26,7 +28,11 @@ const Services = () => {
     const tagContainer = useRef<HTMLDivElement | null>(null)
     const [tagPositions, setTagPositions] = useState<Coordinate[]>([])
     const [cursorIndex, setCursorIndex] = useState(0)
-    const [XY, setXY] = useState<Coordinate | null>(null)
+
+    const XY = {
+        x: tagPositions[cursorIndex]?.x,
+        y: tagPositions[cursorIndex]?.y,
+    }
 
     const calcTagPositions = () => {
         if (tagContainer.current) {
@@ -57,22 +63,18 @@ const Services = () => {
 
     useEffect(() => {
         if (tagContainer.current) setTimeout(() => calcTagPositions(), 400)
-    }, [tagContainer.current])
+    }, [tagContainer])
 
     useEffect(() => {
         window.addEventListener('resize', calcTagPositions)
         return () => window.removeEventListener('resize', calcTagPositions)
-    })
+    }, [])
 
     useEffect(() => {
-        setXY({
-            x: tagPositions[cursorIndex]?.x,
-            y: tagPositions[cursorIndex]?.y,
-        })
         const interval = setInterval(() => {
             const randomIndex = Math.floor(Math.random() * tagPositions.length)
             setCursorIndex(randomIndex)
-        }, 2000)
+        }, 1500)
 
         return () => clearInterval(interval)
     }, [cursorIndex, tagPositions])
@@ -93,20 +95,23 @@ const Services = () => {
                     <h3 className="font-medium font-serif w-full text-lg-variant md:text-xl lg:text-3xl">
                         Services for your business
                     </h3>
-                    <p className="max-w-[640px] md:text-base-variant">
-                        I create quality content that speaks from the heart of
-                        your brand and jaw dropping designs that will make your
-                        competitors ask my number.
+                    <p className="max-w-[640px] md:text-base-v2">
+                        I create high-quality content that captures the essence
+                        of your brand, accompanied by breathtaking designs that
+                        will leave your competitors wanting to connect.
                     </p>
                 </div>
                 <div
                     ref={tagContainer}
-                    className="relative flex flex-row flex-wrap gap-3 justify-center md:gap-5"
+                    className="relative flex flex-row flex-wrap gap-3 justify-center md:gap-5 xl:px-20"
                 >
-                    {XY && (
+                    {XY && tagPositions.length > 0 && (
                         <motion.div
                             className="left-0 top-0 absolute z-10"
                             animate={XY}
+                            transition={{
+                                duration: 0.6,
+                            }}
                         >
                             <Image
                                 src={cursor}
@@ -132,7 +137,7 @@ const Services = () => {
                     ))}
                 </div>
                 <Button variant="black" href="#contact" className="md:mt-10">
-                    <span className="lg:text-base-variant">Contact Me</span>
+                    <span className="lg:text-base-v2">Contact Me</span>
                 </Button>
             </Card>
         </motion.section>

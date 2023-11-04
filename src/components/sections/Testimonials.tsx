@@ -16,14 +16,13 @@ const Testimonials = () => {
             viewport={{ once: true }}
             className="container flex flex-col gap-4"
         >
-            <div className="text-center flex flex-col gap-6 max-w-[80%] md:max-w-[640px] self-center my-4 md:my-10">
+            <div className="text-center flex flex-col gap-6 max-w-[80%] md:max-w-[642px] self-center my-4 md:my-10">
                 <h3 className="font-serif font-medium text-lg-variant md:text-2xl">
-                    You are too polite people!
+                    Wow, you guys are just too polite!
                 </h3>
-                <p className="text-base-variant">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam.
+                <p className="text-base-v2">
+                    My clients are like the finest connoisseurs of awesomeness.
+                    Let&apos;s venture into the chest of their glowing reviews:
                 </p>
             </div>
             <div className="h-fit overflow-hidden">

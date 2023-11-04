@@ -25,16 +25,17 @@ const Footer = () => {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="w-full flex flex-col items-center px-10 gap-14 mt-12 mb-6"
+            className="w-full flex flex-col items-center px-10 gap-14 mt-12 mb-6 font-normal"
         >
             <div className="flex flex-col gap-7 text-center items-center max-w-[400px] md:max-w-[640px]">
                 <h3 className="text-lg font-medium font-serif md:text-2xl">
                     Freck Studio <br /> Amsterdam <br /> the Netherlands, Earth
                 </h3>
-                <p className="text-base-variant">
+                <p className="text-base-v2">
                     For new biz, sugar or juicy content call +370 (639) 20 855,
-                    email saruunep@gmail.com or drop by the office at Jacob
-                    Oliepad 8 in Amsterdam, the Netherlands.
+                    email saruunep@gmail.com or drop by the office at{' '}
+                    <br className="hidden md:block" /> Jacob Oliepad 8 in
+                    Amsterdam, the Netherlands.
                 </p>
             </div>
             <div className="flex flex-row gap-4 mb-6 pointer-events-auto place-items-center sm:gap-6 md:gap-9">

@@ -22,9 +22,9 @@ const WhoCard = () => {
                 className="relative text-center overflow-hidden"
             >
                 <h2 className="text-blue font-serif font-medium text-lg-variant md:text-xl lg:text-3xl">
-                    Behind the scenes
+                    Unveiling the magic
                 </h2>
-                <p className="text-blue text-center mt-5 z-10 md:max-w-[70%] lg:max-w-[640px] md:text-base-variant">
+                <p className="text-blue text-center mt-5 z-10 md:max-w-[70%] lg:max-w-[640px] md:text-base-v2">
                     <AriaLink
                         href="https://www.youtube.com/watch?v=TEhh8UuG6u8"
                         target="_blank"
@@ -42,9 +42,10 @@ const WhoCard = () => {
                         </motion.q>
                     </AriaLink>
                     <br />
-                    <br />A look behind the scenes at Freck. All these totems
-                    play an important role in conjuring the energies needed to
-                    design in contemporary times.
+                    <br />
+                    An exclusive glimpse behind the curtains at Freck. These
+                    totems hold a vital role, channeling the energies required
+                    for cutting-edge design in today&apos;s world.
                 </p>
                 <div className="relative bottom-[-50px] w-[100vw] sm:w-full aspect-desk mt-[-30px] md:mt-[-90px] lg:bottom-[-90px]">
                     <video muted loop autoPlay preload="auto" playsInline>
