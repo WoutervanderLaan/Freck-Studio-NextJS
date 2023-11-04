@@ -122,10 +122,10 @@ const TextBalloon = ({
                     'border-2 border-dashed border-pink': debug,
                 })}
                 style={{
-                    left: left + '%',
-                    bottom: bottom + '%',
-                    height: height + '%',
-                    width: width + '%',
+                    left: `${left}%`,
+                    bottom: `${bottom}%`,
+                    height: `${height}%`,
+                    width: `${width}%`,
                 }}
             />
             <AnimatePresence>
@@ -138,8 +138,8 @@ const TextBalloon = ({
                             duration: 0.2,
                         }}
                         style={{
-                            left: left + width / 2 + '%',
-                            bottom: bottom + height + 5 + '%',
+                            left: `${left + width / 2}%`,
+                            bottom: `${bottom + height + 5}%`,
                         }}
                         ref={balloonRef}
                         className="absolute bg-white rounded-custom flex items-center justify-center p-4 w-[40%] translate-x-[-50%] lg:w-[26%] lg:p-6 dark:bg-dark-bg lg:translate-x-[-52%]"
