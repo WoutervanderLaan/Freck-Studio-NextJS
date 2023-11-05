@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Tag from '../Tag'
 import Card from '../Card'
 import Button from '../Button'
-import cursor from '../../../public/img/3d-cursor.png'
+import cursor from '../../../public/img/3Dcursor.png'
 
 const designServices = [
     '3D assets',
@@ -110,15 +110,15 @@ const Services = () => {
                             className="left-0 top-0 absolute z-10"
                             animate={XY}
                             transition={{
-                                duration: 0.6,
+                                duration: 0.4,
                             }}
                         >
                             <Image
                                 src={cursor}
                                 alt="3D image of cursor"
-                                width={60}
-                                height={60}
-                                className="translate-y-4"
+                                width={100}
+                                height={100}
+                                className="translate-y-0"
                             />
                         </motion.div>
                     )}

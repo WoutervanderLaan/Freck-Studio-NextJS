@@ -62,6 +62,7 @@ const ProjectItem = ({
             {isHovered[id] && Object.values(isHovered).includes(false) && (
                 <motion.div
                     key="projectImage"
+                    style={{ translateX: '50%' }}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0 }}
@@ -70,7 +71,7 @@ const ProjectItem = ({
                         duration: 0.3,
                         delay: 0.1,
                     }}
-                    className="absolute -top-[50%] -right-20"
+                    className="absolute -top-[50%] right-[50%] pointer-events-none"
                 >
                     <Image src={img} alt={imgAlt || ''} height={100} />
                 </motion.div>

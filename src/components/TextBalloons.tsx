@@ -98,19 +98,13 @@ const TextBalloon = ({
     const [showBalloon, setShowBalloon] = useState(false)
 
     useEffect(() => {
-        divRef.current?.addEventListener('mouseenter', () =>
-            setShowBalloon(true)
-        )
-        divRef.current?.addEventListener('mouseleave', () =>
-            setShowBalloon(false)
-        )
+        const div = divRef.current
+
+        div?.addEventListener('mouseenter', () => setShowBalloon(true))
+        div?.addEventListener('mouseleave', () => setShowBalloon(false))
         return () => {
-            divRef.current?.removeEventListener('mouseenter', () =>
-                setShowBalloon(true)
-            )
-            divRef.current?.removeEventListener('mouseleave', () =>
-                setShowBalloon(false)
-            )
+            div?.removeEventListener('mouseenter', () => setShowBalloon(true))
+            div?.removeEventListener('mouseleave', () => setShowBalloon(false))
         }
     }, [])
 

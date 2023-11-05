@@ -31,7 +31,7 @@ const Footer = () => {
                 <h3 className="text-lg font-medium font-serif md:text-2xl">
                     Freck Studio <br /> Amsterdam <br /> the Netherlands, Earth
                 </h3>
-                <p className="text-base-v2">
+                <p className="md:text-base-v2">
                     For new biz, sugar or juicy content call +370 (639) 20 855,
                     email saruunep@gmail.com or drop by the office at{' '}
                     <br className="hidden md:block" /> Jacob Oliepad 8 in

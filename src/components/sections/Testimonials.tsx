@@ -20,7 +20,7 @@ const Testimonials = () => {
                 <h3 className="font-serif font-medium text-lg-variant md:text-2xl">
                     Wow, you guys are just too polite!
                 </h3>
-                <p className="text-base-v2">
+                <p className="md:text-base-v2">
                     My clients are like the finest connoisseurs of awesomeness.
                     Let&apos;s venture into the chest of their glowing reviews:
                 </p>

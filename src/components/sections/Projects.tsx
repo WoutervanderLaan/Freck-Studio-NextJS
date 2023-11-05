@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import Card from '../Card'
 import ProjectItem from '../ProjectItem'
 import BA_Macaron from '../../../public/img/BA_Macaron.png'
-import Hand from '../../../public/img/Email-small.png'
+import Hostens from '../../../public/img/hostens-small.png'
 
 export type HoverValues = {
     BA: boolean
@@ -46,18 +46,18 @@ const Projects = () => {
                     imgAlt="3D rendered bracket symbol"
                 />
                 <ProjectItem
-                    href="/iv"
-                    id="IV"
-                    projectName="Interneto Vizija"
-                    setIsHovered={setIsHovered}
-                    isHovered={isHovered}
-                    img={Hand}
-                    imgAlt="3D rendered bracket symbol"
-                />
-                <ProjectItem
                     href="/hostens"
                     id="HO"
                     projectName="Hostens"
+                    setIsHovered={setIsHovered}
+                    isHovered={isHovered}
+                    img={Hostens}
+                    imgAlt="3D rendered bracket symbol"
+                />
+                <ProjectItem
+                    href="/iv"
+                    id="IV"
+                    projectName="Interneto Vizija"
                     setIsHovered={setIsHovered}
                     isHovered={isHovered}
                     img={BA_Macaron}
@@ -69,7 +69,7 @@ const Projects = () => {
                     projectName="Swedbank"
                     setIsHovered={setIsHovered}
                     isHovered={isHovered}
-                    img={Hand}
+                    img={Hostens}
                     imgAlt="3D rendered bracket symbol"
                 />
             </Card>

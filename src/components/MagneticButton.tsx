@@ -36,27 +36,22 @@ const MagneticButton = (props: MagneticButtonProps) => {
 
     useEffect(() => {
         if (isMobile) return
+        const magnet = magneticAreaRef.current
 
-        if (magneticAreaRef.current) {
-            magneticAreaRef.current.addEventListener(
-                'mousemove',
-                magnetizeButton
-            )
-            magneticAreaRef.current.addEventListener('mouseleave', () =>
+        if (magnet) {
+            magnet.addEventListener('mousemove', magnetizeButton)
+            magnet.addEventListener('mouseleave', () =>
                 setCoordinates(DEFAULT_COORDINATES)
             )
 
             return () => {
-                magneticAreaRef.current?.removeEventListener(
-                    'mousemove',
-                    magnetizeButton
-                )
-                magneticAreaRef.current?.removeEventListener('mouseleave', () =>
+                magnet.removeEventListener('mousemove', magnetizeButton)
+                magnet.removeEventListener('mouseleave', () =>
                     setCoordinates(DEFAULT_COORDINATES)
                 )
             }
         }
-    }, [magneticAreaRef.current, isMobile])
+    }, [magneticAreaRef, isMobile])
 
     const magnetizeButton = (e: MouseEvent) => {
         if (magneticAreaRef.current) {
