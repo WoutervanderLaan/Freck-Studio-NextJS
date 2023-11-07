@@ -15,10 +15,10 @@ const WhyFreck = () => (
     >
         <Card
             backgroundColor="bg-pink dark:bg-dark-tertiary-bg"
-            className="w-full text-green flex flex-col flex-1 gap-8 justify-evenly"
+            className="w-full text-green flex flex-col flex-1 gap-8 justify-between pt-10 pb-16 lg:pt-16 lg:pb-24"
             padding={false}
         >
-            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%] lg:-mt-10 xl:w-[55%]">
+            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%] xl:max-w-[60%]">
                 <video
                     muted
                     loop
@@ -36,11 +36,11 @@ const WhyFreck = () => (
                     />
                 </video>
             </div>
-            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-5 px-8 md:px-14 lg:-mb-10 xl:px-12 2xl:px-[90px]">
+            <div className="text-center flex flex-col justify-between h-fit gap-5 md:gap-8 lg:gap-6 px-6 md:px-14 xl:px-12 2xl:px-[90px]">
                 <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
                     Heartfelt designer
                 </h3>
-                <p className="md:text-base-v2">
+                <p className="text-base-variant md:text-base-v2 xl:max-w-[460px]">
                     I aim to challenge traditional frameworks while
                     collaborating closely with my clients. My duty is to stay
                     engaged, give a damn, and build authentic relationships
@@ -51,14 +51,14 @@ const WhyFreck = () => (
 
         <Card
             backgroundColor="bg-black dark:bg-dark-primary-bg"
-            className="w-full text-white flex flex-col justify-evenly flex-1 overflow-hidden"
+            className="w-full text-white flex flex-col justify-between flex-1 overflow-hidden pt-16 pb-4 lg:pb-16"
             padding={false}
         >
-            <div className="text-center flex flex-col gap-5 md:gap-8 lg:gap-5 px-8 md:px-14 xl:px-12 2xl:px-[90px]">
+            <div className="text-center items-center flex flex-col gap-5 md:gap-8 lg:gap-6 px-6 md:px-14 xl:px-12 2xl:px-[90px]">
                 <h3 className="text-lg-variant font-medium font-serif md:text-xl lg:text-lg-variant xl:text-2xl">
                     In search of stardom and extravaganza?
                 </h3>
-                <p className="md:text-base-v2 opacity-75">
+                <p className="text-base-variant md:text-base-v2 opacity-60 xl:max-w-[460px]">
                     Are you looking for eye-catching infographics, captivating
                     illustrations, or concise one-pagers to convey your
                     brand&apos;s message? Perhaps you&apos;re contemplating a
@@ -69,13 +69,13 @@ const WhyFreck = () => (
                     tools—just a Slack thread with me.
                 </p>
             </div>
-            <div className="relative w-full aspect-hands">
+            <div className="relative w-full aspect-hands -mt-4 lg:mt-0">
                 <Image
                     src={hands}
                     alt="Image of hands exchanging a like card"
                     fill
                     sizes="(max-width: 1024px) 80vw, 40vw"
-                    className="aspect-hands object-cover"
+                    className="aspect-hands object-cover scale-110 sm:scale-100"
                 />
             </div>
         </Card>

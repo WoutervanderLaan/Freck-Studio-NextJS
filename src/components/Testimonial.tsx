@@ -24,8 +24,12 @@ const Testimonial = ({
     company,
     className,
 }: Testimonial) => (
-    <Card backgroundColor={backgroundColor} className="gap-6 h-fit">
-        <div className="relative aspect-square w-[60%] sm:w-[40%] md:w-[60%]">
+    <Card
+        backgroundColor={backgroundColor}
+        className="gap-7 h-fit px-6 py-12"
+        padding={false}
+    >
+        <div className="relative aspect-square w-[65%] sm:w-[40%] md:w-[50%]">
             <Image
                 src={image}
                 fill
@@ -42,13 +46,17 @@ const Testimonial = ({
                 textColor
             )}
         >
-            <p className="w-full italic mb-5 md:text-base-variant">
+            <p className="w-full mb-5 text-base-variant lg:px-6">
                 &quot;{text}&quot;
             </p>
             <div>
-                <p className="font-medium text-base">{name}</p>
-                <p className="text-base">{position}</p>
-                <p className="text-base">{company}</p>
+                <p className="font-medium text-base-variant md:text-[18px]">
+                    {name}
+                </p>
+                <p className="text-base-variant md:text-base">{position}</p>
+                <p className="text-base-variant md:text-base italic">
+                    {company}
+                </p>
             </div>
         </div>
     </Card>

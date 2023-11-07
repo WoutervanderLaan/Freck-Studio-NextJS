@@ -21,25 +21,18 @@ const WhoCard = () => {
                 backgroundColor="bg-dark-secondary-bg"
                 className="relative text-center overflow-hidden"
             >
-                <h2 className="text-blue font-serif font-medium text-lg-variant md:text-xl lg:text-3xl">
+                <h3 className="text-blue font-serif font-medium text-lg-variant md:text-xl lg:text-3xl">
                     Unveiling the magic
-                </h2>
-                <p className="text-blue text-center mt-5 z-10 md:max-w-[70%] lg:max-w-[640px] md:text-base-v2">
+                </h3>
+                <p className="text-blue text-center text-base-variant mt-5 z-10 md:max-w-[70%] lg:max-w-[640px] md:text-base-v2">
                     <AriaLink
                         href="https://www.youtube.com/watch?v=TEhh8UuG6u8"
                         target="_blank"
                         rel="external"
                     >
-                        <motion.q
-                        // animate={{ opacity: [0.7, 1, 1, 0.7] }}
-                        // transition={{
-                        //     duration: 2,
-                        //     repeat: Infinity,
-                        //     ease: 'easeInOut',
-                        // }}
-                        >
+                        <q className="underline">
                             Ade due Damballa. Give me the power, I beg of you!
-                        </motion.q>
+                        </q>
                     </AriaLink>
                     <br />
                     <br />

@@ -43,8 +43,8 @@ const brandSVGCollection = [
 ]
 
 const BrandCollection = () => (
-    <section className="container flex flex-col justify-center items-center py-10 mb-[-40px] sm:mb-4 lg:mb-10 lg:py-0">
-        <h3 className="text-sm sm:text-base lg:text-base-v2 mb-4 lg:mb-0">
+    <section className="container flex flex-col justify-center items-center py-10 sm:mb-4 lg:mb-10 lg:py-0">
+        <h3 className="text-base-variant text-center lg:text-base-v2 mb-4 lg:mb-0">
             Brands I have worked with along the way:
         </h3>
         <div className="min-h-[100px] w-full flex flex-row items-center justify-evenly gap-6 px-4 flex-wrap lg:gap-4 lg:px-16">

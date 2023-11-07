@@ -25,17 +25,33 @@ const Footer = () => {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="w-full flex flex-col items-center px-10 gap-14 mt-12 mb-6 font-normal"
+            className="w-full flex flex-col items-center px-4 md:px-10 gap-14 mt-12 mb-6 font-normal"
         >
-            <div className="flex flex-col gap-7 text-center items-center max-w-[400px] md:max-w-[640px]">
-                <h3 className="text-lg font-medium font-serif md:text-2xl">
+            <div className="flex flex-col gap-7 text-center items-center max-w-[400px] md:max-w-[640px] px-8 md:px-0">
+                <h3 className="text-lg-variant font-medium font-serif md:text-2xl">
                     Freck Studio <br /> Amsterdam <br /> the Netherlands, Earth
                 </h3>
-                <p className="md:text-base-v2">
-                    For new biz, sugar or juicy content call +370 (639) 20 855,
-                    email saruunep@gmail.com or drop by the office at{' '}
-                    <br className="hidden md:block" /> Jacob Oliepad 8 in
-                    Amsterdam, the Netherlands.
+                <p className="text-base-variant md:text-base-v2">
+                    For new biz, sugar or juicy content call{' '}
+                    <AriaLink
+                        href="tel:+37063920855"
+                        aria-label="Press to call"
+                        target="_parent"
+                        className="font-base"
+                    >
+                        +370 (639) 20 855
+                    </AriaLink>
+                    , email{' '}
+                    <AriaLink
+                        href="mailto:saruunep@gmail.com"
+                        aria-label="Press to send email"
+                        target="_parent"
+                        className="font-base"
+                    >
+                        saruunep@gmail.com
+                    </AriaLink>{' '}
+                    or drop by the office at <br className="hidden md:block" />{' '}
+                    Jacob Oliepad 8 in Amsterdam, the Netherlands.
                 </p>
             </div>
             <div className="flex flex-row gap-4 mb-6 pointer-events-auto place-items-center sm:gap-6 md:gap-9">
@@ -83,64 +99,61 @@ const Footer = () => {
                     />
                 </AriaLink>
             </div>
-            {isTablet === false && (
-                <div className="w-full flex flex-col justify-between items-center md:flex-row">
-                    <AriaLink
-                        href="/"
-                        aria-label="Freck Studio Logo"
-                        className="flex-1"
+            <div className="w-full flex flex-row justify-between items-center">
+                <AriaLink
+                    href="/"
+                    aria-label="Freck Studio Logo"
+                    className="flex-1"
+                >
+                    <Logo fill={themeContext?.isDarkMode ? 'white' : 'black'} />
+                </AriaLink>
+                <div className="flex flex-row items-center lg:gap-4 text-sm font-medium pointer-cursor hidden min-[978px]:block">
+                    <Button
+                        variant="ghost"
+                        href="/#why"
+                        ariaLabel="Section Why Freck"
+                        className="hover:text-blue transition active:scale-90"
                     >
-                        <Logo
-                            fill={themeContext?.isDarkMode ? 'white' : 'black'}
-                        />
-                    </AriaLink>
-                    <div className="flex flex-row items-center lg:gap-4 text-sm font-medium pointer-cursor">
-                        <Button
-                            variant="ghost"
-                            href="/#why"
-                            ariaLabel="Section Why Freck"
-                            className="hover:text-blue transition active:scale-90"
-                        >
-                            Why Freck
-                        </Button>
-                        <Button
-                            variant="ghost"
-                            href="/#services"
-                            ariaLabel="Section Services"
-                            className="hover:text-blue transition active:scale-90"
-                        >
-                            Services
-                        </Button>
-                        <Button
-                            variant="ghost"
-                            href="/#about"
-                            ariaLabel="Section About"
-                            className="hover:text-blue transition active:scale-90"
-                        >
-                            About
-                        </Button>
-                        <Button
-                            variant="ghost"
-                            href="/#projects"
-                            ariaLabel="Section Projects"
-                            className="hover:text-blue transition active:scale-90"
-                        >
-                            Projects
-                        </Button>
-                    </div>
-                    <div className="flex flex-row justify-end flex-1 pointer-events-auto">
-                        <Button
-                            onPress={() =>
-                                overlayContext?.setIsContactOverlayOpen(true)
-                            }
-                        >
-                            <span className="lg:text-base-variant">
-                                Contact Form
-                            </span>
-                        </Button>
-                    </div>
+                        Why Freck
+                    </Button>
+                    <Button
+                        variant="ghost"
+                        href="/#services"
+                        ariaLabel="Section Services"
+                        className="hover:text-blue transition active:scale-90"
+                    >
+                        Services
+                    </Button>
+                    <Button
+                        variant="ghost"
+                        href="/#about"
+                        ariaLabel="Section About"
+                        className="hover:text-blue transition active:scale-90"
+                    >
+                        About
+                    </Button>
+                    <Button
+                        variant="ghost"
+                        href="/#projects"
+                        ariaLabel="Section Projects"
+                        className="hover:text-blue transition active:scale-90"
+                    >
+                        Projects
+                    </Button>
                 </div>
-            )}
+                <div className="flex flex-row justify-end flex-1 pointer-events-auto">
+                    <Button
+                        variant={isTablet ? 'small' : 'default'}
+                        onPress={() =>
+                            overlayContext?.setIsContactOverlayOpen(true)
+                        }
+                    >
+                        <span className="text-base-variant lg:text-base-v2">
+                            Contact Form
+                        </span>
+                    </Button>
+                </div>
+            </div>
 
             <EmailOverlay />
         </motion.footer>

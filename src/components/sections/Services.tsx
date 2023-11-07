@@ -5,18 +5,18 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Tag from '../Tag'
 import Card from '../Card'
-import Button from '../Button'
 import cursor from '../../../public/img/3Dcursor.png'
 
 const designServices = [
     '3D assets',
     'Branding',
     'Digital Design',
-    'Motion',
-    'Print Design',
-    'Illustrations',
     'UX/UI',
+    'Print',
+    'Illustrations',
+    'Motion',
     'Social Media',
+    'UI kits',
     'Iconography',
     'Logo Design',
     'Web Development',
@@ -92,10 +92,10 @@ const Services = () => {
                 className="flex flex-col gap-12 justify-between lg:px-20"
             >
                 <div className="text-center flex flex-col gap-6 items-center">
-                    <h3 className="font-medium font-serif w-full text-lg-variant md:text-xl lg:text-3xl">
+                    <h3 className="font-medium font-serif w-full px-6 text-lg-variant md:text-xl lg:text-3xl">
                         Services for your business
                     </h3>
-                    <p className="max-w-[640px] md:text-base-v2">
+                    <p className="max-w-[640px] text-base-variant md:text-base-v2">
                         I create high-quality content that captures the essence
                         of your brand, accompanied by breathtaking designs that
                         will leave your competitors wanting to connect.
@@ -103,7 +103,7 @@ const Services = () => {
                 </div>
                 <div
                     ref={tagContainer}
-                    className="relative flex flex-row flex-wrap gap-3 justify-center md:gap-5 xl:px-20"
+                    className="relative flex flex-row flex-wrap gap-3 justify-center md:gap-7 xl:px-32"
                 >
                     {XY && tagPositions.length > 0 && (
                         <motion.div
@@ -136,9 +136,6 @@ const Services = () => {
                         </Tag>
                     ))}
                 </div>
-                <Button variant="black" href="#contact" className="md:mt-10">
-                    <span className="lg:text-base-v2">Contact Me</span>
-                </Button>
             </Card>
         </motion.section>
     )

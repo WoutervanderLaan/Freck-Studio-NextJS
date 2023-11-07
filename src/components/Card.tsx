@@ -43,10 +43,10 @@ const Card = ({
     return (
         <motion.div
             className={classNames(
-                'flex rounded-custom min-h-[300px] flex-col items-center py-[50px] lg:py-20',
+                'flex rounded-custom min-h-[300px] flex-col items-center',
                 backgroundColor,
                 className,
-                { 'px-10': padding }
+                { 'py-[50px] lg:py-20 px-6': padding }
             )}
             style={{
                 skewY: skew ? skewY : 0,

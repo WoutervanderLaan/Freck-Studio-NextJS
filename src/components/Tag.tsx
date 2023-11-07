@@ -20,7 +20,7 @@ const Tag = ({
     hovered?: boolean
 }) => (
     <motion.div
-        className="rounded-custom py-3 text-center px-6 text-base sm:text-lg"
+        className="rounded-custom py-3 text-center px-6 text-base-variant sm:text-lg"
         data-name="tag"
         variants={tagVariants}
         initial={{ backgroundColor: '#ffffff' }}

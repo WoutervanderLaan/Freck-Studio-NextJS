@@ -57,7 +57,6 @@ type MemojiPartProps = {
 const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
     const ref = useRef<HTMLImageElement>(null)
     const x = useMotionValue(0)
-    const y = useMotionValue(0)
 
     useEffect(() => {
         document.addEventListener('mousemove', (e) => moveAvatar(e), {
@@ -74,14 +73,14 @@ const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
             x.set(0)
         }
         if (window.innerWidth >= 1024) {
-            x.set((e.clientX * dataValue) / 250)
+            x.set(((e.clientX - window.innerWidth / 2) * dataValue) / 250)
         }
     }
 
     return (
         <motion.div
             layout
-            style={{ x, y }}
+            style={{ x }}
             animate={{
                 y: [0, 1 * dataValue, 0],
             }}

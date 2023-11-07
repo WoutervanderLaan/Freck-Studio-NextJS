@@ -13,7 +13,7 @@ const variantStyles: Record<ButtonStyleVariants, string> = {
     black: 'w-fit px-9 py-5 rounded-custom bg-black text-white duration-200 hover:bg-white hover:text-black disabled:opacity-50',
     ghost: 'p-2 rounded-full md:p-4 md:text-base-variant font-normal',
     switch: 'rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5 border-2',
-    small: 'w-fit h-fit bg-pink-dark rounded-custom px-4 py-1 dark:bg-purple',
+    small: 'w-fit h-fit bg-purple text-blue rounded-custom px-5 py-2 dark:bg-green',
 }
 
 type BaseProps = {
