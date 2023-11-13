@@ -5,7 +5,7 @@ const SevenPack = () => (
         viewBox="0 0 87 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="max-h-10 w-fit"
+        className="max-h-8 w-fit"
     >
         <path d="M86.6563 0H0V100H86.6563V0Z" fill="white" />
         <path

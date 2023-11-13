@@ -5,7 +5,7 @@ const Hostens = () => (
         viewBox="0 0 341 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="max-h-5 w-fit sm:max-h-10"
+        className="max-h-5 w-fit sm:max-h-8"
     >
         <g clipPath="url(#clip0_2_729)">
             <path

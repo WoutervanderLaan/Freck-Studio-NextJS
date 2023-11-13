@@ -179,7 +179,7 @@ const Navbar = () => {
                                                 setIsMenuDropdownOpen(false)
                                             }}
                                         >
-                                            <span className="text-lg-variant text-white">
+                                            <span className="text-lg text-white">
                                                 Why Freck
                                             </span>
                                         </Button>
@@ -192,7 +192,7 @@ const Navbar = () => {
                                                 setIsMenuDropdownOpen(false)
                                             }}
                                         >
-                                            <span className="text-lg-variant text-white">
+                                            <span className="text-lg text-white">
                                                 Services
                                             </span>
                                         </Button>
@@ -205,7 +205,7 @@ const Navbar = () => {
                                                 setIsMenuDropdownOpen(false)
                                             }}
                                         >
-                                            <span className="text-lg-variant text-white">
+                                            <span className="text-lg text-white">
                                                 Projects
                                             </span>
                                         </Button>
@@ -218,7 +218,7 @@ const Navbar = () => {
                                                 setIsMenuDropdownOpen(false)
                                             }}
                                         >
-                                            <span className="text-lg-variant text-white">
+                                            <span className="text-lg text-white">
                                                 About
                                             </span>
                                         </Button>
@@ -232,7 +232,7 @@ const Navbar = () => {
                                                 )
                                             }}
                                         >
-                                            <span className="text-lg-variant text-orange">
+                                            <span className="text-lg text-orange">
                                                 {themeContext?.isDarkMode
                                                     ? 'Light Theme'
                                                     : 'Dracula Theme'}
@@ -243,13 +243,12 @@ const Navbar = () => {
                                         <Button
                                             variant="ghost"
                                             onPress={() => {
-                                                overlayContext?.setIsContactOverlayOpen(
-                                                    true
-                                                )
+                                                router.push('#contact')
+
                                                 setIsMenuDropdownOpen(false)
                                             }}
                                         >
-                                            <span className="text-lg-variant text-white">
+                                            <span className="text-lg text-white">
                                                 Contact
                                             </span>
                                         </Button>

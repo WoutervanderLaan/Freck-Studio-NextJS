@@ -37,7 +37,7 @@ const Footer = () => {
                         href="tel:+37063920855"
                         aria-label="Press to call"
                         target="_parent"
-                        className="font-base"
+                        className="font-base whitespace-nowrap"
                     >
                         +370 (639) 20 855
                     </AriaLink>
@@ -46,7 +46,7 @@ const Footer = () => {
                         href="mailto:saruunep@gmail.com"
                         aria-label="Press to send email"
                         target="_parent"
-                        className="font-base"
+                        className="font-base whitespace-nowrap"
                     >
                         saruunep@gmail.com
                     </AriaLink>{' '}

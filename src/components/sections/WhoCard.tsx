@@ -30,7 +30,7 @@ const WhoCard = () => {
                         target="_blank"
                         rel="external"
                     >
-                        <q className="underline">
+                        <q>
                             Ade due Damballa. Give me the power, I beg of you!
                         </q>
                     </AriaLink>

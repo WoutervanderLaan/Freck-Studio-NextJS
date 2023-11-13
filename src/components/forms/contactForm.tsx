@@ -135,7 +135,7 @@ const ContactForm = () => {
                     }}
                 />
                 {isSucces && (
-                    <span className="absolute -bottom-3 left-0 text-bright-green text-sm">
+                    <span className="absolute -bottom-3 left-0 text-purple text-sm">
                         Thank you for your message!
                     </span>
                 )}
@@ -151,7 +151,9 @@ const ContactForm = () => {
                 className="place-self-start border-purple border-2"
                 isDisabled={isSubmitting}
             >
-                Send Message
+                <span className="font-normal text-base-variant lg:text-base-v2">
+                    Send Message
+                </span>
             </Button>
         </>
     )
@@ -183,7 +185,11 @@ const ContactFormInput = (
 
     return (
         <div className="relative h-fit w-full md:max-w-[40%]">
-            <label id={`${name}_label`} htmlFor={name} className="text-base">
+            <label
+                id={`${name}_label`}
+                htmlFor={name}
+                className="text-base-variant md:text-base-v2"
+            >
                 {label}
             </label>
 
@@ -198,7 +204,7 @@ const ContactFormInput = (
                 aria-labelledby={`${name}_label`}
                 disabled={isSubmitting}
                 className={classNames(
-                    'w-full border-b-2 py-1 border-purple bg-transparent text-purple outline-none placeholder:text-base-variant placeholder:text-purple/25',
+                    'w-full border-b-2 py-1 border-purple bg-transparent text-purple outline-none font-normal text-base-variant md:text-base-v2 placeholder:text-purple/25',
                     {
                         'ring-2 ring-pink-dark ring-offset-2 ring-offset-white':
                             isFocusVisible,
@@ -232,7 +238,7 @@ const ContactFormTextArea = (
             <label
                 id={`${name}_label`}
                 htmlFor={name}
-                className="font-medium text-base"
+                className="text-base-variant md:text-base-v2"
             >
                 {label}
             </label>
@@ -249,7 +255,7 @@ const ContactFormTextArea = (
                 aria-labelledby={`${name}_label`}
                 disabled={isSubmitting}
                 className={classNames(
-                    'w-full h-16 py-1 border-b-2 border-purple bg-transparent outline-none text-purple placeholder:text-base-variant placeholder:text-purple/25',
+                    'w-full h-16 py-1 border-b-2 border-purple bg-transparent outline-none text-purple font-normal text-base-variant md:text-base-v2 placeholder:text-purple/25',
                     {
                         'ring-2 ring-pink-dark ring-offset-2 ring-offset-white':
                             isFocusVisible,

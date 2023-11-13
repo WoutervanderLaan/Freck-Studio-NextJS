@@ -42,10 +42,10 @@ const ContactOverlay = () => {
 
                             <div className="flex flex-col gap-10 max-w-[600px] py-10 md:py-0 sm:px-14">
                                 <div className="flex flex-col gap-2">
-                                    <h3 className="font-serif font-medium text-lg-variant md:text-2xl ">
+                                    <h3 className="font-serif font-medium text-lg-variant md:text-2xl">
                                         How can I Help?
                                     </h3>
-                                    <p className="text-base">
+                                    <p className="text-base-variant md:text-base-v2 font-normal">
                                         Digital queries? We&apos;d love to hear
                                         them! Fill in your details and
                                         we&apos;ll get back to you as soon as

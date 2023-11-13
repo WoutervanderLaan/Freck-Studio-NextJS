@@ -5,7 +5,7 @@ const Fincell = () => (
         viewBox="0 0 347 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="max-h-10 w-fit"
+        className="max-h-8 w-fit"
     >
         <g clipPath="url(#clip0_2_720)">
             <path
