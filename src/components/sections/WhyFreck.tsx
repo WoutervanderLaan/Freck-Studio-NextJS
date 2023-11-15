@@ -18,7 +18,7 @@ const WhyFreck = () => (
             className="w-full text-green flex flex-col flex-1 gap-8 justify-between pt-10 pb-16 lg:pt-16 lg:pb-24"
             padding={false}
         >
-            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%] lg:w-[80%] xl:max-w-[70%]">
+            <div className="relative aspect-square rounded-full overflow-hidden z-10 w-[80%] md:w-[70%] lg:w-[80%] xl:max-w-[70%] 2xl:max-w-[60%]">
                 <video
                     muted
                     loop

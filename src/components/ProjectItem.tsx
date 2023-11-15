@@ -71,7 +71,7 @@ const ProjectItem = ({
                         duration: 0.3,
                         delay: 0.1,
                     }}
-                    className="absolute -top-[50%] right-[50%] pointer-events-none"
+                    className="absolute top-0 right-[50%] pointer-events-none"
                 >
                     <Image src={img} alt={imgAlt || ''} height={100} />
                 </motion.div>

@@ -43,10 +43,13 @@ const WhoCard = () => {
                 <div className="relative bottom-[-50px] w-[100vw] sm:w-full aspect-desk mt-[-30px] md:mt-[-90px] lg:bottom-[-90px]">
                     <video muted loop autoPlay preload="auto" playsInline>
                         <source
-                            src="/img/Desk_Safari.mov"
+                            src="/img/Desk_Safari_2.mov"
                             type="video/quicktime"
                         />
-                        <source src="/img/Desk_Chrome.webm" type="video/webm" />
+                        <source
+                            src="/img/Desk_Chrome_2.webm"
+                            type="video/webm"
+                        />
                         Your browser does not support the video tag.
                         <track
                             kind="captions"
