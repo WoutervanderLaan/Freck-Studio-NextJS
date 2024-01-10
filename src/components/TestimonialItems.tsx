@@ -1,5 +1,5 @@
 import milda from '../../public/img/Milda.png'
-import skaiste from '../../public/img/Skaistė.png'
+import skaiste from '../../public/img/Skaiste.png'
 import silvija from '../../public/img/Silvija.png'
 
 const TestimonialItems = () => [

@@ -34,9 +34,10 @@ const Testimonial = ({
                 src={image}
                 fill
                 quality={100}
+                priority
                 alt={`portrait of ${name} from company ${company}`}
                 className="object-cover rounded-full"
-                sizes="(min-width: 1280px) 100vw, (min-width: 768px) 20vw, 33vw"
+                sizes="(max-width: 639px) 50vw, (max-width: 768px) 33vw, 20vw"
             />
         </div>
         <div

@@ -62,7 +62,7 @@ const Services = () => {
     }
 
     useEffect(() => {
-        if (tagContainer.current) setTimeout(() => calcTagPositions(), 400)
+        if (tagContainer.current) setTimeout(() => calcTagPositions(), 2000)
     }, [tagContainer])
 
     useEffect(() => {
@@ -98,7 +98,7 @@ const Services = () => {
                     <p className="max-w-[640px] text-base-variant md:text-base-v2">
                         I create high-quality content that captures the essence
                         of your brand, accompanied by breathtaking designs that
-                        will leave your competitors wanting to connect.
+                        will leave your competitors begging for my number.
                     </p>
                 </div>
                 <div
@@ -118,7 +118,7 @@ const Services = () => {
                                 alt="3D image of cursor"
                                 width={100}
                                 height={100}
-                                className="translate-y-0"
+                                className="translate-y-6"
                             />
                         </motion.div>
                     )}
@@ -130,7 +130,9 @@ const Services = () => {
                                     ? '(new)'
                                     : ''
                             }
-                            hovered={cursorIndex === index}
+                            hovered={
+                                tagPositions.length > 0 && cursorIndex === index
+                            }
                         >
                             {tag}
                         </Tag>
