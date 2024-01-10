@@ -90,7 +90,7 @@ const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
                 type: 'tween',
                 ease: 'easeInOut',
             }}
-            className="max-w-[600px]"
+            className="max-w-[600px] 2xl:max-w-[700px]"
         >
             <Image
                 src={variant}
