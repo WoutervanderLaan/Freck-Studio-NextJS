@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
 
     try {
         const msg = await mg.messages.create(DOMAIN!, {
-            from: `${firstName} ${lastName} / ${company} <contact@canvasheroes.com>`,
+            from: `${firstName} ${lastName} / ${company} <contact@freck.com>`,
             to: [EMAIL_W!, EMAIL_S!],
             subject: 'Message from Freck Studio Contact Form',
             text: `${message} | <${email}>`,

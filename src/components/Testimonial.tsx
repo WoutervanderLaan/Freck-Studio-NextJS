@@ -26,7 +26,7 @@ const Testimonial = ({
 }: Testimonial) => (
     <Card
         backgroundColor={backgroundColor}
-        className="gap-7 h-fit px-6 py-12"
+        className="gap-7 px-6 py-12 h-full relative"
         padding={false}
     >
         <div className="relative aspect-square w-[65%] sm:w-[40%] md:w-[50%]">
@@ -42,7 +42,7 @@ const Testimonial = ({
         </div>
         <div
             className={classNames(
-                'flex flex-col gap-4 text-center',
+                'flex flex-col flex-1 gap-4 text-center justify-between',
                 className,
                 textColor
             )}

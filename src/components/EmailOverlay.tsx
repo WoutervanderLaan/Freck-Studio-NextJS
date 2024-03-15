@@ -1,10 +1,11 @@
 import { useContext } from 'react'
 import { FocusScope } from 'react-aria'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { OverlayContext } from '@/contexts/OverlayContext'
 import AriaLink from './AriaLink'
 import Button from './Button'
 import Cross from './icons/Cross'
+import { MotionDiv } from './MotionElement'
 
 const EmailOverlay = () => {
     const overlayContext = useContext(OverlayContext)
@@ -12,7 +13,7 @@ const EmailOverlay = () => {
     return (
         <AnimatePresence>
             {overlayContext?.isEmailOverlayOpen && (
-                <motion.div
+                <MotionDiv
                     className="w-screen h-screen fixed top-0 flex flex-col justify-center items-center bg-black/50 z-20"
                     key="contactForm"
                     initial={{ opacity: 0 }}
@@ -40,7 +41,7 @@ const EmailOverlay = () => {
                             />
                         </div>
                     </FocusScope>
-                </motion.div>
+                </MotionDiv>
             )}
         </AnimatePresence>
     )

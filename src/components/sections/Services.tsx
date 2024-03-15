@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Tag from '../Tag'
 import Card from '../Card'
 import cursor from '../../../public/img/3Dcursor.png'
+import { MotionDiv, MotionSection } from '../MotionElement'
 
 const designServices = [
     '3D assets',
@@ -80,7 +80,7 @@ const Services = () => {
     }, [cursorIndex, tagPositions])
 
     return (
-        <motion.section
+        <MotionSection
             id="services"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -106,7 +106,7 @@ const Services = () => {
                     className="relative flex flex-row flex-wrap gap-3 justify-center md:gap-7 xl:px-32"
                 >
                     {XY && tagPositions.length > 0 && (
-                        <motion.div
+                        <MotionDiv
                             className="left-0 top-0 absolute z-10"
                             animate={XY}
                             transition={{
@@ -120,7 +120,7 @@ const Services = () => {
                                 height={100}
                                 className="translate-y-6"
                             />
-                        </motion.div>
+                        </MotionDiv>
                     )}
                     {designServices.map((tag, index) => (
                         <Tag
@@ -139,7 +139,7 @@ const Services = () => {
                     ))}
                 </div>
             </Card>
-        </motion.section>
+        </MotionSection>
     )
 }
 

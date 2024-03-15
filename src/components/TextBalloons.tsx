@@ -1,6 +1,9 @@
+'use client'
+
 import classNames from 'classnames'
 import { useEffect, useRef, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
+import { MotionDiv } from './MotionElement'
 
 type TextBalloonsProps = {
     debug?: boolean
@@ -112,7 +115,7 @@ const TextBalloon = ({
         <>
             <div
                 ref={divRef}
-                className={classNames('absolute z-50', {
+                className={classNames('absolute z-50 hidden md:block', {
                     'border-2 border-dashed border-pink': debug,
                 })}
                 style={{
@@ -124,7 +127,7 @@ const TextBalloon = ({
             />
             <AnimatePresence>
                 {showBalloon && (
-                    <motion.div
+                    <MotionDiv
                         key={'balloon'}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -136,7 +139,7 @@ const TextBalloon = ({
                             bottom: `${bottom + height + 5}%`,
                         }}
                         ref={balloonRef}
-                        className="absolute bg-white rounded-custom flex items-center justify-center p-4 w-[26%] translate-x-[-50%] lg:w-[24%] lg:p-6 dark:bg-dark-bg lg:translate-x-[-52%]"
+                        className="absolute hidden md:block bg-white rounded-custom flex items-center justify-center p-4 w-[26%] translate-x-[-50%] lg:w-[24%] lg:p-6 dark:bg-dark-bg lg:translate-x-[-52%]"
                     >
                         <div className="z-10 text-center flex flex-col gap-2 md:gap-4">
                             <p className="font-bold text-sm lg:text-lg">
@@ -150,7 +153,7 @@ const TextBalloon = ({
                                 left: '50%',
                             }}
                         />
-                    </motion.div>
+                    </MotionDiv>
                 )}
             </AnimatePresence>
         </>

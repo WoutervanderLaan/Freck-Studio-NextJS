@@ -1,5 +1,3 @@
-'use client'
-
 import BA from '../icons/brands/BA'
 import Bite from '../icons/brands/Bite'
 import Hostens from '../icons/brands/Hostens'
@@ -8,7 +6,6 @@ import Ignitis from '../icons/brands/Ignitis'
 import Swedbank from '../icons/brands/Swedbank'
 import VU from '../icons/brands/VU'
 import AriaLink from '../AriaLink'
-import UseViewportDetection from '@/hooks/useViewportDetection'
 import { Fragment } from 'react'
 
 const brandSVGCollection = [
@@ -45,35 +42,29 @@ const brandSVGCollection = [
     },
 ]
 
-const BrandCollection = () => {
-    const isSmallViewport = UseViewportDetection(1024)
-
-    return (
-        <section className="container flex flex-col justify-center items-center py-10 sm:mb-4 lg:mb-10 lg:py-0">
-            <h3 className="text-base-variant text-center lg:text-base-v2 mb-4 lg:mb-0">
-                Brands I have worked with along the way:
-            </h3>
-            <div className="min-h-[100px] w-full px-4 lg:px-16 items-center py-2 grid grid-rows-3 grid-cols-3 gap-x-4 gap-y-6 lg:grid-cols-7 lg:grid-rows-1 lg:gap-4 xl:gap-10">
-                {brandSVGCollection.map((brand, index) => (
-                    <Fragment key={index}>
-                        {isSmallViewport && index === 6 && (
-                            <div className="bg-blue/50" />
-                        )}
-                        <AriaLink
-                            href={brand.href}
-                            target="_blank"
-                            rel="external"
-                            aria-label={brand.name}
-                        >
-                            <div className="grayscale transition hover:grayscale-0 hover:scale-[103%] dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale flex items-center justify-center">
-                                {brand.component}
-                            </div>
-                        </AriaLink>
-                    </Fragment>
-                ))}
-            </div>
-        </section>
-    )
-}
+const BrandCollection = () => (
+    <section className="container flex flex-col justify-center items-center py-10 sm:mb-4 lg:mb-10 lg:py-0">
+        <h3 className="text-base-variant text-center lg:text-base-v2 mb-4 lg:mb-0">
+            Brands I have worked with along the way:
+        </h3>
+        <div className="min-h-[100px] w-full px-4 lg:px-16 items-center py-2 grid grid-rows-3 grid-cols-3 gap-x-4 gap-y-6 lg:grid-cols-7 lg:grid-rows-1 lg:gap-4 xl:gap-10">
+            {brandSVGCollection.map((brand, index) => (
+                <Fragment key={index}>
+                    {index === 6 && <div className="lg:hidden" />}
+                    <AriaLink
+                        href={brand.href}
+                        target="_blank"
+                        rel="external"
+                        aria-label={brand.name}
+                    >
+                        <div className="grayscale transition hover:grayscale-0 hover:scale-[103%] dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale flex items-center justify-center">
+                            {brand.component}
+                        </div>
+                    </AriaLink>
+                </Fragment>
+            ))}
+        </div>
+    </section>
+)
 
 export default BrandCollection

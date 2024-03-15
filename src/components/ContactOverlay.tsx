@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { FocusScope } from 'react-aria'
 import { useContext, useEffect } from 'react'
 import { OverlayContext } from '@/contexts/OverlayContext'
@@ -7,6 +7,7 @@ import Card from './Card'
 import Button from './Button'
 import Cross from './icons/Cross'
 import Logo from './Logo'
+import { MotionDiv } from './MotionElement'
 
 const ContactOverlay = () => {
     const overlayContext = useContext(OverlayContext)
@@ -23,7 +24,7 @@ const ContactOverlay = () => {
     return (
         <AnimatePresence>
             {overlayContext?.isContactOverlayOpen && (
-                <motion.div
+                <MotionDiv
                     key="contactOverlay"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -65,7 +66,7 @@ const ContactOverlay = () => {
                             />
                         </Card>
                     </FocusScope>
-                </motion.div>
+                </MotionDiv>
             )}
         </AnimatePresence>
     )

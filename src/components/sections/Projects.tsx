@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import Card from '../Card'
 import ProjectItem from '../ProjectItem'
 import BA_Macaron from '../../../public/img/BA_Macaron.png'
 import Hostens from '../../../public/img/hostens-small.png'
+import { MotionSection } from '../MotionElement'
 
 export type HoverValues = {
     BA: boolean
@@ -25,7 +25,7 @@ const Projects = () => {
     const [isHovered, setIsHovered] = useState<HoverValues>(defaultState)
 
     return (
-        <motion.section
+        <MotionSection
             id="projects"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -73,7 +73,7 @@ const Projects = () => {
                     imgAlt="3D rendered bracket symbol"
                 />
             </Card>
-        </motion.section>
+        </MotionSection>
     )
 }
 

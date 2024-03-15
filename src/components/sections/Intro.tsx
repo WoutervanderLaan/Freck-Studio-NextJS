@@ -1,5 +1,3 @@
-'use client'
-
 import Memoji from '@/components/Memoji'
 import Button from '../Button'
 

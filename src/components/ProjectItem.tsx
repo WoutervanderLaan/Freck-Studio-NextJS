@@ -50,6 +50,7 @@ const ProjectItem = ({
         )}
     >
         <AriaLink
+            isDisabled //TODO: remove when routes are made
             href={href}
             aria-label={`Press to go to case study of ${projectName}`}
             target="_self"

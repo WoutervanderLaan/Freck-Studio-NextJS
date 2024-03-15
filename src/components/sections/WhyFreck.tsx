@@ -1,12 +1,10 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Card from '../Card'
 import hands from '@/../public/img/Freck_Hands.png'
+import { MotionSection } from '../MotionElement'
 
 const WhyFreck = () => (
-    <motion.section
+    <MotionSection
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -79,7 +77,7 @@ const WhyFreck = () => (
                 />
             </div>
         </Card>
-    </motion.section>
+    </MotionSection>
 )
 
 export default WhyFreck
