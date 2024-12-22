@@ -1,7 +1,7 @@
 import { AnimatePresence } from 'framer-motion'
 import { FocusScope } from 'react-aria'
-import { useContext, useEffect } from 'react'
-import { OverlayContext } from '@/contexts/OverlayContext'
+import { useEffect } from 'react'
+import { useOverlayContext } from '@/contexts/OverlayContext'
 import ContactForm from './forms/contactForm'
 import Card from './Card'
 import Button from './Button'
@@ -10,20 +10,21 @@ import Logo from './Logo'
 import { MotionDiv } from './MotionElement'
 
 const ContactOverlay = () => {
-    const overlayContext = useContext(OverlayContext)
+    const { isContactOverlayOpen, setIsContactOverlayOpen } =
+        useOverlayContext()
 
     useEffect(() => {
-        if (overlayContext?.isContactOverlayOpen) {
+        if (isContactOverlayOpen) {
             document.body.classList.add('pointer-events-none')
         }
-        if (!overlayContext?.isContactOverlayOpen) {
+        if (!isContactOverlayOpen) {
             document.body.classList.remove('pointer-events-none')
         }
-    }, [overlayContext?.isContactOverlayOpen])
+    }, [isContactOverlayOpen])
 
     return (
         <AnimatePresence>
-            {overlayContext?.isContactOverlayOpen && (
+            {isContactOverlayOpen && (
                 <MotionDiv
                     key="contactOverlay"
                     initial={{ opacity: 0 }}
@@ -56,11 +57,7 @@ const ContactOverlay = () => {
                             </div>
                             <Button
                                 variant="ghost"
-                                onPress={() =>
-                                    overlayContext?.setIsContactOverlayOpen(
-                                        false
-                                    )
-                                }
+                                onPress={() => setIsContactOverlayOpen(false)}
                                 className="absolute top-2 right-2 opacity-75 hover:opacity-100 hover:bg-white/25"
                                 icon={<Cross strokeColor="stroke-purple" />}
                             />

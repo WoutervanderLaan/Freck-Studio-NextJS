@@ -74,7 +74,7 @@ const Testimonials = () => (
                 Let&apos;s venture into the chest of their glowing reviews:
             </p>
         </div>
-        <div className="h-fit flex">
+        <div className="h-fit flex w-full">
             <Swiper
                 spaceBetween={20}
                 slidesPerView={1}

@@ -74,7 +74,13 @@ const ProjectItem = ({
                     }}
                     className="absolute top-0 right-[50%] pointer-events-none"
                 >
-                    <Image src={img} alt={imgAlt || ''} height={100} />
+                    <Image
+                        src={img}
+                        alt={imgAlt || ''}
+                        height={100}
+                        priority
+                        fetchPriority="high"
+                    />
                 </motion.div>
             )}
         </AnimatePresence>

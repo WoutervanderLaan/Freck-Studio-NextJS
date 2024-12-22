@@ -5,6 +5,7 @@ import {
     ReactNode,
     SetStateAction,
     createContext,
+    useContext,
     useEffect,
     useState,
 } from 'react'
@@ -41,3 +42,11 @@ const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
 }
 
 export default ThemeContextProvider
+
+export const useThemeContext = () => {
+    const overlayContext = useContext(ThemeContext)
+
+    if (!overlayContext) throw Error('Theme context used outside provider')
+
+    return overlayContext
+}
