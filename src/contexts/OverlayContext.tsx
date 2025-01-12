@@ -5,6 +5,7 @@ import {
     ReactNode,
     SetStateAction,
     createContext,
+    useContext,
     useState,
 } from 'react'
 
@@ -36,3 +37,11 @@ const OverlayContextProvider = ({ children }: { children: ReactNode }) => {
 }
 
 export default OverlayContextProvider
+
+export const useOverlayContext = () => {
+    const overlayContext = useContext(OverlayContext)
+
+    if (!overlayContext) throw Error('Overlay context used outside provider')
+
+    return overlayContext
+}

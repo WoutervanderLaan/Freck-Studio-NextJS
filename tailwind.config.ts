@@ -46,10 +46,13 @@ module.exports = {
             'dark-secondary-bg': 'radial-gradient(#9137ff, #4900a3)',
             'dark-tertiary-bg': 'radial-gradient(#ffe5eb, #ffb8c8)',
             'dark-quarternary-bg': 'radial-gradient(#2b7347, #2b553b)',
+            'dark-quintenary-bg': 'radial-gradient(#1552F1, #0A38AE)',
             'button-gradient-1': 'linear-gradient(45deg, #ec8eaa, #4900a3)',
             'button-gradient-2':
                 'linear-gradient(90deg, #ffca49,#ff9561,#ef78cf,#9137ff)',
             'button-gradient-3': 'linear-gradient(90deg, #6effd7, #78ff84)',
+            'gradient-transparent':
+                'linear-gradient(90deg, #fff, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), #fff)',
         },
         fontFamily: {
             sans: ['var(--font-rubik)'],

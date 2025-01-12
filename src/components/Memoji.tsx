@@ -1,8 +1,8 @@
 'use client'
 
 import Image, { StaticImageData } from 'next/image'
-import { useRef, useEffect, useContext } from 'react'
-import { ThemeContext } from '@/contexts/ThemeContext'
+import { useRef, useEffect, useState, useMemo } from 'react'
+import { useThemeContext } from '@/contexts/ThemeContext'
 import { motion, useMotionValue, AnimatePresence } from 'framer-motion'
 import memoji from '../../public/img/Memoji_small.png'
 import memojiDark from '../../public/img/MemojiDark_small.png'
@@ -11,38 +11,61 @@ import memojiHandDark from '../../public/img/MemojiHandDark_small.png'
 import memojiShadow from '../../public/img/MemojiShadow_small.png'
 
 const Memoji = () => {
-    const themeContext = useContext(ThemeContext)
+    const { isDarkMode } = useThemeContext()
+    const [loading, setLoading] = useState({ 1: true, 2: true, 3: true })
+
+    const onLoad = (index: number) =>
+        setLoading((prev) => ({ ...prev, [index]: false }))
+
+    const appear = useMemo(
+        () => Object.values(loading).every((val) => !val),
+        [loading]
+    )
 
     return (
         <AnimatePresence mode="wait">
-            {!themeContext?.isDarkMode && (
+            {!isDarkMode && (
                 <motion.div
                     key="memojiLight"
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    animate={{ opacity: appear ? 1 : 0 }}
                     exit={{ opacity: 0 }}
                     transition={{
                         duration: 0.2,
                     }}
                 >
-                    <MemojiPart variant={memoji} />
-                    <MemojiPart variant={memojiHand} dataValue={13} />
-                    <MemojiPart variant={memojiShadow} />
+                    <MemojiPart variant={memoji} onLoad={() => onLoad(1)} />
+                    <MemojiPart
+                        variant={memojiHand}
+                        dataValue={13}
+                        onLoad={() => onLoad(2)}
+                    />
+                    <MemojiPart
+                        variant={memojiShadow}
+                        onLoad={() => onLoad(3)}
+                    />
                 </motion.div>
             )}
-            {themeContext?.isDarkMode && (
+            {isDarkMode && appear && (
                 <motion.div
                     key="memojiDark"
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    animate={{ opacity: appear ? 1 : 0 }}
                     exit={{ opacity: 0 }}
                     transition={{
                         duration: 0.2,
                     }}
                 >
-                    <MemojiPart variant={memojiDark} />
-                    <MemojiPart variant={memojiHandDark} dataValue={13} />
-                    <MemojiPart variant={memojiShadow} />
+                    <MemojiPart variant={memojiDark} onLoad={() => onLoad(1)} />
+                    <MemojiPart
+                        variant={memojiHandDark}
+                        dataValue={13}
+                        onLoad={() => onLoad(2)}
+                    />
+                    <MemojiPart
+                        variant={memojiShadow}
+                        onLoad={() => onLoad(3)}
+                    />
                 </motion.div>
             )}
         </AnimatePresence>
@@ -52,9 +75,10 @@ const Memoji = () => {
 type MemojiPartProps = {
     variant: StaticImageData
     dataValue?: number
+    onLoad: () => void
 }
 
-const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
+const MemojiPart = ({ variant, dataValue = 10, onLoad }: MemojiPartProps) => {
     const ref = useRef<HTMLImageElement>(null)
     const x = useMotionValue(0)
 
@@ -99,6 +123,7 @@ const MemojiPart = ({ variant, dataValue = 10 }: MemojiPartProps) => {
                 ref={ref}
                 priority
                 draggable="false"
+                onLoad={onLoad}
             />
         </motion.div>
     )

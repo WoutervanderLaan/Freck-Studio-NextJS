@@ -5,7 +5,7 @@ const Ignitis = () => (
         viewBox="0 0 300 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="max-h-5 w-fit sm:max-h-8"
+        className="max-h-8 w-fit"
     >
         <g clipPath="url(#clip0_2_768)">
             <path

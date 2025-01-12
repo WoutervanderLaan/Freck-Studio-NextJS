@@ -2,7 +2,7 @@ import Image from 'next/image'
 import swedBankLogo from '@/../public/img/Swedbank_pos_720px.png'
 
 const Swedbank = () => (
-    <div className="relative aspect-swedbank h-5 self-center sm:h-8 md:h-6">
+    <div className="relative aspect-swedbank self-center w-full sm:w-auto sm:h-8 md:h-6">
         <Image
             src={swedBankLogo}
             alt="Logo of Swedbank"

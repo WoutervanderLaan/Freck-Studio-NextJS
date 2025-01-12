@@ -1,11 +1,11 @@
 'use client'
 
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FocusScope } from 'react-aria'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import UseViewportDetection from '@/hooks/useViewportDetection'
-import { ThemeContext } from '@/contexts/ThemeContext'
+import { useThemeContext } from '@/contexts/ThemeContext'
 import Logo from '@/components/Logo'
 import Moon from './icons/Moon'
 import Sun from './icons/Sun'
@@ -13,11 +13,11 @@ import Hamburger from './icons/Hamburger'
 import Button from './Button'
 import AriaLink from './AriaLink'
 import ContactOverlay from './ContactOverlay'
-import { OverlayContext } from '@/contexts/OverlayContext'
+import { useOverlayContext } from '@/contexts/OverlayContext'
 
 const Navbar = () => {
-    const themeContext = useContext(ThemeContext)
-    const overlayContext = useContext(OverlayContext)
+    const { isDarkMode, setDarkMode } = useThemeContext()
+    const { isContactOverlayOpen } = useOverlayContext()
     const isTablet = UseViewportDetection(768)
     const [isMenuDropdownOpen, setIsMenuDropdownOpen] = useState<
         boolean | null
@@ -28,13 +28,13 @@ const Navbar = () => {
     const year = date.getFullYear()
 
     useEffect(() => {
-        if (isMenuDropdownOpen || overlayContext?.isContactOverlayOpen) {
+        if (isMenuDropdownOpen || isContactOverlayOpen) {
             document.body.classList.add('overflow-hidden')
         }
-        if (!isMenuDropdownOpen && !overlayContext?.isContactOverlayOpen) {
+        if (!isMenuDropdownOpen && !isContactOverlayOpen) {
             document.body.classList.remove('overflow-hidden')
         }
-    }, [isMenuDropdownOpen, overlayContext?.isContactOverlayOpen])
+    }, [isMenuDropdownOpen, isContactOverlayOpen])
 
     useEffect(() => {
         isTablet && setIsMenuDropdownOpen(false)
@@ -43,7 +43,7 @@ const Navbar = () => {
     const backgroundVariants = {
         default: {
             height: '100%',
-            backgroundColor: themeContext?.isDarkMode ? '#0E100D' : '#ffffff',
+            backgroundColor: isDarkMode ? '#0E100D' : '#ffffff',
             transition: { delay: 0.2 },
         },
         openMenu: { height: '105dvh', backgroundColor: '#054BFA' },
@@ -64,8 +64,7 @@ const Navbar = () => {
                         <AriaLink href="/" aria-label="Freck Studio Logo">
                             <Logo
                                 fill={
-                                    isMenuDropdownOpen ||
-                                    themeContext?.isDarkMode
+                                    isMenuDropdownOpen || isDarkMode
                                         ? 'white'
                                         : 'black'
                                 }
@@ -90,14 +89,14 @@ const Navbar = () => {
                                     >
                                         Services
                                     </Button>
-                                    <Button
+                                    {/* <Button
                                         variant="ghost"
                                         href="/#projects"
                                         ariaLabel="Section Projects"
                                         className="hover:text-blue transition active:scale-90"
                                     >
                                         Projects
-                                    </Button>
+                                    </Button> */}
                                     <Button
                                         variant="ghost"
                                         href="/#about"
@@ -113,9 +112,7 @@ const Navbar = () => {
                                         variant="switch"
                                         className="relative bg-blue border-blue border-2 dark:bg-dark-bg dark:border-green"
                                         onPress={() => {
-                                            themeContext?.setIsDarkMode(
-                                                (prevValue) => !prevValue
-                                            )
+                                            setDarkMode(!isDarkMode)
                                         }}
                                         ariaLabel="Theme slider"
                                     >
@@ -125,9 +122,7 @@ const Navbar = () => {
                                             className="absolute top-0 bg-purple dark:bg-green rounded-full h-6 w-6 m-0.5"
                                             layout
                                             animate={{
-                                                left: themeContext?.isDarkMode
-                                                    ? 0
-                                                    : 32,
+                                                left: isDarkMode ? 0 : 32,
                                             }}
                                             transition={{
                                                 duration: 0.2,
@@ -151,7 +146,7 @@ const Navbar = () => {
                                     icon={
                                         <Hamburger
                                             isOpen={isMenuDropdownOpen === true}
-                                            dark={themeContext?.isDarkMode}
+                                            dark={isDarkMode}
                                         />
                                     }
                                 />
@@ -197,7 +192,7 @@ const Navbar = () => {
                                             </span>
                                         </Button>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <Button
                                             variant="ghost"
                                             onPress={() => {
@@ -209,7 +204,7 @@ const Navbar = () => {
                                                 Projects
                                             </span>
                                         </Button>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <Button
                                             variant="ghost"
@@ -227,13 +222,11 @@ const Navbar = () => {
                                         <Button
                                             variant="ghost"
                                             onPress={() => {
-                                                themeContext?.setIsDarkMode(
-                                                    (prevValue) => !prevValue
-                                                )
+                                                setDarkMode(!isDarkMode)
                                             }}
                                         >
                                             <span className="text-lg text-orange">
-                                                {themeContext?.isDarkMode
+                                                {isDarkMode
                                                     ? 'Light Theme'
                                                     : 'Dracula Theme'}
                                             </span>

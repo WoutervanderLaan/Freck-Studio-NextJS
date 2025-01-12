@@ -14,8 +14,8 @@ import ciri from '@/../public/img/Ciri.png'
 
 const TESTIMONIALS = [
     {
-        backgroundColor: 'bg-gray-light',
-        textColor: 'text-blue-intense',
+        backgroundColor: 'bg-gray-light dark:bg-dark-quarternary-bg',
+        textColor: 'text-blue-intense dark:text-white',
         name: 'Kristina Kirkliauskaitė',
         position: 'Communications Manager',
         company: 'Baltic Amadeus',
@@ -23,8 +23,8 @@ const TESTIMONIALS = [
         text: "I've worked with Šarūnė on multiple design projects, and she always comes up with something fresh and creative. Šarūnė also has a strong collaborative quality, which makes teamwork smooth and fun. Beyond that, Šarūnė is a very skilled digital designer, so you can be sure that projects are always delivered in high quality and on time.",
     },
     {
-        backgroundColor: 'bg-green-light',
-        textColor: 'text-purple-alt',
+        backgroundColor: 'bg-green-light dark:bg-dark-primary-bg',
+        textColor: 'text-purple-alt dark:text-white',
         name: 'Milda Bernatavičiūtė',
         position: 'Product Marketing Manager',
         company: 'Omnisend',
@@ -33,14 +33,15 @@ const TESTIMONIALS = [
     },
     {
         name: 'Monika Krikščiūnaitė',
+        backgroundColor: 'bg-pink dark:bg-dark-tertiary-bg',
         position: 'Marketing Consultant',
         company: 'TBWA\\Vilnius',
         image: monika,
         text: "I highly recommend Šarūnė as a an excellent creative. I've collaborated with her for over 5 years on various projects. I am deeply impressed by her ability not only to creatively execute design tasks but also to thoroughly comprehend the job brief. She possesses a sense of aesthetics, understands emerging trends, and quickly grasps a new brand identity.",
     },
     {
-        backgroundColor: 'bg-gray-light',
-        textColor: 'text-blue-intense',
+        backgroundColor: 'bg-gray-light dark:bg-dark-quarternary-bg',
+        textColor: 'text-blue-intense dark:text-white',
         name: 'Silvija Kuprionytė',
         position: 'Account Manager',
         company: 'INK agency',
@@ -48,8 +49,8 @@ const TESTIMONIALS = [
         text: "Šarūnė is unequivocally a specialist in her field. She has an excellent aesthetic sense, her works are creative and original, and most importantly, Šarūnė is not just an executor. She has a clear vision of what to do to exceed the client's expectations visually and she is not afraid to express her opinion, which may not necessarily align with the client's",
     },
     {
-        backgroundColor: 'bg-green-light',
-        textColor: 'text-purple-alt',
+        backgroundColor: 'bg-green-light dark:bg-dark-primary-bg',
+        textColor: 'text-purple-alt dark:text-white',
         name: 'Ciri',
         position: 'Vibe Manager',
         company: 'Meowcrosoft',
@@ -74,7 +75,7 @@ const Testimonials = () => (
                 Let&apos;s venture into the chest of their glowing reviews:
             </p>
         </div>
-        <div className="h-fit flex">
+        <div className="h-fit flex w-full">
             <Swiper
                 spaceBetween={20}
                 slidesPerView={1}

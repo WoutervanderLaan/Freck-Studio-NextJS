@@ -1,8 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useContext } from 'react'
-import { ThemeContext } from '@/contexts/ThemeContext'
+import { useThemeContext } from '@/contexts/ThemeContext'
 import AriaLink from './AriaLink'
 import Image from 'next/image'
 import Button from './Button'
@@ -12,11 +11,12 @@ import phone from '../../public/img/Phone_small.png'
 import linkedin from '../../public/img/Linkedin_small.png'
 import EmailOverlay from './EmailOverlay'
 import UseViewportDetection from '@/hooks/useViewportDetection'
-import { OverlayContext } from '@/contexts/OverlayContext'
+import { useOverlayContext } from '@/contexts/OverlayContext'
 
 const Footer = () => {
-    const overlayContext = useContext(OverlayContext)
-    const themeContext = useContext(ThemeContext)
+    const { setIsEmailOverlayOpen, setIsContactOverlayOpen } =
+        useOverlayContext()
+    const { isDarkMode } = useThemeContext()
     const isTablet = UseViewportDetection(768)
 
     return (
@@ -58,7 +58,7 @@ const Footer = () => {
                 <Button
                     variant="ghost"
                     className="relative p-0 w-20 md:w-[120px] h-20 md:h-[120px] rounded-2xl md:rounded-3xl active:scale-90 hover:scale-[102%] duration-200"
-                    onPress={() => overlayContext?.setIsEmailOverlayOpen(true)}
+                    onPress={() => setIsEmailOverlayOpen(true)}
                     aria-label="Press to see email address"
                 >
                     <Image
@@ -105,7 +105,7 @@ const Footer = () => {
                     aria-label="Freck Studio Logo"
                     className="flex-1"
                 >
-                    <Logo fill={themeContext?.isDarkMode ? 'white' : 'black'} />
+                    <Logo fill={isDarkMode ? 'white' : 'black'} />
                 </AriaLink>
                 <div className="flex flex-row items-center lg:gap-4 text-sm font-medium pointer-cursor hidden min-[978px]:block">
                     <Button
@@ -144,9 +144,7 @@ const Footer = () => {
                 <div className="flex flex-row justify-end flex-1 pointer-events-auto">
                     <Button
                         variant={isTablet ? 'small' : 'default'}
-                        onPress={() =>
-                            overlayContext?.setIsContactOverlayOpen(true)
-                        }
+                        onPress={() => setIsContactOverlayOpen(true)}
                     >
                         <span className="text-base-variant lg:text-base-v2">
                             Contact Form

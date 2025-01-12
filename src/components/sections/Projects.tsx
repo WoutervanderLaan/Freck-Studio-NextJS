@@ -33,7 +33,7 @@ const Projects = () => {
             className="container scroll-my-20"
         >
             <Card
-                backgroundColor="bg-dark-bg dark:bg-dark-primary-bg text-orange"
+                backgroundColor="bg-dark-bg dark:bg-dark-quintenary-bg text-orange"
                 className="relative w-full h-fit flex flex-col gap-10 md:gap-14 py-20"
             >
                 <ProjectItem

@@ -1,8 +1,9 @@
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 
 const caseStudies = ['iv', 'ba', 'hostens', 'swedbank']
 
 const CaseStudy = ({ params }: { params: { caseStudy: string } }) => {
+    redirect('/')
     if (!caseStudies.includes(params.caseStudy)) notFound()
 
     return (
