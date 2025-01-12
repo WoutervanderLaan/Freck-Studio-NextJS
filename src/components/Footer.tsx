@@ -138,7 +138,7 @@ const Footer = () => {
                         variant={isTablet ? 'small' : 'default'}
                         onPress={() => setIsContactOverlayOpen(true)}
                     >
-                        <span className="text-base-variant lg:text-base-v2">
+                        <span className="text-base-variant lg:text-base-v2 dark:text-white">
                             Contact Form
                         </span>
                     </Button>

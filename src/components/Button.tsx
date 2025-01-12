@@ -23,7 +23,7 @@ const variantStyles: Record<ButtonStyleVariants, string> = {
     ghost: 'p-2 rounded-full md:p-4 md:text-base-variant font-normal',
     switch: 'rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5 border-2',
     small: 'w-fit h-fit bg-purple text-blue rounded-custom px-5 py-2 dark:bg-green',
-}
+} //TODO: cleanup variant styles and button classNames and split size based styling into separate prop
 
 type BaseProps = {
     variant?: ButtonStyleVariants
