@@ -3,7 +3,8 @@ import { notFound, redirect } from 'next/navigation'
 const caseStudies = ['iv', 'ba', 'hostens', 'swedbank']
 
 const CaseStudy = ({ params }: { params: { caseStudy: string } }) => {
-    redirect('/')
+    redirect('/') // TEMP redirect until more pages are added
+
     if (!caseStudies.includes(params.caseStudy)) notFound()
 
     return (
