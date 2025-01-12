@@ -5,11 +5,20 @@ import { ReactNode, useRef } from 'react'
 import classNames from 'classnames'
 import AriaLink from './AriaLink'
 
-type ButtonStyleVariants = 'default' | 'ghost' | 'switch' | 'small' | 'black'
+type ButtonStyleVariants =
+    | 'default'
+    | 'secondary'
+    | 'ghost'
+    | 'switch'
+    | 'small'
+    | 'black'
 
 const variantStyles: Record<ButtonStyleVariants, string> = {
     default:
         'w-fit px-9 py-5 rounded-custom bg-purple text-blue duration-200 hover:bg-blue hover:text-purple dark:bg-green dark:text-white dark:hover:bg-white dark:hover:text-green disabled:opacity-50',
+    secondary:
+        'w-fit px-9 py-5 rounded-custom bg-purple text-blue duration-200 disabled:opacity-50 hover:bg-blue border-purple border-2 hover:text-purple',
+
     black: 'w-fit px-9 py-5 rounded-custom bg-black text-white duration-200 hover:bg-white hover:text-black disabled:opacity-50',
     ghost: 'p-2 rounded-full md:p-4 md:text-base-variant font-normal',
     switch: 'rounded-full h-8 w-16 hover:scale-110 flex justify-between items-center p-1.5 border-2',

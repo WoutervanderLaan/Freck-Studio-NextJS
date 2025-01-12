@@ -132,14 +132,6 @@ const Footer = () => {
                     >
                         About
                     </Button>
-                    <Button
-                        variant="ghost"
-                        href="/#projects"
-                        ariaLabel="Section Projects"
-                        className="hover:text-blue transition active:scale-90"
-                    >
-                        Projects
-                    </Button>
                 </div>
                 <div className="flex flex-row justify-end flex-1 pointer-events-auto">
                     <Button
