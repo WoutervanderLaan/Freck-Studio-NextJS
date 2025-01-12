@@ -6,7 +6,7 @@ import Ignitis from '../icons/brands/Ignitis'
 import Swedbank from '../icons/brands/Swedbank'
 import VU from '../icons/brands/VU'
 import AriaLink from '../AriaLink'
-import { MotionDiv } from '../MotionElement'
+import { Fragment } from 'react'
 
 const brandSVGCollection = [
     {
@@ -43,26 +43,15 @@ const brandSVGCollection = [
 ]
 
 const BrandCollection = () => (
-    <section className="relative flex flex-col justify-center items-center py-10 lg:mb-10 lg:py-0">
+    <section className="container flex flex-col justify-center items-center py-10 sm:mb-4 lg:mb-10 lg:py-0">
         <h3 className="text-base-variant text-center lg:text-base-v2 mb-4 lg:mb-0">
             Brands I have worked with along the way:
         </h3>
-
-        <MotionDiv
-            className="pt-4 w-fit flex flex-row gap-20 items-center lg:pt-10 px-10"
-            style={{ y: '50%' }}
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            transition={{
-                ease: 'linear',
-                duration: brandSVGCollection.length * 2,
-                repeat: Infinity,
-            }}
-        >
-            {[...brandSVGCollection, ...brandSVGCollection].map(
-                (brand, index) => (
+        <div className="min-h-[100px] w-full px-4 lg:px-16 items-center py-2 grid grid-rows-3 grid-cols-3 gap-x-4 gap-y-6 lg:grid-cols-7 lg:grid-rows-1 lg:gap-4 xl:gap-10">
+            {brandSVGCollection.map((brand, index) => (
+                <Fragment key={index}>
+                    {index === 6 && <div className="lg:hidden" />}
                     <AriaLink
-                        key={index}
                         href={brand.href}
                         target="_blank"
                         rel="external"
@@ -72,37 +61,9 @@ const BrandCollection = () => (
                             {brand.component}
                         </div>
                     </AriaLink>
-                )
-            )}
-        </MotionDiv>
-
-        <MotionDiv
-            className="pt-4 w-fit flex flex-row gap-20 items-center lg:pt-10 px-10"
-            style={{ y: '-50%' }}
-            initial={{ x: 0 }}
-            animate={{ x: '-100%' }}
-            transition={{
-                ease: 'linear',
-                duration: brandSVGCollection.length * 2,
-                repeat: Infinity,
-            }}
-        >
-            {[...brandSVGCollection, ...brandSVGCollection].map(
-                (brand, index) => (
-                    <AriaLink
-                        key={index}
-                        href={brand.href}
-                        target="_blank"
-                        rel="external"
-                        aria-label={brand.name}
-                    >
-                        <div className="grayscale transition hover:grayscale-0 hover:scale-[103%] dark:invert dark:opacity-50 dark:hover:opacity-100 dark:hover:grayscale flex items-center justify-center">
-                            {brand.component}
-                        </div>
-                    </AriaLink>
-                )
-            )}
-        </MotionDiv>
+                </Fragment>
+            ))}
+        </div>
     </section>
 )
 

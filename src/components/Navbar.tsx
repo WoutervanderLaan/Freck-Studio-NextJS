@@ -16,7 +16,7 @@ import ContactOverlay from './ContactOverlay'
 import { useOverlayContext } from '@/contexts/OverlayContext'
 
 const Navbar = () => {
-    const { isDarkMode, setIsDarkMode } = useThemeContext()
+    const { isDarkMode, setDarkMode } = useThemeContext()
     const { isContactOverlayOpen } = useOverlayContext()
     const isTablet = UseViewportDetection(768)
     const [isMenuDropdownOpen, setIsMenuDropdownOpen] = useState<
@@ -89,14 +89,14 @@ const Navbar = () => {
                                     >
                                         Services
                                     </Button>
-                                    <Button
+                                    {/* <Button
                                         variant="ghost"
                                         href="/#projects"
                                         ariaLabel="Section Projects"
                                         className="hover:text-blue transition active:scale-90"
                                     >
                                         Projects
-                                    </Button>
+                                    </Button> */}
                                     <Button
                                         variant="ghost"
                                         href="/#about"
@@ -112,9 +112,7 @@ const Navbar = () => {
                                         variant="switch"
                                         className="relative bg-blue border-blue border-2 dark:bg-dark-bg dark:border-green"
                                         onPress={() => {
-                                            setIsDarkMode(
-                                                (prevValue) => !prevValue
-                                            )
+                                            setDarkMode(!isDarkMode)
                                         }}
                                         ariaLabel="Theme slider"
                                     >
@@ -194,7 +192,7 @@ const Navbar = () => {
                                             </span>
                                         </Button>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <Button
                                             variant="ghost"
                                             onPress={() => {
@@ -206,7 +204,7 @@ const Navbar = () => {
                                                 Projects
                                             </span>
                                         </Button>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <Button
                                             variant="ghost"
@@ -224,9 +222,7 @@ const Navbar = () => {
                                         <Button
                                             variant="ghost"
                                             onPress={() => {
-                                                setIsDarkMode(
-                                                    (prevValue) => !prevValue
-                                                )
+                                                setDarkMode(!isDarkMode)
                                             }}
                                         >
                                             <span className="text-lg text-orange">

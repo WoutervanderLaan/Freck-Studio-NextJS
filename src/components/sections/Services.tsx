@@ -88,7 +88,7 @@ const Services = () => {
             className="container scroll-my-20"
         >
             <Card
-                backgroundColor="bg-gray"
+                backgroundColor="bg-gray dark:bg-dark-quarternary-bg"
                 className="flex flex-col gap-12 justify-between lg:px-20"
             >
                 <div className="text-center flex flex-col gap-6 items-center">

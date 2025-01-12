@@ -148,7 +148,7 @@ const ContactForm = () => {
             <Button
                 type="submit"
                 form="contactForm"
-                className="place-self-start border-purple border-2"
+                className="place-self-start border-purple border-2 dark:text-blue dark:bg-purple dark:hover:bg-blue dark:hover:text-purple"
                 isDisabled={isSubmitting}
             >
                 <span className="font-normal text-base-variant lg:text-base-v2">
