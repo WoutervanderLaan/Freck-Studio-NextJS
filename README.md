@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Freck Studio Landing Page
+
+This is the official landing page for **Freck Studio**, built with [Next.js](https://nextjs.org/) and styled using [Tailwind CSS](https://tailwindcss.com/). The site showcases Freck Studio's portfolio, services, testimonials, and contact information in a modern, responsive design.
+
+## Features
+
+-   **Modern UI**: Sleek, animated, and responsive design for all devices.
+-   **Portfolio Showcase**: Highlighted case studies and projects.
+-   **Contact Forms**: Integrated contact and email overlays for easy communication.
+-   **Dark/Light Theme**: Toggle between dark and light modes.
+-   **Custom Animations**: Smooth transitions and interactive elements using Framer Motion.
+-   **Optimized Assets**: Web-optimized images and videos for fast loading.
+
+## Tech Stack
+
+-   [Next.js](https://nextjs.org/) (App Router)
+-   [React](https://react.dev/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Tailwind CSS](https://tailwindcss.com/)
+-   [Framer Motion](https://www.framer.com/motion/)
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+2. **Run the development server:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+    ```bash
+    npm run dev
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Build for production:**
+    ```bash
+    npm run build
+    npm start
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Structure
 
-## Learn More
+-   `src/app/` — Main app pages and layout
+-   `src/components/` — Reusable UI components
+-   `src/contexts/` — React context providers (e.g., theme, overlays)
+-   `src/hooks/` — Custom React hooks
+-   `public/` — Static assets (images, icons, videos)
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   **Branding**: Update images and logos in `public/`.
+-   **Content**: Edit text and sections in `src/app/` and `src/components/sections/`.
+-   **Styling**: Modify Tailwind config in `tailwind.config.ts`.
